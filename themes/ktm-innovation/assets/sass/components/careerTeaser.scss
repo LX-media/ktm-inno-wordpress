@@ -13,6 +13,8 @@
 
         @media screen and (max-width: $break-mobile){
             flex-direction: column;
+            justify-content: space-around;
+
         }
 
         .LxBox {

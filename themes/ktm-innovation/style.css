@@ -423,7 +423,9 @@ footer #LxFooterBottom {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
-        flex-direction: column; } }
+        flex-direction: column;
+        -ms-flex-pack: distribute;
+        justify-content: space-around; } }
     .lxmo_career_teaser .LxCareerTeaser .LxBox {
       width: 458px; }
       @media screen and (max-width: 980px) {
