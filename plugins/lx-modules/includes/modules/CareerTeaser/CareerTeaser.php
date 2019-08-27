@@ -125,26 +125,27 @@ class LXMO_CareerTeaser extends ET_Builder_Module {
 		ob_start();
 		?>
 		<div class="LxContainer">
-			<div class="LxBox LxBoxOne">
-				<h3><?php echo $title_one; ?></h3>
-				<p><?php echo $content_one; ?></p>
-				<?php if($button_one): ?>
-					<a class="LxBtn LxBtnOrange" href="<?php echo $button_one_url; ?>" <?php if($link_target_one == "off"): ?> target="_blank" <?php endif; ?>>
-						<?php echo $button_one; ?>
-					</a>
-				<?php endif; ?>
-			</div>
+			<div class="LxCareerTeaser">
+				<div class="LxBox LxBoxOne">
+					<h3><?php echo $title_one; ?></h3>
+					<p><?php echo $content_one; ?></p>
+					<?php if($button_one): ?>
+						<a class="LxBtn LxBtnOrange" href="<?php echo $button_one_url; ?>" <?php if($link_target_one == "off"): ?> target="_blank" <?php endif; ?>>
+							<?php echo $button_one; ?>
+						</a>
+					<?php endif; ?>
+				</div>
 
-			<div class="LxBox LxBoxTwo">
-				<h3><?php echo $title_two ?></h3>
-				<p><?php echo $content_two; ?></p>
-				<?php if($button_two): ?>
-					<a class="LxBtn LxBtnOrange" href="<?php echo $button_two_url; ?>" <?php if($link_target_two == "off"): ?> target="_blank" <?php endif; ?>>
-						<?php echo $button_two; ?>
-					</a>
-				<?php endif; ?>
+				<div class="LxBox LxBoxTwo">
+					<h3><?php echo $title_two ?></h3>
+					<p><?php echo $content_two; ?></p>
+					<?php if($button_two): ?>
+						<a class="LxBtn LxBtnOrange" href="<?php echo $button_two_url; ?>" <?php if($link_target_two == "off"): ?> target="_blank" <?php endif; ?>>
+							<?php echo $button_two; ?>
+						</a>
+					<?php endif; ?>
+				</div>
 			</div>
-			
 		</div>
 		<?php
 		$output = ob_get_contents();

@@ -10,12 +10,11 @@
     }
 
     .et_pb_ajax_pagination_container {
-        max-width: 1400px;     
-        z-index: 1;   
+        z-index: 1; 
         position: absolute;
-        left: 50%;
+        margin-left: $leftMargin;
         margin-top: 310px;
-        transform: translateX(-50%);
+        // transform: translateX(-50%);
         height: 986px;
         display: flex;
         justify-content: space-evenly;
@@ -31,6 +30,10 @@
             display: table;
             width: 420px;
             margin: 0 40px;
+
+            &:first-child{
+                margin: 0 40px 0 0;
+            }
             @media screen and (max-width: $break-tablet) {
                 max-width: calc(50vw - 60px);
                 margin: 0 10px;

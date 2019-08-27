@@ -6,6 +6,11 @@ body{
 
 #page-container{
     padding-top: 0;
+
+    .LxContainer {
+        max-width: $container;
+        margin: 0 auto;
+    }
 }
 
 #et-main-area{

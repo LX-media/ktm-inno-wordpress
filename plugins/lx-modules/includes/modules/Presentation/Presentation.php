@@ -127,21 +127,23 @@ class LXMO_Presentation extends ET_Builder_Module {
 
 		ob_start();
 		?>
-		<div class="LxContainer LxCompany">
-			<div class="LxBox LxBoxOne">
-				<h3><?php echo $title_one; ?></h3>
-				<p><?php echo $content_one; ?></p>
-				<?php if($button_one): ?>
-					<a class="LxBtn LxBtnOrange" href="<?php echo $button_one_url; ?>" <?php if($link_target_one == "off"): ?> target="_blank" <?php endif; ?>>
-						<?php echo $button_one; ?>
-					</a>
-				<?php endif; ?>
-			</div>
+		<div class="LxCompany">
+			<div class="LxContainer LxCompanyInner">
+				<div class="LxBox LxBoxOne">
+					<h3><?php echo $title_one; ?></h3>
+					<p><?php echo $content_one; ?></p>
+					<?php if($button_one): ?>
+						<a class="LxBtn LxBtnOrange" href="<?php echo $button_one_url; ?>" <?php if($link_target_one == "off"): ?> target="_blank" <?php endif; ?>>
+							<?php echo $button_one; ?>
+						</a>
+					<?php endif; ?>
+				</div>
 
-			<div class="LxBox LxBoxTwo">
-				<img src="<?php echo $img1_src; ?>" alt="<?php echo $image1_alt; ?>" >
-				<img src="<?php echo $img2_src; ?>" alt="<?php echo $image2_alt; ?>" >
-				<img src="<?php echo $img3_src; ?>" alt="<?php echo $image3_alt; ?>" >
+				<div class="LxBox LxBoxTwo">
+					<img src="<?php echo $img1_src; ?>" alt="<?php echo $image1_alt; ?>" >
+					<img src="<?php echo $img2_src; ?>" alt="<?php echo $image2_alt; ?>" >
+					<img src="<?php echo $img3_src; ?>" alt="<?php echo $image3_alt; ?>" >
+				</div>
 			</div>
 			
 		</div>

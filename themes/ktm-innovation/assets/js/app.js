@@ -1,11 +1,15 @@
 define([
 	'jquery',
     'header',
-	'particles'
+	// 'particles',
+	'three',
+	'vanta'
 ], function(
 	$,
 	Header,
-	Particles
+	// Particles,
+	Three,
+	Vanta
 	) {
 
 	var App = function() {
@@ -21,9 +25,10 @@ define([
 
 	};
 	
-	particlesJS.load('particles-js', '/wp-content/themes/ktm-innovation/assets/js/helper/particlesjs-config.json', function() {
-		console.log('callback - particles.js config loaded');
-	});
+	// particlesJS.load('particles-js', '/wp-content/themes/ktm-innovation/assets/js/helper/particlesjs-config.json', function() {
+	// 	console.log('callback - particles.js config loaded');
+	// });
+
 
 	return App;
 });

@@ -94,20 +94,19 @@ class LXMO_Stage extends ET_Builder_Module {
 
 		ob_start();
 		?>
-		<img src="<?php echo $img_src; ?>" alt="<?php echo $image_alt; ?>" class="tilt">
-		<div class="LxContainer">
-			<div class="LxBox">
-				<h3><?php echo $title_one; ?></h3>
-				<p><?php echo $content_one; ?></p>
-				<?php if($button_one): ?>
-					<a class="LxBtn LxBtnOrange" href="<?php echo $button_one_url; ?>" <?php if($link_target_one == "off"): ?> target="_blank" <?php endif; ?>>
-						<?php echo $button_one; ?>
-					</a>
-				<?php endif; ?>
+		<img src="<?php echo $img_src; ?>" alt="<?php echo $image_alt; ?>" class="tilt LxStageImage">
+		<div class="LxStage">
+			<div class="LxContainer">
+				<div class="LxBox">
+					<h3><?php echo $title_one; ?></h3>
+					<p><?php echo $content_one; ?></p>
+					<?php if($button_one): ?>
+						<a class="LxBtn LxBtnOrange" href="<?php echo $button_one_url; ?>" <?php if($link_target_one == "off"): ?> target="_blank" <?php endif; ?>>
+							<?php echo $button_one; ?>
+						</a>
+					<?php endif; ?>
+				</div>			
 			</div>
-
-			
-			
 		</div>
 		<?php
 		$output = ob_get_contents();

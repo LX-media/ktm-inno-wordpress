@@ -4,7 +4,7 @@
  *
  * @since 3.10
  */
-do_action( 'et_after_main_content' ); 2
+do_action( 'et_after_main_content' );
 
 if ( 'on' === et_get_option( 'divi_back_to_top', 'false' ) ) : ?>
 
@@ -32,15 +32,10 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 						</div>
 					<?php endif; ?>				
 				</div> 
-
-		
-
 				<div id="LxFooterBottom">
-					<div class="clearfix">
+					<div class="LxFooterBottomInner">
 				<?php
-					if ( false !== et_get_option( 'show_footer_social_icons', true ) ) {
-						get_template_part( 'includes/social_icons', 'footer' );
-					}
+				
 
 					if ( is_active_sidebar( 'custom-footer-bottom' ) ) : ?>
 						<div id="menu-widget-area" class="" role="complementary">
@@ -51,8 +46,12 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 					// echo et_core_fix_unclosed_html_tags( et_core_esc_previously( et_get_footer_credits() ) );
 					// phpcs:enable
 				?>
+					<?php if ( false !== et_get_option( 'show_footer_social_icons', true ) ) {
+							get_template_part( 'includes/social_icons', 'footer' );
+				} ?>
 					</div>	<!-- .container -->
 				</div>
+			
 			</footer> <!-- #main-footer -->
 		</div> <!-- #et-main-area -->
 
@@ -64,5 +63,16 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 
 	<script data-main="/wp-content/themes/ktm-innovation/assets/js/main" src="/wp-content/themes/ktm-innovation/assets/js/helper/require.js"></script>
 
+	<script> // need to fix the colors
+		VANTA.NET({
+		el: "#vantajs",
+		color: 0xff6600,
+		backgroundColor: 0x989898,
+		points: 8.00,
+		maxDistance: 22.00,
+		spacing: 16.00,
+		showDots: false
+	})
+	</script>
 </body>
 </html>

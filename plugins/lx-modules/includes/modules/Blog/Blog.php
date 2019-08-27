@@ -1474,14 +1474,17 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 			}
 
 			$output = sprintf(
+
 				'<div%4$s class="%1$s"%8$s%9$s >
 				%6$s
 				%5$s
-				<div id="particles-js">
-					<div class="et_pb_ajax_pagination_container" >
-						%2$s
+				<div id="vantajs">
+					<div class="LxContainer">
+						<div class="et_pb_ajax_pagination_container" >
+							%2$s
+						</div>
 					</div>
-					</div>
+				</div>
 				</div>
 				%3$s %7$s',
 				$this->module_classname( $render_slug ),

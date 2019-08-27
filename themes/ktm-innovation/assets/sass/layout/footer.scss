@@ -100,6 +100,13 @@ footer{
             padding-bottom: 20px;
         }
         .LxFooterBottom{
+            .LxFooterBottomInner{
+                display: flex;
+            }
+
+            .menu-footer-bottom-container{
+                max-width: 1096px;
+            }
             #menu-footer-bottom{
                 li{
                     display: inline;
@@ -113,6 +120,11 @@ footer{
                         font-size: 16px;
                         text-transform: uppercase;
                         color: $grey;
+
+                        &:hover{
+                            transition: $shortTransition;
+                            color: $orange;
+                        }
                     }
                 }
             }
