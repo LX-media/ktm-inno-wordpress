@@ -1,0 +1,38 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+}
+
+h1 {
+    
+}
+
+h2 {
+
+}
+
+h3 {
+    font-size: 50px;
+    line-height: 50px;
+
+    @media screen and (max-width: $break-tablet){
+        font-size: 40px;
+        line-height: 40px;
+    }
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}

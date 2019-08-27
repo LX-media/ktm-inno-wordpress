@@ -1,0 +1,92 @@
+.et_pb_lxblog_0{
+    z-index: 1;
+    position: relative;
+    height: 986px;
+    #particles-js{
+        z-index: 1;
+        @media screen and (max-width: $break-mobile){
+            height: 100%;
+        }
+    }
+
+    .et_pb_ajax_pagination_container {
+        max-width: 1400px;     
+        z-index: 1;   
+        position: absolute;
+        left: 50%;
+        margin-top: 310px;
+        transform: translateX(-50%);
+        height: 986px;
+        display: flex;
+        justify-content: space-evenly;
+
+        @media screen and (max-width: $break-mobile) {
+            flex-direction: column;
+            margin-top: 0;
+            left: 0;
+            transform: none;
+        }
+
+        article {
+            display: table;
+            width: 420px;
+            margin: 0 40px;
+            @media screen and (max-width: $break-tablet) {
+                max-width: calc(50vw - 60px);
+                margin: 0 10px;
+                &:first-child{
+                    padding-left: 15px;
+                }
+                &:last-child{
+                    padding-right: 15px;
+                }
+            }
+            @media screen and (max-width: $break-mobile) {
+                max-width: calc(100vw - 60px);
+
+                &:first-child{
+                    padding-left: 15px;
+                }
+                &:last-child{
+                    padding-right: 0; 
+                    padding-left: 15px;
+                }
+            }
+
+            h2{
+                font-size: 40px;
+                line-height: 34px;
+                width: 60%;
+                margin-bottom: 15px;
+                margin-top: 30px;
+
+                @media screen and (max-width: $break-tablet) {
+                    width: 90%;          
+                }
+            }
+
+            .post-meta{
+                margin-top: 5px;
+                float: right;
+                text-transform: uppercase;
+                .published{
+                    color: $orange;
+                }
+
+                @media screen and (max-width: $break-tablet) {
+                    top: 245px;
+                }
+            }
+
+            .entry-featured-image-url{margin-bottom: 0;}
+            
+            img {
+                width: 100%;
+                max-height: 310px;
+                object-fit: cover;
+                border-bottom: 12px solid $orange;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

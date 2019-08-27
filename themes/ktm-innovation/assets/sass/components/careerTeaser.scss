@@ -1,0 +1,66 @@
+.lxmo_career_teaser {
+    background: url("/wp-content/plugins/lx-modules/includes/modules/CareerTeaser/img/back.png"); 
+    max-width: 100%;
+    width: 100vw;
+    // height: 986px;
+
+    .LxContainer {
+        max-width: 1900px;
+        height: 986px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+
+        @media screen and (max-width: $break-mobile){
+            flex-direction: column;
+        }
+
+        .LxBox {
+            width: 458px; // ??
+
+            @media screen and (max-width: $break-tablet){
+                width: calc(50% - 40px);
+            }
+
+            @media screen and (max-width: $break-mobile){
+                width: calc(100% - 40px);
+                margin: 0 auto;
+            }
+
+            &.LxBoxOne {
+                margin-top: 290px;
+
+                @media screen and (max-width: $break-mobile){
+                    margin-top: 0;
+                }
+            }
+
+            &.LxBoxTwo {
+                margin-top: 440px;
+                @media screen and (max-width: $break-mobile){
+                    margin-top: 0;
+                }
+            }
+
+            p {
+                margin-top: 40px;
+                margin-bottom: 50px;
+                font-size: 18px;
+                line-height: 28px;
+                width: 420px;
+
+                @media screen and (max-width: $break-tablet){
+                    width: calc(100% - 40px);
+                }
+            }
+            
+            .LxBtn{
+                width: 100%;
+                margin-left: 30px;
+            }
+        }
+    
+
+    }
+
+}

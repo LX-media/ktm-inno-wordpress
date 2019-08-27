@@ -1,0 +1,130 @@
+footer{
+
+
+    #LxFooter {
+        display: flex;
+
+        @media screen and (max-width: $break-mobile) {
+            flex-direction: column;
+        }
+
+        .LxFooterContentContainer{
+            position: relative;
+            width: 40vw;
+
+            @media screen and (max-width: $break-mobile) {
+                width: 100vw;
+                max-width: 100%;
+            }
+
+
+            .LxFooterInner {
+                position: relative;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 420px;
+                display: block;
+                @media screen and (max-width: $break-mobile) {
+                    transform: none;
+                    left: 0;
+                    top: 0;
+                }
+
+                @media screen and (max-width: $break-tablet) {
+                    width: auto;
+                    padding: 0 30px;
+                }
+                .LxFooterContent{
+                    
+                    h3 {
+                        color: $white;
+                        font-size: 60px;
+                        line-height: 88px;
+
+                        @media screen and (max-width: $break-tablet) {
+                            font-size: 40px;
+                            line-height: 64px;
+                        }
+                    }
+
+
+                    p {
+                        font-size: 20px;
+                        line-height: 28px;
+                        margin-top: 20px;
+
+                        @media screen and (max-width: $break-tablet) {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+
+                    &:nth-child(2){
+                        p {
+                            font-size: 18px;
+
+                            @media screen and (max-width: $break-tablet) {
+                                font-size: 14px;
+                                line-height: 18px;
+                            }
+                        }
+
+                    }
+
+                    a {
+                        color: $orange;
+                    }
+                }
+            }
+        } 
+
+        .LxFooterImageContainer {
+            @media screen and (max-width: $break-laptop){
+                width: 60vw;
+            }
+
+            @media screen and (max-width: $break-mobile){
+                width: 100vw;
+                max-width: 100%;
+            }
+        }
+    }
+
+    #LxFooterBottom{
+        line-height: 80px;
+
+        @media screen and (max-width: $break-mobile) {
+            line-height: 20px;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+        .LxFooterBottom{
+            #menu-footer-bottom{
+                li{
+                    display: inline;
+                    margin: 0 70px;
+
+                    @media screen and (max-width: $break-mobile) {
+                        display: block;
+                        margin: 20px 0 0 30px ;
+                    }
+                    a{
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        color: $grey;
+                    }
+                }
+            }
+        }
+
+        .et-social-icons{
+            //tbd
+
+            @media screen and (max-width: $break-mobile) {
+                margin: 40px 0;
+            }
+        }
+    
+    }
+}

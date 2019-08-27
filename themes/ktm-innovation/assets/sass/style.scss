@@ -1,0 +1,46 @@
+/*
+    Theme Name:   KTM Inno
+    Theme URI:    https://www.lx-media.at
+    Description:  Custom Theme for KTM Inno
+    Author:       LX media GmbH
+    Author URI:   https://www.lx-media.at
+    Template:     Divi
+    Version:      1.0.0
+    Text Domain:  divi-child
+*/
+
+@import "base/reset.scss";
+
+/* import divi styles */
+@import "../Divi/style.css";
+@import "../Divi/includes/builder/styles/magnific_popup.css";
+
+/* BASE */
+@import "base/variables.scss";
+
+/* MIXINS */
+@import "mixins/clearfix.scss";
+@import "mixins/font-mixin.scss";
+
+body {
+
+}
+
+@import "base/headlines.scss";
+@import "base/typography.scss";
+@import "base/buttons.scss";
+
+/* FORM ELEMENTS */
+
+
+/* LAYOUT */
+@import "layout/base.scss";
+@import "layout/header.scss";
+@import "layout/footer.scss";
+
+
+/* COMPONENTS */
+@import "components/careerTeaser.scss";
+@import "components/blog.scss";
+@import "components/stage.scss";
+@import "components/presentation.scss";
