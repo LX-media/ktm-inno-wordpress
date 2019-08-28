@@ -4,5 +4,79 @@
     background-repeat: no-repeat;
     background-position: left;
     height: 1084px;
-    z-index: 2;
+    z-index: 2; 
+
+    .LxContainer{
+        position: relative;
+        height: 100%;
+    }
+
+    span.excerpt {
+        color:$black;
+        position: absolute;
+        top: 227px;
+        width: 424px;
+        right: 0;
+
+        &:before{
+            content: "";
+            width: 100px;
+            height: 1px;
+            background: black;
+            top:3px;
+            // right: 0;
+            position: absolute;
+        }
+    }
+
+    nav.streams-menu {
+        margin-left: 340px;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        ol{
+            display: flex;
+            list-style: none;
+            flex-direction: column;
+            flex-wrap: wrap;
+            counter-reset: my-awesome-counter;
+            margin: 0;
+            padding-left:45px;
+            margin-left:45px;
+
+            li{
+                font-size: 50px;
+                line-height: 60px;
+                margin-bottom: 40px;
+                max-width: 460px;
+                counter-increment: my-awesome-counter;
+                display: flex;
+                @include font('bold');
+                left: 45px;
+            
+                &:before{
+                    content: "0" counter(my-awesome-counter);
+                    color: $white;
+                    @include font('bold');
+                    font-size: 20px;
+                    position: absolute;
+                    top: -10px;
+                    left: -45px;
+                }
+
+                a{
+                    text-transform: uppercase;
+                    color:$black;
+            
+                    &:hover{
+                        color: $white;
+                    }
+                }
+            
+            }
+        }
+
+    }
 }
+

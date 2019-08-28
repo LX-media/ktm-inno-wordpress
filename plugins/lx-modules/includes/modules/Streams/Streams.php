@@ -27,7 +27,7 @@ class LXMO_Streams extends ET_Builder_Module {
 
 		$menu = '<nav class="streams-menu">';
 
-		$menuClass = 'fullwidth-menu nav';
+		$menuClass = 'streams-menu nav';
 
 		// divi_disable_toptier option available in Divi theme only
 		if ( ! et_is_builder_plugin_active() && 'on' === et_get_option( 'divi_disable_toptier' ) ) {
@@ -44,6 +44,7 @@ class LXMO_Streams extends ET_Builder_Module {
 			'menu_class'     => $menuClass,
 			'menu_id'        => '',
 			'echo'           => false,
+			'items_wrap' 	=> '<ol id="%1$s" class="%2$s">%3$s</ol>'
 		);
 
 		if ( '' !== $args['menu_id'] ) {
@@ -54,11 +55,11 @@ class LXMO_Streams extends ET_Builder_Module {
 
 		if ( empty( $primaryNav ) ) {
 			$menu .= sprintf(
-				'<ul class="%1$s">
+				'<ol class="%1$s">
 					%2$s',
 				esc_attr( $menuClass ),
 				( ! et_is_builder_plugin_active() && 'on' === et_get_option( 'divi_home_link' )
-					? sprintf( '<li%1$s><a href="%2$s">%3$s</a></li>',
+					? sprintf( '<li><a href="%2$s">%3$s</a></li>',
 						( is_home() ? ' class="current_page_item"' : '' ),
 						esc_url( home_url( '/' ) ),
 						esc_html__( 'Home', 'et_builder' )
@@ -79,7 +80,7 @@ class LXMO_Streams extends ET_Builder_Module {
 
 			$menu .= ob_get_contents();
 
-			$menu .= '</ul>';
+			$menu .= '</ol>';
 
 			ob_end_clean();
 		} else {
@@ -121,6 +122,7 @@ class LXMO_Streams extends ET_Builder_Module {
 		);
 	}
 
+
 	function render( $attrs, $content = null, $render_slug ) {
 		$menu_id  = $this->props['menu_id'];
 
@@ -135,7 +137,7 @@ class LXMO_Streams extends ET_Builder_Module {
 		<div class="LxStreams">
 			<div class="LxContainer">
 				<?php echo $menu; ?>
-				
+				<span class="excerpt"> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</span>
 			</div>
 		</div>
 		<span class="triangle bottom grey"></span>

@@ -746,6 +746,76 @@ footer #LxFooterBottom {
   background-position: left;
   height: 1084px;
   z-index: 2; }
+  .LxStreams .LxContainer {
+    position: relative;
+    height: 100%; }
+  .LxStreams span.excerpt {
+    color: #000000;
+    position: absolute;
+    top: 227px;
+    width: 424px;
+    right: 0; }
+    .LxStreams span.excerpt:before {
+      content: "";
+      width: 100px;
+      height: 1px;
+      background: black;
+      top: 3px;
+      position: absolute; }
+  .LxStreams nav.streams-menu {
+    margin-left: 340px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%); }
+    .LxStreams nav.streams-menu ol {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      list-style: none;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      counter-reset: my-awesome-counter;
+      margin: 0;
+      padding-left: 45px;
+      margin-left: 45px; }
+      .LxStreams nav.streams-menu ol li {
+        font-size: 50px;
+        line-height: 60px;
+        margin-bottom: 40px;
+        max-width: 460px;
+        counter-increment: my-awesome-counter;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-family: proxima-nova,sans-serif;
+        font-weight: 700;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-style: normal;
+        left: 45px; }
+        .LxStreams nav.streams-menu ol li:before {
+          content: "0" counter(my-awesome-counter);
+          color: #FFFFFF;
+          font-family: proxima-nova,sans-serif;
+          font-weight: 700;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-style: normal;
+          font-size: 20px;
+          position: absolute;
+          top: -10px;
+          left: -45px; }
+        .LxStreams nav.streams-menu ol li a {
+          text-transform: uppercase;
+          color: #000000; }
+          .LxStreams nav.streams-menu ol li a:hover {
+            color: #FFFFFF; }
 
 .LxFrontPage {
   height: 530px; }

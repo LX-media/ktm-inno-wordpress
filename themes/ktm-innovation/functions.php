@@ -53,26 +53,24 @@
     // add_action( 'wp_print_scripts', 'deregister_script', 100 );
 
 
-// custom post type function
-function create_posttype() {
- 
-    register_post_type( 'projects',
-    // CPT Options
-        array(
-            'labels' => array(
-                'name' => __( 'Projects' ),
-                'singular_name' => __( 'Project' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'projects'),
-        )
-    );
-}
-// Hooking up our function to theme setup
-add_action( 'init', 'create_posttype' );
-
-
+    // custom post type function
+    function create_posttype() {
+    
+        register_post_type( 'projects',
+        // CPT Options
+            array(
+                'labels' => array(
+                    'name' => __( 'Projects' ),
+                    'singular_name' => __( 'Project' )
+                ),
+                'public' => true,
+                'has_archive' => true,
+                'rewrite' => array('slug' => 'projects'),
+            )
+        );
+    }
+    // Hooking up our function to theme setup
+    add_action( 'init', 'create_posttype' );
 
 
     // REMOVE WP EMOJI
