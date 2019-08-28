@@ -24,7 +24,9 @@
 		document.documentElement.className = 'js';
 	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script> 
-	<script src="https://www.vantajs.com/dist/vanta.net.min.js"></script> 
+	<script src="https://www.vantajs.com/dist/vanta.net.min.js"></script>
+	
+	<link rel="stylesheet" href="https://use.typekit.net/vvz2ixf.css">
 
 	<?php wp_head(); ?>
 </head>

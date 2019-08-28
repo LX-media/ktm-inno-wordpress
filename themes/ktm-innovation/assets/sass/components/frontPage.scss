@@ -74,6 +74,7 @@
             z-index: 99;
 
             li {
+                @include font('bold');
                 font-size: 80px;
                 text-transform: uppercase;
                 padding: 0 10px;

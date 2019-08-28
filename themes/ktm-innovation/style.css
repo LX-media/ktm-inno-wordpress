@@ -142,6 +142,27 @@ input, select {
 /* import divi styles */
 /* BASE */
 /* MIXINS */
+body {
+  font-family: proxima-nova,sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: proxima-nova,sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+}
+
 h3 {
   font-size: 50px;
   line-height: 50px;
@@ -388,6 +409,11 @@ body.noScroll {
 }
 
 #LxMenu .LxMenuContainer .LxMenuInner ul li a {
+  font-family: proxima-nova,sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
   font-size: 60px;
   line-height: 80px;
   color: #FFFFFF;
@@ -1041,6 +1067,11 @@ footer #LxFooterBottom .LxFooterBottom #menu-footer-bottom li a:hover {
 }
 
 .LxFrontPage .fullwidth-menu-nav .fullwidth-menu li {
+  font-family: proxima-nova,sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
   font-size: 80px;
   text-transform: uppercase;
   padding: 0 10px;
