@@ -6,6 +6,49 @@ body{
 
 #page-container{
     padding-top: 0;
+
+    .LxContainer {
+        max-width: $container;
+        margin: 0 auto;
+    }
+
+    .triangle {
+        height: 40px;
+        
+        width: 100%;
+        display: block;
+        position: absolute;
+        bottom: -40px;
+        z-index: 9999;
+
+        &.grey{
+            background: transparent;
+
+            &:before{
+                content: "";
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-top: 40px solid $grey;
+                border-left: 60px solid transparent;
+                z-index: 999;
+            }
+    
+            &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-top: 40px solid $grey;
+                border-right: calc(100vw - 77px) solid transparent;
+            }
+        }
+
+    }
 }
 
 #et-main-area{
@@ -22,6 +65,7 @@ body{
     max-width: 100%;
     margin: 0 auto;
     padding: 0 !important;
+    z-index: 1;
 }
 
 .et_pb_module {

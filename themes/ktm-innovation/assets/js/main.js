@@ -4,7 +4,10 @@ require.config({
     paths: {
         // helpers
         "jquery"        : "helper/jquery.min",
-        "particles"     : "helper/particles.min",
+        // "particles"     : "helper/particles.min",
+        "three"         : "helper/three.min",
+        "vanta"         : "helper/vanta.net.min",
+ 
 
         // custom js
         "app"           : "app",

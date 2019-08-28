@@ -4,15 +4,17 @@
     width: 100vw;
     // height: 986px;
 
-    .LxContainer {
-        max-width: 1900px;
+    .LxCareerTeaser {
+        
         height: 986px;
         margin: 0 auto;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
 
         @media screen and (max-width: $break-mobile){
             flex-direction: column;
+            justify-content: space-around;
+
         }
 
         .LxBox {
@@ -29,9 +31,11 @@
 
             &.LxBoxOne {
                 margin-top: 290px;
+                margin-left: $leftMargin;
 
                 @media screen and (max-width: $break-mobile){
                     margin-top: 0;
+                    margin-left: 0;
                 }
             }
 

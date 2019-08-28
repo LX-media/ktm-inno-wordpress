@@ -99,7 +99,15 @@ footer{
             margin-top: 20px;
             padding-bottom: 20px;
         }
+
+        .LxFooterBottomInner{
+            display: flex;
+        }
+
         .LxFooterBottom{
+            .menu-footer-bottom-container{
+                max-width: 1096px;
+            }
             #menu-footer-bottom{
                 li{
                     display: inline;
@@ -107,12 +115,17 @@ footer{
 
                     @media screen and (max-width: $break-mobile) {
                         display: block;
-                        margin: 20px 0 0 30px ;
+                        margin: 20px 0 0 30px;
                     }
                     a{
                         font-size: 16px;
                         text-transform: uppercase;
                         color: $grey;
+
+                        &:hover{
+                            transition: $shortTransition;
+                            color: $orange;
+                        }
                     }
                 }
             }

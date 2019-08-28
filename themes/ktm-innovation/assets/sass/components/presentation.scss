@@ -1,12 +1,13 @@
 .LxCompany {
     height: 986px;
     background: $background;
-    display: flex;
+
+    .LxCompanyInner{
+        display: flex;
 
     @media screen and (max-width: $break-mobile){
         flex-direction: column;
     }
-
 
     .LxBox {
         @media screen and (max-width: $break-tablet){
@@ -22,7 +23,7 @@
             width: 458px; // ??
             margin-top: 0;
             padding-top: 290px;
-            margin-left: 376px;
+            margin-left: $leftMargin;
             h3 {
                 text-transform: uppercase;
             }
@@ -55,6 +56,9 @@
                 margin-right: 78px;
                 width: 219px;
 
+                &:last-child{
+                    margin-right: 0;
+                }
                 @media screen and (max-width: $break-mobile){
                     width: 200px;
                     margin: 5px auto;
@@ -63,8 +67,6 @@
 
             }
         }
-
-
 
         p {
             margin-top: 40px;
@@ -83,6 +85,9 @@
             
         }
     }
+
+    }
+    
 
 
 
