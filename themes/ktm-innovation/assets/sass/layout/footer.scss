@@ -99,11 +99,12 @@ footer{
             margin-top: 20px;
             padding-bottom: 20px;
         }
-        .LxFooterBottom{
-            .LxFooterBottomInner{
-                display: flex;
-            }
 
+        .LxFooterBottomInner{
+            display: flex;
+        }
+
+        .LxFooterBottom{
             .menu-footer-bottom-container{
                 max-width: 1096px;
             }
@@ -114,7 +115,7 @@ footer{
 
                     @media screen and (max-width: $break-mobile) {
                         display: block;
-                        margin: 20px 0 0 30px ;
+                        margin: 20px 0 0 30px;
                     }
                     a{
                         font-size: 16px;

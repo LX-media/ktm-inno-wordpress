@@ -137,6 +137,7 @@ class LXMO_Streams extends ET_Builder_Module {
 				
 			</div>
 		</div>
+		<span class="triangle grey"></span>
 		<?php
 		$output = ob_get_contents();
 		ob_end_clean();

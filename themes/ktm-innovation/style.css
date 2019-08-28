@@ -151,6 +151,34 @@ body.noScroll {
   #page-container .LxContainer {
     max-width: 1460px;
     margin: 0 auto; }
+  #page-container .triangle {
+    height: 40px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    z-index: 9999; }
+    #page-container .triangle.grey {
+      background: transparent; }
+      #page-container .triangle.grey:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top: 40px solid #878787;
+        border-left: 60px solid transparent;
+        z-index: 999; }
+      #page-container .triangle.grey:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-top: 40px solid #878787;
+        border-right: calc(100vw - 77px) solid transparent; }
 
 #et-main-area {
   z-index: 0;
@@ -163,7 +191,8 @@ body.noScroll {
   width: 100vw;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 !important; }
+  padding: 0 !important;
+  z-index: 1; }
 
 .et_pb_module {
   margin-bottom: 0 !important; }
@@ -378,7 +407,7 @@ footer #LxFooterBottom {
       line-height: 20px;
       margin-top: 20px;
       padding-bottom: 20px; } }
-  footer #LxFooterBottom .LxFooterBottom .LxFooterBottomInner {
+  footer #LxFooterBottom .LxFooterBottomInner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
@@ -686,7 +715,8 @@ footer #LxFooterBottom {
   background-image: url("/wp-content/plugins/lx-modules/includes/modules/Streams/img/c-1.png");
   background-repeat: no-repeat;
   background-position: left;
-  height: 1084px; }
+  height: 1084px;
+  z-index: 2; }
 
 .LxFrontPage {
   height: 530px; }
