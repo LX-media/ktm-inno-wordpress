@@ -23,7 +23,7 @@
 @import "mixins/font-mixin.scss";
 
 body {
-
+    @include font('regular');
 }
 
 @import "base/headlines.scss";

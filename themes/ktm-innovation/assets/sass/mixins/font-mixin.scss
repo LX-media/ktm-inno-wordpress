@@ -1,3 +1,15 @@
 @mixin font($weight) {
-    
+    @if $weight == 'regular' {
+        font-family: proxima-nova,sans-serif;
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-style: normal;
+    } @else if $weight == 'bold' {
+        font-family: proxima-nova,sans-serif;
+        font-weight: 700;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-style: normal;
+    }
 }

@@ -7,8 +7,107 @@
 		"uuidString": "93665232-0508-4100-80EC-8457469BDA81"
 		}
 	],
-"creatorBuild": "31486",
+"creatorBuild": "31491",
 "files": {
+	"/assets/img/ktm-innovation-logo-inv.png": {
+		"ft": 32768,
+		"iS": 20725,
+		"oA": 0,
+		"oAP": "/assets/img/ktm-innovation-logo-inv.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/js-min/app-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js-min/app-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/js-min/header-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js-min/header-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/js-min/jquery.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js-min/jquery.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/js-min/main-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js-min/main-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/js-min/particles.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js-min/particles.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/js-min/require-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js-min/require-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/js-min/three.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js-min/three.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/js-min/vanta.net.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js-min/vanta.net.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/assets/js/app.js": {
 		"bF": 0,
 		"ft": 64,
@@ -42,6 +141,25 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/assets/js/helper/particles.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js-min/particles.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/js/helper/particlesjs-config.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/assets/js/helper/particlesjs-config-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/assets/js/helper/require.js": {
 		"bF": 0,
 		"ft": 64,
@@ -49,6 +167,28 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/assets/js-min/require-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/js/helper/three.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js-min/three.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/js/helper/vanta.net.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js-min/vanta.net.min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -352,6 +492,19 @@
 		"oAP": "/assets/sass/.sass-cache/e3de8e61f915cc3c54fe613271169a6e70aa1fbb/style.scssc",
 		"oF": 0
 		},
+	"/assets/sass/base/buttons.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/buttons.css",
+		"oF": 0,
+		"oS": 1,
+		"uL": 1
+		},
 	"/assets/sass/base/headlines.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -360,7 +513,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/css/headlines.css",
+		"oAP": "/assets/headlines.css",
 		"oF": 0,
 		"oS": 1,
 		"uL": 1
@@ -373,7 +526,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/css/reset.css",
+		"oAP": "/assets/reset.css",
 		"oF": 0,
 		"oS": 1,
 		"uL": 1
@@ -386,7 +539,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/css/typography.css",
+		"oAP": "/assets/typography.css",
 		"oF": 0,
 		"oS": 1,
 		"uL": 1
@@ -399,7 +552,124 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/css/variables.css",
+		"oAP": "/assets/variables.css",
+		"oF": 0,
+		"oS": 1,
+		"uL": 1
+		},
+	"/assets/sass/components/blog.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/blog.css",
+		"oF": 0,
+		"oS": 1,
+		"uL": 1
+		},
+	"/assets/sass/components/careerTeaser.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/careerTeaser.css",
+		"oF": 0,
+		"oS": 1,
+		"uL": 1
+		},
+	"/assets/sass/components/frontPage.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/frontPage.css",
+		"oF": 0,
+		"oS": 1,
+		"uL": 1
+		},
+	"/assets/sass/components/presentation.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/presentation.css",
+		"oF": 0,
+		"oS": 1,
+		"uL": 1
+		},
+	"/assets/sass/components/stage.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/stage.css",
+		"oF": 0,
+		"oS": 1,
+		"uL": 1
+		},
+	"/assets/sass/components/streams.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/streams.css",
+		"oF": 0,
+		"oS": 1,
+		"uL": 1
+		},
+	"/assets/sass/layout/base.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/base.css",
+		"oF": 0,
+		"oS": 1,
+		"uL": 1
+		},
+	"/assets/sass/layout/footer.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/footer.css",
+		"oF": 0,
+		"oS": 1,
+		"uL": 1
+		},
+	"/assets/sass/layout/header.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/header.css",
 		"oF": 0,
 		"oS": 1,
 		"uL": 1
@@ -412,7 +682,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/css/clearfix.css",
+		"oAP": "/assets/clearfix.css",
 		"oF": 0,
 		"oS": 1,
 		"uL": 1
@@ -425,7 +695,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/css/font-mixin.css",
+		"oAP": "/assets/font-mixin.css",
 		"oF": 0,
 		"oS": 1,
 		"uL": 1
@@ -438,10 +708,26 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/css/style.css",
+		"oAP": "/style.css",
 		"oF": 0,
 		"oS": 1,
 		"uL": 1
+		},
+	"/build/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/.gitignore",
+		"oF": 0
+		},
+	"/footer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/footer.php",
+		"oF": 0
 		},
 	"/functions.php": {
 		"cB": 0,
@@ -450,6 +736,33 @@
 		"oA": 0,
 		"oAP": "/functions.php",
 		"oF": 0
+		},
+	"/header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/header.php",
+		"oF": 0
+		},
+	"/prepros-6.config": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/prepros-6.config",
+		"oF": 0
+		},
+	"/screenshot.PNG": {
+		"ft": 32768,
+		"iS": 127140,
+		"oA": 0,
+		"oAP": "/screenshot.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
 		},
 	"/style.css": {
 		"aP": 1,
@@ -472,7 +785,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-obama",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 562659002.050421
+	"lastBuiltDate": 588685473.19075596
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2456,7 +2769,7 @@
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "../../../",
+		"autoOutputPathRelativePath": "../../",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
