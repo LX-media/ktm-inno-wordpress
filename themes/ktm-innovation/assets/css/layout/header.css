@@ -1,8 +1,0 @@
-#main-header {
-  width: 100vw;
-  background: orange; }
-  #main-header .LxHeader {
-    position: relative; }
-    #main-header .LxHeader .LxBurger {
-      position: absolute;
-      right: 20%; }

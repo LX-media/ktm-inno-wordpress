@@ -1,0 +1,1 @@
+require.config({baseUrl:"/wp-content/themes/ktm-innovation/assets/js/",paths:{jquery:"helper/jquery.min",three:"helper/three.min",vanta:"helper/vanta.net.min",app:"app",header:"components/header"}}),"function"==typeof jQuery&&define("jquery",function(){return jQuery}),require(["app"],function(e){"use strict";var n=new e});
