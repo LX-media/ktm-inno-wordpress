@@ -4,6 +4,7 @@ class LXMO_Streams extends ET_Builder_Module {
 
 	public $slug       = 'lxmo_streams';
 	public $vb_support = 'on';
+	public $child_slug = 'lxmo_streams_item';
 
 	protected $module_credits = array(
 		'module_uri' => 'www.lx-media.at',
@@ -13,137 +14,165 @@ class LXMO_Streams extends ET_Builder_Module {
 
 	public function init() {
 		$this->name = esc_html__( 'Leistungen / Streams Overview', 'lxmo-lx-modules' );
-	}
-	static function get_fullwidth_menu( $args = array() ) {
-		$defaults = array(
-			'submenu_direction' => '',
-			'menu_id'           => '',
+
+		$this->settings_modal_toggles = array(
+			'advanced' => array(
+				'toggles' => array(
+					'icon'          => esc_html__( 'Icon', 'et_builder' ),
+					'toggle_layout' => esc_html__( 'Toggle', 'et_builder' ),
+					'text'          => array(
+						'title'    => esc_html__( 'Text', 'et_builder' ),
+						'priority' => 49,
+					),
+				),
+			),
 		);
 
-		// modify the menu item to include the required data
-		add_filter( 'wp_setup_nav_menu_item', array( 'ET_Builder_Module_Fullwidth_Menu', 'modify_fullwidth_menu_item' ) );
-
-		$args = wp_parse_args( $args, $defaults );
-
-		$menu = '<nav class="fullwidth-menu-nav">';
-
-		$menuClass = 'fullwidth-menu nav';
-
-		// divi_disable_toptier option available in Divi theme only
-		if ( ! et_is_builder_plugin_active() && 'on' === et_get_option( 'divi_disable_toptier' ) ) {
-			$menuClass .= ' et_disable_top_tier';
-		}
-		$menuClass .= ( '' !== $args['submenu_direction'] ? sprintf( ' %s', esc_attr( $args['submenu_direction'] ) ) : '' );
-
-		$primaryNav = '';
-
-		$menu_args = array(
-			'theme_location' => 'primary-menu',
-			'container'      => '',
-			'fallback_cb'    => '',
-			'menu_class'     => $menuClass,
-			'menu_id'        => '',
-			'echo'           => false,
+		$this->advanced_fields = array(
+			'borders'               => array(
+				'default' => array(
+					'css'      => array(
+						'main' => array(
+							'border_radii'  => "{$this->main_css_element} .lxmo_streams_item",
+							'border_styles' => "{$this->main_css_element} .lxmo_streams_item",
+						),
+					),
+					'defaults' => array(
+						'border_radii' => 'on||||',
+						'border_styles' => array(
+							'width' => '1px',
+							'color' => '#d9d9d9',
+							'style' => 'solid',
+						),
+					),
+				),
+			),
+			'box_shadow'            => array(
+				'default' => array(
+					'css' => array(
+						'main' => '%%order_class%% .et_pb_toggle',
+					),
+				),
+			),
+			'fonts'                 => array(
+				'toggle'        => array(
+					'label'            => esc_html__( 'Title', 'et_builder' ),
+					'css'              => array(
+						'main'      => "{$this->main_css_element} h5.et_pb_toggle_title, {$this->main_css_element} h1.et_pb_toggle_title, {$this->main_css_element} h2.et_pb_toggle_title, {$this->main_css_element} h3.et_pb_toggle_title, {$this->main_css_element} h4.et_pb_toggle_title, {$this->main_css_element} h6.et_pb_toggle_title",
+						'important' => 'plugin_only',
+					),
+					'header_level'     => array(
+						'default' => 'h5',
+					),
+					'options_priority' => array(
+						'toggle_text_color' => 9,
+					),
+				),
+				'closed_toggle' => array(
+					'label'           => esc_html__( 'Closed Title', 'et_builder' ),
+					'css'             => array(
+						'main'      => "{$this->main_css_element} .et_pb_toggle_close h5.et_pb_toggle_title, {$this->main_css_element} .et_pb_toggle_close h1.et_pb_toggle_title, {$this->main_css_element} .et_pb_toggle_close h2.et_pb_toggle_title, {$this->main_css_element} .et_pb_toggle_close h3.et_pb_toggle_title, {$this->main_css_element} .et_pb_toggle_close h4.et_pb_toggle_title, {$this->main_css_element} .et_pb_toggle_close h6.et_pb_toggle_title",
+						'important' => 'plugin_only',
+					),
+					'hide_text_color' => true,
+					'line_height'     => array(
+						'default' => '1.7em',
+					),
+					'font_size'       => array(
+						'default' => '16px',
+					),
+					'letter_spacing'  => array(
+						'default' => '0px',
+					),
+				),
+				'body'          => array(
+					'label'          => esc_html__( 'Body', 'et_builder' ),
+					'css'            => array(
+						'main'         => "{$this->main_css_element} .et_pb_toggle_content",
+						'limited_main' => "{$this->main_css_element} .et_pb_toggle_content, {$this->main_css_element} .et_pb_toggle_content p",
+						'line_height'  => "{$this->main_css_element} .et_pb_toggle_content p",
+					),
+					'block_elements' => array(
+						'tabbed_subtoggles' => true,
+					),
+				),
+			),
+			'margin_padding' => array(
+				'draggable_padding' => false,
+				'css'        => array(
+					'padding'   => "{$this->main_css_element} .et_pb_toggle_content",
+					'margin'    => $this->main_css_element,
+					'important' => 'all',
+				),
+			),
+			'button'                => false,
 		);
 
-		if ( '' !== $args['menu_id'] ) {
-			$menu_args['menu'] = (int) $args['menu_id'];
-		}
+		$this->custom_css_fields = array(
+			'toggle' => array(
+				'label'    => esc_html__( 'Toggle', 'et_builder' ),
+				'selector' => '.et_pb_toggle',
+			),
+			'open_toggle' => array(
+				'label'    => esc_html__( 'Open Toggle', 'et_builder' ),
+				'selector' => '.et_pb_toggle_open',
+			),
+			'toggle_title' => array(
+				'label'    => esc_html__( 'Toggle Title', 'et_builder' ),
+				'selector' => '.et_pb_toggle_title',
+			),
+			'toggle_icon' => array(
+				'label'    => esc_html__( 'Toggle Icon', 'et_builder' ),
+				'selector' => '.et_pb_toggle_title:before',
+			),
+			'toggle_content' => array(
+				'label'    => esc_html__( 'Toggle Content', 'et_builder' ),
+				'selector' => '.et_pb_toggle_content',
+			),
+		);
 
-		$primaryNav = wp_nav_menu( apply_filters( 'et_fullwidth_menu_args', $menu_args ) );
-
-		if ( empty( $primaryNav ) ) {
-			$menu .= sprintf(
-				'<ul class="%1$s">
-					%2$s',
-				esc_attr( $menuClass ),
-				( ! et_is_builder_plugin_active() && 'on' === et_get_option( 'divi_home_link' )
-					? sprintf( '<li%1$s><a href="%2$s">%3$s</a></li>',
-						( is_home() ? ' class="current_page_item"' : '' ),
-						esc_url( home_url( '/' ) ),
-						esc_html__( 'Home', 'et_builder' )
-					)
-					: ''
-				)
-			);
-
-			ob_start();
-
-			// @todo: check if Fullwidth Menu module works fine with no menu selected in settings
-			if ( et_is_builder_plugin_active() ) {
-				wp_page_menu();
-			} else {
-				show_page_menu( $menuClass, false, false );
-				show_categories_menu( $menuClass, false );
-			}
-
-			$menu .= ob_get_contents();
-
-			$menu .= '</ul>';
-
-			ob_end_clean();
-		} else {
-			$menu .= $primaryNav;
-		}
-
-		$menu .= '</nav>';
-
-		remove_filter( 'wp_setup_nav_menu_item', array( 'ET_Builder_Module_Fullwidth_Menu', 'modify_fullwidth_menu_item' ) );
-
-		return $menu;
+		$this->help_videos = array(
+			array(
+				'id'   => esc_html( 'OBbuKXTJyj8' ),
+				'name' => esc_html__( 'An introduction to the Accordion module', 'et_builder' ),
+			),
+		);
 	}
+
 
 	public function get_fields() {
 		return array(
-			'menu_id' => array(
-				'label'           => esc_html__( 'Menu', 'et_builder' ),
-				'type'            => 'select',
-				'option_category' => 'basic_option',
-				'options'         => et_builder_get_nav_menus_options(),
-				'description'     => sprintf(
-					'<p class="description">%2$s. <a href="%1$s" target="_blank">%3$s</a>.</p>',
-					esc_url( admin_url( 'nav-menus.php' ) ),
-					esc_html__( 'Select a menu that should be used in the module', 'et_builder' ),
-					esc_html__( 'Click here to create new menu', 'et_builder' )
-				),
-				'toggle_slug'      => 'main_content',
-				'computed_affects' => array(
-					'__menu',
-				),
-			),
-			'__menu' => array(
-				'type'                => 'computed',
-				'computed_callback'   => array( 'LXMO_Streams', 'get_fullwidth_menu' ),
-				'computed_depends_on' => array(
-					'menu_id'
-				),
-			),
+			
+
+
 		);
 	}
 
+	
 	function render( $attrs, $content = null, $render_slug ) {
-		$menu_id  = $this->props['menu_id'];
-
-		$menu = self::get_fullwidth_menu( array(
-			'menu_id'  => $menu_id,
-		) );
 
 
-		ob_start();
-		?>
-		<div class="LxStreams">
-			<div class="LxContainer">
-				<?php echo $menu; ?>
-				
-			</div>
-		</div>
-		<span class="triangle grey"></span>
-		<?php
-		$output = ob_get_contents();
-		ob_end_clean();
-		return $output;	// retrieves the attachment ID from the file URL
+		$output = sprintf(
+			'<span class="triangle top grey"></span>
+			<div%3$s class="LxStreams %2$s">
+				%5$s
+				%4$s
+				%1$s
+			</div> <!-- .et_pb_accordion -->
+			<span class="triangle bottom grey"></span>',
+			$this->content,
+			$this->module_classname( $render_slug ),
+			$this->module_id()
+		);
 
+		return $output;
+	}
+
+	public function add_new_child_text() {
+		return esc_html__( 'Add New Accordion Item', 'et_builder' );
 	}
 }
 
+
 new LXMO_Streams;
+

@@ -67,7 +67,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 		VANTA.NET({
 		el: "#vantajs",
 		color: 0xff6600,
-		backgroundColor: 0x989898,
+		backgroundColor: 0xffffff,
 		points: 8.00,
 		maxDistance: 22.00,
 		spacing: 16.00,
