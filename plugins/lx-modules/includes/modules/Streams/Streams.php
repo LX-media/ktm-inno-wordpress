@@ -25,7 +25,7 @@ class LXMO_Streams extends ET_Builder_Module {
 
 		$args = wp_parse_args( $args, $defaults );
 
-		$menu = '<nav class="fullwidth-menu-nav">';
+		$menu = '<nav class="streams-menu">';
 
 		$menuClass = 'fullwidth-menu nav';
 
