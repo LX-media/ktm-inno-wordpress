@@ -934,7 +934,7 @@ footer #LxFooterBottom {
     .LxFrontPage .LxHeaderFacts .chw-widget:nth-child(2) {
       margin-top: 30px;
       margin-bottom: 20px; }
-    .LxFrontPage .LxHeaderFacts .chw-widget a {
+    .LxFrontPage .LxHeaderFacts a {
       color: #FF6600;
       text-transform: uppercase;
       text-decoration: none; }

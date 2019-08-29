@@ -136,46 +136,38 @@ class LXMO_Streams extends ET_Builder_Module {
 		
 		$titles = wp_get_nav_menu_items($menu_id); 
 
+		$menu = wp_get_nav_menu_object($menu_id);
+		$menu_items = wp_get_nav_menu_items($menu->term_id);
+
+		$menu_list = '<nav class="streams-menu">' ."\n";
+		$menu_list .= "\t\t\t\t". '<ul>' ."\n";
+		foreach ((array) $menu_items as $key => $menu_item) {
+			$id 		= $menu_item->ID;
+			$object_id 	= $menu_item->object_id;
+			$title 		= $menu_item->title;
+			$url 		= $menu_item->url;
 	
+			$my_post = get_post( $object_id ); 
+			$excerpt = $my_post->post_excerpt;
+	
+			$menu_list .= "\t\t\t\t\t". '<li><a href="'. $url .'">'. $title .'</a>';
+			$menu_list .= "<span class='line'> </span>";
+			$menu_list .= "<div class='excerpt' data-post='". $id ."' data-object='". $object_id ."'> ". $excerpt . " </div>";
 
-				$menu = wp_get_nav_menu_object($menu_id);
-				$menu_items = wp_get_nav_menu_items($menu->term_id);
-		
-				$menu_list = '<nav class="streams-menu">' ."\n";
-				$menu_list .= "\t\t\t\t". '<ul>' ."\n";
-				foreach ((array) $menu_items as $key => $menu_item) {
-					$id 		= $menu_item->ID;
-					$object_id 	= $menu_item->object_id;
-					$title 		= $menu_item->title;
-					$url 		= $menu_item->url;
 			
-					$my_post = get_post( $object_id ); 
-					$excerpt = $my_post->post_excerpt;
-			
-					$menu_list .= "\t\t\t\t\t". '<li><a href="'. $url .'">'. $title .'</a>';
-					$menu_list .= "<span class='line'> </span>";
-					$menu_list .= "<div class='excerpt' data-post='". $id ."' data-object='". $object_id ."'> ". $excerpt . " </div>";
-
-					
-					$menu_list .= '</li>' ."\n";
-				}
-				$menu_list .= "\t\t\t\t". '</ul>' ."\n";
-				$menu_list .= "\t\t\t". '</nav>' ."\n";
+			$menu_list .= '</li>' ."\n";
+		}
+		$menu_list .= "\t\t\t\t". '</ul>' ."\n";
+		$menu_list .= "\t\t\t". '</nav>' ."\n";
 			
 		
-
 		ob_start();
 		?>
 		<span class="triangle top grey"></span>
 		<div class="LxStreams">
 			<div class="LxContainer">
 				<div class="LxStreamsInner">
-					<?php // echo $menu; ?>
 					<?php echo $menu_list; ?>
-					
-					<!-- <div class="LxExcerptContainer">
-					
-					</div> -->
 				</div>
 				<div class="hiddenmenu"> </div>
 			</div>
