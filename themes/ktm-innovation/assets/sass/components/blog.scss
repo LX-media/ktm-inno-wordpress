@@ -19,7 +19,7 @@
         display: flex;
         justify-content: space-evenly;
 
-        @media screen and (max-width: $break-mobile) {
+        @media screen and (max-width: $break-tablet) {
             flex-direction: column;
             margin-top: 0;
             left: 0;

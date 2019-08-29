@@ -133,6 +133,7 @@ footer{
 
         .et-social-icons{
             //tbd
+            display: none;
 
             @media screen and (max-width: $break-mobile) {
                 margin: 40px 0;

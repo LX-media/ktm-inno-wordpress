@@ -11,52 +11,69 @@
         height: 100%;
     }
 
-    span.excerpt {
-        color:$black;
-        position: absolute;
-        top: 227px;
-        width: 424px;
-        right: 0;
+    .LxStreamsInner {
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+        display: flex;
+    }
 
-        &:before{
-            content: "";
-            width: 100px;
-            height: 1px;
-            background: black;
-            top:3px;
-            // right: 0;
-            position: absolute;
+    
+    .hiddenmenu {
+        li{
+            font-size: 50px;
+            line-height: 60px;
+            margin-bottom: 40px;
+            width: 100%;
+            counter-increment: lx-counter;
+            display: flex;
+            justify-content: space-between;
+            @include font('bold');
+            left: 45px;
+            position: relative;
+
+            a{
+                    text-transform: uppercase;
+                    color:$black;
+                    background: $orange;
+                    z-index: 10;
+                    max-width: 460px;
+                    display: block;
+                    padding-right: 20px;
+            }
         }
     }
 
     nav.streams-menu {
-        margin-left: 340px;
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
+        margin-left: 325px;
+        width: 100%;
 
-        ol{
+        @media screen and (max-width: $break-tablet){
+            margin-left: 10%;
+        }
+
+        ul{
             display: flex;
             list-style: none;
             flex-direction: column;
             flex-wrap: wrap;
-            counter-reset: my-awesome-counter;
+            counter-reset: lx-counter;
             margin: 0;
-            padding-left:45px;
-            margin-left:45px;
 
             li{
                 font-size: 50px;
                 line-height: 60px;
                 margin-bottom: 40px;
-                max-width: 460px;
-                counter-increment: my-awesome-counter;
+                width: calc(100% - 45px);
+                counter-increment: lx-counter;
                 display: flex;
+                justify-content: space-between;
                 @include font('bold');
                 left: 45px;
+                position: relative;
             
                 &:before{
-                    content: "0" counter(my-awesome-counter);
+                    content: "0" counter(lx-counter);
                     color: $white;
                     @include font('bold');
                     font-size: 20px;
@@ -68,15 +85,60 @@
                 a{
                     text-transform: uppercase;
                     color:$black;
+                    z-index: 10;
+                    max-width: 45%;
+                    display: block;
+                    padding-right: 20px;
             
                     &:hover{
                         color: $white;
                     }
                 }
+
+                .line{
+                    position: absolute;
+                    height: 1px;
+                    background:$black;
+                    width: 0;
+                    left: 200px;
+                    top: 28px;
+                    z-index: 11;
+                    transition: width $longTransition;
+                }
+
+                .excerpt {
+                    @include font('regular');
+                    font-size: 20px;
+                    line-height: 28px;
+                    color:$black;
+                    position: absolute;
+                    top: 14px;
+                    right: 0;
+                    width: 45%;
+                    max-width:425px;
+                    text-align: left;
+                    display: none;
+                
+                    &.active{
+                        display: block;
+                        transition: all $longTransition;
+                        transition-delay: $longTransition;
+                    }
             
+                    // &:before{
+                    //     content: "";
+                    //     width: 300px;
+                    //     height: 1px;
+                    //     background: black;
+                    //     top:14px;
+                    //     left: -320px;
+                    //     position: absolute;
+                    // }
+                }
+
+
             }
         }
-
     }
 }
 

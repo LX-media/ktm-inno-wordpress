@@ -203,6 +203,9 @@ body.noScroll {
         right: 0;
         border-top: 40px solid #878787;
         border-right: calc(100vw - 77px) solid transparent; }
+        @media screen and (max-width: 980px) {
+          #page-container .triangle.grey:after {
+            border-right: calc(100vw - 60px) solid transparent; } }
 
 #et-main-area {
   z-index: 0;
@@ -458,9 +461,11 @@ footer #LxFooterBottom {
         -o-transition: 0.5s;
         transition: 0.5s;
         color: #FF6600; }
-  @media screen and (max-width: 767px) {
-    footer #LxFooterBottom .et-social-icons {
-      margin: 40px 0; } }
+  footer #LxFooterBottom .et-social-icons {
+    display: none; }
+    @media screen and (max-width: 767px) {
+      footer #LxFooterBottom .et-social-icons {
+        margin: 40px 0; } }
 
 /* COMPONENTS */
 .lxmo_career_teaser {
@@ -539,7 +544,7 @@ footer #LxFooterBottom {
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly; }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 980px) {
       .et_pb_lxblog_0 .et_pb_ajax_pagination_container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -749,27 +754,49 @@ footer #LxFooterBottom {
   .LxStreams .LxContainer {
     position: relative;
     height: 100%; }
-  .LxStreams span.excerpt {
-    color: #000000;
-    position: absolute;
-    top: 227px;
-    width: 424px;
-    right: 0; }
-    .LxStreams span.excerpt:before {
-      content: "";
-      width: 100px;
-      height: 1px;
-      background: black;
-      top: 3px;
-      position: absolute; }
-  .LxStreams nav.streams-menu {
-    margin-left: 340px;
-    position: absolute;
+  .LxStreams .LxStreamsInner {
+    position: relative;
     top: 50%;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%); }
-    .LxStreams nav.streams-menu ol {
+    transform: translate(0, -50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .LxStreams .hiddenmenu li {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 40px;
+    width: 100%;
+    counter-increment: lx-counter;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-family: proxima-nova,sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    left: 45px;
+    position: relative; }
+    .LxStreams .hiddenmenu li a {
+      text-transform: uppercase;
+      color: #000000;
+      background: #FF6600;
+      z-index: 10;
+      max-width: 460px;
+      display: block;
+      padding-right: 20px; }
+  .LxStreams nav.streams-menu {
+    margin-left: 325px;
+    width: 100%; }
+    @media screen and (max-width: 980px) {
+      .LxStreams nav.streams-menu {
+        margin-left: 10%; } }
+    .LxStreams nav.streams-menu ul {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -780,27 +807,29 @@ footer #LxFooterBottom {
       flex-direction: column;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      counter-reset: my-awesome-counter;
-      margin: 0;
-      padding-left: 45px;
-      margin-left: 45px; }
-      .LxStreams nav.streams-menu ol li {
+      counter-reset: lx-counter;
+      margin: 0; }
+      .LxStreams nav.streams-menu ul li {
         font-size: 50px;
         line-height: 60px;
         margin-bottom: 40px;
-        max-width: 460px;
-        counter-increment: my-awesome-counter;
+        width: calc(100% - 45px);
+        counter-increment: lx-counter;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
         font-family: proxima-nova,sans-serif;
         font-weight: 700;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-style: normal;
-        left: 45px; }
-        .LxStreams nav.streams-menu ol li:before {
-          content: "0" counter(my-awesome-counter);
+        left: 45px;
+        position: relative; }
+        .LxStreams nav.streams-menu ul li:before {
+          content: "0" counter(lx-counter);
           color: #FFFFFF;
           font-family: proxima-nova,sans-serif;
           font-weight: 700;
@@ -811,11 +840,50 @@ footer #LxFooterBottom {
           position: absolute;
           top: -10px;
           left: -45px; }
-        .LxStreams nav.streams-menu ol li a {
+        .LxStreams nav.streams-menu ul li a {
           text-transform: uppercase;
-          color: #000000; }
-          .LxStreams nav.streams-menu ol li a:hover {
+          color: #000000;
+          z-index: 10;
+          max-width: 45%;
+          display: block;
+          padding-right: 20px; }
+          .LxStreams nav.streams-menu ul li a:hover {
             color: #FFFFFF; }
+        .LxStreams nav.streams-menu ul li .line {
+          position: absolute;
+          height: 1px;
+          background: #000000;
+          width: 0;
+          left: 200px;
+          top: 28px;
+          z-index: 11;
+          -webkit-transition: width 1s;
+          -o-transition: width 1s;
+          transition: width 1s; }
+        .LxStreams nav.streams-menu ul li .excerpt {
+          font-family: proxima-nova,sans-serif;
+          font-weight: 400;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-style: normal;
+          font-size: 20px;
+          line-height: 28px;
+          color: #000000;
+          position: absolute;
+          top: 14px;
+          right: 0;
+          width: 45%;
+          max-width: 425px;
+          text-align: left;
+          display: none; }
+          .LxStreams nav.streams-menu ul li .excerpt.active {
+            display: block;
+            -webkit-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            -webkit-transition-delay: 1s;
+            -o-transition-delay: 1s;
+            transition-delay: 1s; }
 
 .LxFrontPage {
   height: 530px; }
@@ -823,7 +891,8 @@ footer #LxFooterBottom {
     .LxFrontPage {
       height: 330px; } }
   .LxFrontPage .LxHeaderFacts {
-    width: 420px;
+    width: 30%;
+    max-width: 425px;
     border-left: 4px solid #000000;
     float: right;
     padding: 5px 0 5px 30px;

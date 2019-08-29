@@ -59,7 +59,7 @@ class LXMO_Streams extends ET_Builder_Module {
 					%2$s',
 				esc_attr( $menuClass ),
 				( ! et_is_builder_plugin_active() && 'on' === et_get_option( 'divi_home_link' )
-					? sprintf( '<li><a href="%2$s">%3$s</a></li>',
+					? sprintf( '<li class="test"><a href="%2$s">%3$s</a></li>',
 						( is_home() ? ' class="current_page_item"' : '' ),
 						esc_url( home_url( '/' ) ),
 						esc_html__( 'Home', 'et_builder' )
@@ -93,6 +93,8 @@ class LXMO_Streams extends ET_Builder_Module {
 
 		return $menu;
 	}
+
+	
 
 	public function get_fields() {
 		return array(
@@ -128,16 +130,54 @@ class LXMO_Streams extends ET_Builder_Module {
 
 		$menu = self::get_fullwidth_menu( array(
 			'menu_id'  => $menu_id,
-		) );
+		));
 
+		
+		
+		$titles = wp_get_nav_menu_items($menu_id); 
+
+	
+
+				$menu = wp_get_nav_menu_object($menu_id);
+				$menu_items = wp_get_nav_menu_items($menu->term_id);
+		
+				$menu_list = '<nav class="streams-menu">' ."\n";
+				$menu_list .= "\t\t\t\t". '<ul>' ."\n";
+				foreach ((array) $menu_items as $key => $menu_item) {
+					$id 		= $menu_item->ID;
+					$object_id 	= $menu_item->object_id;
+					$title 		= $menu_item->title;
+					$url 		= $menu_item->url;
+			
+					$my_post = get_post( $object_id ); 
+					$excerpt = $my_post->post_excerpt;
+			
+					$menu_list .= "\t\t\t\t\t". '<li><a href="'. $url .'">'. $title .'</a>';
+					$menu_list .= "<span class='line'> </span>";
+					$menu_list .= "<div class='excerpt' data-post='". $id ."' data-object='". $object_id ."'> ". $excerpt . " </div>";
+
+					
+					$menu_list .= '</li>' ."\n";
+				}
+				$menu_list .= "\t\t\t\t". '</ul>' ."\n";
+				$menu_list .= "\t\t\t". '</nav>' ."\n";
+			
+		
 
 		ob_start();
 		?>
 		<span class="triangle top grey"></span>
 		<div class="LxStreams">
 			<div class="LxContainer">
-				<?php echo $menu; ?>
-				<span class="excerpt"> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</span>
+				<div class="LxStreamsInner">
+					<?php // echo $menu; ?>
+					<?php echo $menu_list; ?>
+					
+					<!-- <div class="LxExcerptContainer">
+					
+					</div> -->
+				</div>
+				<div class="hiddenmenu"> </div>
 			</div>
 		</div>
 		<span class="triangle bottom grey"></span>
