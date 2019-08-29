@@ -58,6 +58,10 @@
 
                 &:last-child{
                     margin-right: 0;
+                    @media screen and (max-width: $break-mobile){
+                        margin-right: auto;
+                    }
+
                 }
                 @media screen and (max-width: $break-mobile){
                     width: 200px;

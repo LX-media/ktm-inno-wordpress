@@ -42,10 +42,11 @@ define(
 
             stream.hover(
                 function() {
-                
                     var text = $(this).find("a").html();
                     var lenghtCheck = text.split(" ");
                     var height = $(this).height();
+
+                    $(this).find("a").css("color", "#FFFFFF");
     
                     if ((lenghtCheck.length >= 2) && (height > 60)) {                            
                         $(this).find(".line").css("left", lenght+20 + "px");
@@ -70,6 +71,7 @@ define(
                 }, function() {
                     $(this).find(".line").css("width", "0");
                     $(this).find(".excerpt").removeClass("active");
+                    $(this).find("a").css("color", "");
                 }
             );
 		}
