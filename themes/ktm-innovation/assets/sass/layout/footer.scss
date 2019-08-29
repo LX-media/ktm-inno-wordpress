@@ -111,7 +111,7 @@ footer{
             #menu-footer-bottom{
                 li{
                     display: inline;
-                    margin: 0 70px;
+                    margin: 0 65px;
 
                     @media screen and (max-width: $break-mobile) {
                         display: block;
@@ -133,6 +133,7 @@ footer{
 
         .et-social-icons{
             //tbd
+            display: none;
 
             @media screen and (max-width: $break-mobile) {
                 margin: 40px 0;

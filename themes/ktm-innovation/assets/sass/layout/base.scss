@@ -52,6 +52,11 @@ body{
                 right: 0;
                 border-top: 40px solid $grey;
                 border-right: calc(100vw - 77px) solid transparent;
+
+                @media screen and (max-width: $break-tablet){
+                    border-right: calc(100vw - 60px) solid transparent;
+
+                }
             }
         }
 

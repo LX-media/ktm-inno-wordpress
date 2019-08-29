@@ -3,13 +3,15 @@ define([
     'header',
 	// 'particles',
 	'three',
-	'vanta'
+	'vanta',
+	'streams'
 ], function(
 	$,
 	Header,
 	// Particles,
 	Three,
-	Vanta
+	Vanta,
+	Streams
 	) {
 
 	var App = function() {
@@ -18,6 +20,7 @@ define([
 		// * 	header functions
 		// * ———————————————————————————————————————————————————————— * //
 		Header.init();
+		Streams.init();
 
 		// * ———————————————————————————————————————————————————————— * //
 		// * 	components

@@ -19,16 +19,20 @@
         display: flex;
         justify-content: space-evenly;
 
-        @media screen and (max-width: $break-mobile) {
+        @media screen and (max-width: $break-tablet) {
             flex-direction: column;
             margin-top: 0;
             left: 0;
             transform: none;
         }
 
+        @media screen and (max-width: $break-mobile) {
+            margin-left: 0;
+        }
+
         article {
             display: table;
-            width: 420px;
+            max-width: 420px;
             margin: 0 40px;
 
             &:first-child{

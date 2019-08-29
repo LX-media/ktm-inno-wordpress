@@ -25,9 +25,9 @@ class LXMO_Streams extends ET_Builder_Module {
 
 		$args = wp_parse_args( $args, $defaults );
 
-		$menu = '<nav class="fullwidth-menu-nav">';
+		$menu = '<nav class="streams-menu">';
 
-		$menuClass = 'fullwidth-menu nav';
+		$menuClass = 'streams-menu nav';
 
 		// divi_disable_toptier option available in Divi theme only
 		if ( ! et_is_builder_plugin_active() && 'on' === et_get_option( 'divi_disable_toptier' ) ) {
@@ -44,6 +44,7 @@ class LXMO_Streams extends ET_Builder_Module {
 			'menu_class'     => $menuClass,
 			'menu_id'        => '',
 			'echo'           => false,
+			'items_wrap' 	=> '<ol id="%1$s" class="%2$s">%3$s</ol>'
 		);
 
 		if ( '' !== $args['menu_id'] ) {
@@ -54,11 +55,11 @@ class LXMO_Streams extends ET_Builder_Module {
 
 		if ( empty( $primaryNav ) ) {
 			$menu .= sprintf(
-				'<ul class="%1$s">
+				'<ol class="%1$s">
 					%2$s',
 				esc_attr( $menuClass ),
 				( ! et_is_builder_plugin_active() && 'on' === et_get_option( 'divi_home_link' )
-					? sprintf( '<li%1$s><a href="%2$s">%3$s</a></li>',
+					? sprintf( '<li class="test"><a href="%2$s">%3$s</a></li>',
 						( is_home() ? ' class="current_page_item"' : '' ),
 						esc_url( home_url( '/' ) ),
 						esc_html__( 'Home', 'et_builder' )
@@ -79,7 +80,7 @@ class LXMO_Streams extends ET_Builder_Module {
 
 			$menu .= ob_get_contents();
 
-			$menu .= '</ul>';
+			$menu .= '</ol>';
 
 			ob_end_clean();
 		} else {
@@ -92,6 +93,8 @@ class LXMO_Streams extends ET_Builder_Module {
 
 		return $menu;
 	}
+
+	
 
 	public function get_fields() {
 		return array(
@@ -121,21 +124,52 @@ class LXMO_Streams extends ET_Builder_Module {
 		);
 	}
 
+
 	function render( $attrs, $content = null, $render_slug ) {
 		$menu_id  = $this->props['menu_id'];
 
 		$menu = self::get_fullwidth_menu( array(
 			'menu_id'  => $menu_id,
-		) );
+		));
 
+		
+		
+		$titles = wp_get_nav_menu_items($menu_id); 
 
+		$menu = wp_get_nav_menu_object($menu_id);
+		$menu_items = wp_get_nav_menu_items($menu->term_id);
+
+		$menu_list = '<nav class="streams-menu">' ."\n";
+		$menu_list .= "\t\t\t\t". '<ul>' ."\n";
+		foreach ((array) $menu_items as $key => $menu_item) {
+			$id 		= $menu_item->ID;
+			$object_id 	= $menu_item->object_id;
+			$title 		= $menu_item->title;
+			$url 		= $menu_item->url;
+	
+			$my_post = get_post( $object_id ); 
+			$excerpt = $my_post->post_excerpt;
+	
+			$menu_list .= "\t\t\t\t\t". '<li><a href="'. $url .'">'. $title .'</a>';
+			$menu_list .= "<span class='line'> </span>";
+			$menu_list .= "<div class='excerpt' data-post='". $id ."' data-object='". $object_id ."'> ". $excerpt . " </div>";
+
+			
+			$menu_list .= '</li>' ."\n";
+		}
+		$menu_list .= "\t\t\t\t". '</ul>' ."\n";
+		$menu_list .= "\t\t\t". '</nav>' ."\n";
+			
+		
 		ob_start();
 		?>
 		<span class="triangle top grey"></span>
 		<div class="LxStreams">
 			<div class="LxContainer">
-				<?php echo $menu; ?>
-				
+				<div class="LxStreamsInner">
+					<?php echo $menu_list; ?>
+				</div>
+				<div class="hiddenmenu"> </div>
 			</div>
 		</div>
 		<span class="triangle bottom grey"></span>

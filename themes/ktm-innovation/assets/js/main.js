@@ -11,7 +11,8 @@ require.config({
 
         // custom js
         "app"           : "app",
-        "header"        : "components/header"
+        "header"        : "components/header",
+        "streams"       : "components/streams"
     }
 });
 
