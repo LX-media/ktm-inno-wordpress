@@ -712,216 +712,218 @@ footer #LxFooterBottom {
       .lxmo_stage .LxStage .LxBox .LxBtn {
         width: 100%; }
 
-.LxCompany {
-  height: 986px;
+.lxmo_presentation {
   background: #F0F4F6; }
-  .LxCompany .LxCompanyInner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    @media screen and (max-width: 767px) {
-      .LxCompany .LxCompanyInner {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column; } }
-    @media screen and (max-width: 980px) {
-      .LxCompany .LxCompanyInner .LxBox {
-        width: calc(50% - 40px); } }
-    @media screen and (max-width: 767px) {
-      .LxCompany .LxCompanyInner .LxBox {
-        width: calc(100% - 40px);
-        margin: 0 auto; } }
-    .LxCompany .LxCompanyInner .LxBox.LxBoxOne {
-      width: 458px;
-      margin-top: 0;
-      padding-top: 290px;
-      margin-left: 160px; }
-      .LxCompany .LxCompanyInner .LxBox.LxBoxOne h3 {
-        text-transform: uppercase; }
+  .lxmo_presentation .LxCompany {
+    height: 986px; }
+    .lxmo_presentation .LxCompany .LxCompanyInner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      @media screen and (max-width: 767px) {
+        .lxmo_presentation .LxCompany .LxCompanyInner {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column; } }
       @media screen and (max-width: 980px) {
-        .LxCompany .LxCompanyInner .LxBox.LxBoxOne {
-          margin-left: 10%; } }
+        .lxmo_presentation .LxCompany .LxCompanyInner .LxBox {
+          width: calc(50% - 40px); } }
       @media screen and (max-width: 767px) {
-        .LxCompany .LxCompanyInner .LxBox.LxBoxOne {
-          width: calc(100% - 20px);
-          margin-top: 0;
-          margin-left: 10px;
-          padding-top: 20px  !important; } }
-    .LxCompany .LxCompanyInner .LxBox.LxBoxTwo {
-      margin-top: 540px; }
-      @media screen and (max-width: 1280px) {
-        .LxCompany .LxCompanyInner .LxBox.LxBoxTwo {
-          margin-top: 70px; } }
-      @media screen and (max-width: 767px) {
-        .LxCompany .LxCompanyInner .LxBox.LxBoxTwo {
-          margin-top: 10px; } }
-      .LxCompany .LxCompanyInner .LxBox.LxBoxTwo img {
-        border-radius: 50%;
-        margin-right: 78px;
-        width: 219px; }
-        .LxCompany .LxCompanyInner .LxBox.LxBoxTwo img:last-child {
-          margin-right: 0; }
-          @media screen and (max-width: 767px) {
-            .LxCompany .LxCompanyInner .LxBox.LxBoxTwo img:last-child {
-              margin-right: auto; } }
+        .lxmo_presentation .LxCompany .LxCompanyInner .LxBox {
+          width: calc(100% - 40px);
+          margin: 0 auto; } }
+      .lxmo_presentation .LxCompany .LxCompanyInner .LxBox.LxBoxOne {
+        width: 458px;
+        margin-top: 0;
+        padding-top: 290px;
+        margin-left: 160px; }
+        .lxmo_presentation .LxCompany .LxCompanyInner .LxBox.LxBoxOne h3 {
+          text-transform: uppercase; }
+        @media screen and (max-width: 980px) {
+          .lxmo_presentation .LxCompany .LxCompanyInner .LxBox.LxBoxOne {
+            margin-left: 10%; } }
         @media screen and (max-width: 767px) {
-          .LxCompany .LxCompanyInner .LxBox.LxBoxTwo img {
-            width: 200px;
-            margin: 5px auto;
-            display: block; } }
-    .LxCompany .LxCompanyInner .LxBox p {
-      margin-top: 40px;
-      margin-bottom: 50px;
-      font-size: 18px;
-      line-height: 28px;
-      width: 420px; }
-      @media screen and (max-width: 980px) {
-        .LxCompany .LxCompanyInner .LxBox p {
-          width: calc(100% - 40px); } }
-    .LxCompany .LxCompanyInner .LxBox .LxBtn {
-      width: 100%; }
+          .lxmo_presentation .LxCompany .LxCompanyInner .LxBox.LxBoxOne {
+            width: calc(100% - 20px);
+            margin-top: 0;
+            margin-left: 10px;
+            padding-top: 20px  !important; } }
+      .lxmo_presentation .LxCompany .LxCompanyInner .LxBox.LxBoxTwo {
+        margin-top: 540px; }
+        @media screen and (max-width: 1280px) {
+          .lxmo_presentation .LxCompany .LxCompanyInner .LxBox.LxBoxTwo {
+            margin-top: 70px; } }
+        @media screen and (max-width: 767px) {
+          .lxmo_presentation .LxCompany .LxCompanyInner .LxBox.LxBoxTwo {
+            margin-top: 10px; } }
+        .lxmo_presentation .LxCompany .LxCompanyInner .LxBox.LxBoxTwo img {
+          border-radius: 50%;
+          margin-right: 78px;
+          width: 219px; }
+          .lxmo_presentation .LxCompany .LxCompanyInner .LxBox.LxBoxTwo img:last-child {
+            margin-right: 0; }
+            @media screen and (max-width: 767px) {
+              .lxmo_presentation .LxCompany .LxCompanyInner .LxBox.LxBoxTwo img:last-child {
+                margin-right: auto; } }
+          @media screen and (max-width: 767px) {
+            .lxmo_presentation .LxCompany .LxCompanyInner .LxBox.LxBoxTwo img {
+              width: 200px;
+              margin: 5px auto;
+              display: block; } }
+      .lxmo_presentation .LxCompany .LxCompanyInner .LxBox p {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        font-size: 18px;
+        line-height: 28px;
+        width: 420px; }
+        @media screen and (max-width: 980px) {
+          .lxmo_presentation .LxCompany .LxCompanyInner .LxBox p {
+            width: calc(100% - 40px); } }
+      .lxmo_presentation .LxCompany .LxCompanyInner .LxBox .LxBtn {
+        width: 100%; }
 
-.LxStreams {
-  background-color: #FF6600;
-  background-image: url("/wp-content/plugins/lx-modules/includes/modules/Streams/img/c-1.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  height: 1084px;
-  z-index: 2; }
-  .LxStreams .LxContainer {
-    position: relative;
-    height: 100%; }
-  .LxStreams .LxStreamsInner {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  .LxStreams .hiddenmenu li {
-    font-size: 50px;
-    line-height: 60px;
-    margin-bottom: 40px;
-    width: 100%;
-    counter-increment: lx-counter;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    font-family: proxima-nova,sans-serif;
-    font-weight: 700;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-style: normal;
-    left: 45px;
-    position: relative; }
-    .LxStreams .hiddenmenu li a {
-      text-transform: uppercase;
-      color: #000000;
-      background: #FF6600;
-      z-index: 10;
-      max-width: 460px;
-      display: block;
-      padding-right: 20px; }
-  .LxStreams nav.streams-menu {
-    margin-left: 325px;
-    width: 100%; }
-    @media screen and (max-width: 980px) {
-      .LxStreams nav.streams-menu {
-        margin-left: 10%; } }
-    .LxStreams nav.streams-menu ul {
+.lxmo_streams {
+  background-color: #FF6600; }
+  .lxmo_streams .LxStreams {
+    background-image: url("/wp-content/plugins/lx-modules/includes/modules/Streams/img/c-1.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 1084px;
+    z-index: 2; }
+    .lxmo_streams .LxStreams .LxContainer {
+      position: relative;
+      height: 100%; }
+    .lxmo_streams .LxStreams .LxStreamsInner {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .lxmo_streams .LxStreams .hiddenmenu li {
+      font-size: 50px;
+      line-height: 60px;
+      margin-bottom: 40px;
+      width: 100%;
+      counter-increment: lx-counter;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      list-style: none;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      counter-reset: lx-counter;
-      margin: 0; }
-      .LxStreams nav.streams-menu ul li {
-        font-size: 50px;
-        line-height: 60px;
-        margin-bottom: 40px;
-        width: calc(100% - 45px);
-        counter-increment: lx-counter;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      font-family: proxima-nova,sans-serif;
+      font-weight: 700;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-style: normal;
+      left: 45px;
+      position: relative; }
+      .lxmo_streams .LxStreams .hiddenmenu li a {
+        text-transform: uppercase;
+        color: #000000;
+        background: #FF6600;
+        z-index: 10;
+        max-width: 460px;
+        display: block;
+        padding-right: 20px; }
+    .lxmo_streams .LxStreams nav.streams-menu {
+      margin-left: 325px;
+      width: 100%; }
+      @media screen and (max-width: 980px) {
+        .lxmo_streams .LxStreams nav.streams-menu {
+          margin-left: 10%; } }
+      .lxmo_streams .LxStreams nav.streams-menu ul {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        font-family: proxima-nova,sans-serif;
-        font-weight: 700;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-style: normal;
-        left: 45px;
-        position: relative; }
-        .LxStreams nav.streams-menu ul li:before {
-          content: "0" counter(lx-counter);
-          color: #FFFFFF;
+        list-style: none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        counter-reset: lx-counter;
+        margin: 0; }
+        .lxmo_streams .LxStreams nav.streams-menu ul li {
+          font-size: 50px;
+          line-height: 60px;
+          margin-bottom: 40px;
+          width: calc(100% - 45px);
+          counter-increment: lx-counter;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
           font-family: proxima-nova,sans-serif;
           font-weight: 700;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
           font-style: normal;
-          font-size: 20px;
-          position: absolute;
-          top: -10px;
-          left: -45px; }
-        .LxStreams nav.streams-menu ul li a {
-          text-transform: uppercase;
-          color: #000000;
-          z-index: 10;
-          max-width: 45%;
-          display: block;
-          padding-right: 20px; }
-          .LxStreams nav.streams-menu ul li a:hover {
-            color: #FFFFFF; }
-        .LxStreams nav.streams-menu ul li .line {
-          position: absolute;
-          height: 1px;
-          background: #000000;
-          width: 0;
-          left: 200px;
-          top: 28px;
-          z-index: 11;
-          -webkit-transition: width 1s;
-          -o-transition: width 1s;
-          transition: width 1s; }
-        .LxStreams nav.streams-menu ul li .excerpt {
-          font-family: proxima-nova,sans-serif;
-          font-weight: 400;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          font-style: normal;
-          font-size: 20px;
-          line-height: 28px;
-          color: #000000;
-          position: absolute;
-          top: 14px;
-          right: 0;
-          width: 45%;
-          max-width: 425px;
-          text-align: left;
-          display: none; }
-          .LxStreams nav.streams-menu ul li .excerpt.active {
+          left: 45px;
+          position: relative; }
+          .lxmo_streams .LxStreams nav.streams-menu ul li:before {
+            content: "0" counter(lx-counter);
+            color: #FFFFFF;
+            font-family: proxima-nova,sans-serif;
+            font-weight: 700;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-style: normal;
+            font-size: 20px;
+            position: absolute;
+            top: -10px;
+            left: -45px; }
+          .lxmo_streams .LxStreams nav.streams-menu ul li a {
+            text-transform: uppercase;
+            color: #000000;
+            z-index: 10;
+            max-width: 45%;
             display: block;
-            -webkit-transition: all 1s;
-            -o-transition: all 1s;
-            transition: all 1s;
-            -webkit-transition-delay: 1s;
-            -o-transition-delay: 1s;
-            transition-delay: 1s; }
+            padding-right: 20px; }
+            .lxmo_streams .LxStreams nav.streams-menu ul li a:hover {
+              color: #FFFFFF; }
+          .lxmo_streams .LxStreams nav.streams-menu ul li .line {
+            position: absolute;
+            height: 1px;
+            background: #000000;
+            width: 0;
+            left: 200px;
+            top: 28px;
+            z-index: 11;
+            -webkit-transition: width 1s;
+            -o-transition: width 1s;
+            transition: width 1s; }
+          .lxmo_streams .LxStreams nav.streams-menu ul li .excerpt {
+            font-family: proxima-nova,sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-style: normal;
+            font-size: 20px;
+            line-height: 28px;
+            color: #000000;
+            position: absolute;
+            top: 14px;
+            right: 0;
+            width: 45%;
+            max-width: 425px;
+            text-align: left;
+            display: none; }
+            .lxmo_streams .LxStreams nav.streams-menu ul li .excerpt.active {
+              display: block;
+              -webkit-transition: all 1s;
+              -o-transition: all 1s;
+              transition: all 1s;
+              -webkit-transition-delay: 1s;
+              -o-transition-delay: 1s;
+              transition-delay: 1s; }
 
 .LxFrontPage {
   height: 530px; }
