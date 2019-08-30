@@ -147,8 +147,12 @@ h3 {
   line-height: 50px; }
   @media screen and (max-width: 980px) {
     h3 {
-      font-size: 40px;
-      line-height: 40px; } }
+      font-size: 30px;
+      line-height: 30px; } }
+  @media screen and (max-width: 767px) {
+    h3 {
+      font-size: 20px;
+      line-height: 24px; } }
 
 .LxBtn {
   font-size: 16px;
@@ -609,68 +613,96 @@ footer #LxFooterBottom {
         margin-bottom: 0; }
 
 .lxmo_stage {
-  position: relative; }
+  position: relative;
+  height: 100%; }
   .lxmo_stage:before {
     content: "";
-    background: #FF6600;
-    width: 500px;
-    height: 800px;
-    left: -404px;
-    bottom: -18px;
+    background: -webkit-linear-gradient(165deg, #FF6600 74%, #FF6600 50%, #FF6600 50%, #DE5900 50%, #DE5900 100%);
+    background: -o-linear-gradient(165deg, #FF6600 74%, #FF6600 50%, #FF6600 50%, #DE5900 50%, #DE5900 100%);
+    background: linear-gradient(-75deg, #FF6600 74%, #FF6600 50%, #FF6600 50%, #DE5900 50%, #DE5900 100%);
+    /* W3C */
+    width: 5%;
+    height: 109.5%;
+    left: 0;
+    top: 0;
     position: absolute;
-    -webkit-transform: rotate(-55deg);
-    -moz-transform: rotate(-55deg);
-    -ms-transform: rotate(-55deg);
-    -o-transform: rotate(-55deg);
-    transform: rotate(-55deg); }
-    @media screen and (max-width: 767px) {
-      .lxmo_stage:before {
-        bottom: -7px;
-        height: 70%;
-        width: 10px;
-        left: 0;
-        -webkit-transform: none;
-        -ms-transform: none;
-        transform: none; } }
+    z-index: 1;
+    -webkit-clip-path: polygon(0 9%, 100% 0%, 100% 70%, 0% 100%);
+    clip-path: polygon(0 9%, 100% 0%, 100% 70%, 0% 100%); }
+  .lxmo_stage:after {
+    content: "";
+    background: #FF6600;
+    position: absolute;
+    right: 0;
+    top: 3.3%;
+    width: 3%;
+    height: 98%;
+    z-index: 1;
+    -webkit-clip-path: polygon(0% 0%, 100% 6%, 100% 92%, 100% 100%);
+    clip-path: polygon(0% 0%, 100% 6%, 100% 92%, 100% 100%); }
   .lxmo_stage .et_pb_module_inner .LxStageImage {
-    position: absolute; }
-  .lxmo_stage .LxStage {
-    height: 986px;
-    margin: 0 auto;
     position: relative; }
+    .lxmo_stage .et_pb_module_inner .LxStageImage.clip {
+      -webkit-clip-path: polygon(5% 0%, 97% 3%, 100% 92%, 0% 100%);
+      clip-path: polygon(5% 0%, 97% 3%, 100% 92%, 0% 100%);
+      z-index: 1;
+      margin-bottom: -5%; }
+  .lxmo_stage .LxStage {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%; }
     @media screen and (max-width: 767px) {
       .lxmo_stage .LxStage {
         top: 10px; } }
     .lxmo_stage .LxStage .LxBox {
-      width: 570px;
-      top: 300px;
-      positioN: relative;
+      max-width: 570px;
       margin-left: 160px;
-      background-color: white;
+      top: 50%;
+      -webkit-transform: translate(0, -30%);
+      -ms-transform: translate(0, -30%);
+      transform: translate(0, -30%);
+      position: absolute;
+      background-color: #FFFFFF;
       padding: 100px 50px; }
+      @media screen and (max-width: 1650px) {
+        .lxmo_stage .LxStage .LxBox {
+          padding: 50px 25px;
+          -webkit-transform: translate(0, -35%);
+          -ms-transform: translate(0, -35%);
+          transform: translate(0, -35%); } }
+      @media screen and (max-width: 1280px) {
+        .lxmo_stage .LxStage .LxBox {
+          padding: 50px 25px;
+          -webkit-transform: translate(0, -40%);
+          -ms-transform: translate(0, -40%);
+          transform: translate(0, -40%); } }
       @media screen and (max-width: 980px) {
         .lxmo_stage .LxStage .LxBox {
-          width: calc(50% - 40px); } }
+          width: calc(50% - 40px);
+          top: 15%;
+          -webkit-transform: none;
+          -ms-transform: none;
+          transform: none;
+          padding: 30px 15px; } }
       @media screen and (max-width: 767px) {
         .lxmo_stage .LxStage .LxBox {
           width: calc(100% - 40px);
           margin: 0 auto; } }
-      .lxmo_stage .LxStage .LxBox h3 {
-        font-size: 40px;
-        line-height: 48px; }
-        @media screen and (max-width: 767px) {
-          .lxmo_stage .LxStage .LxBox h3 {
-            font-size: 20px;
-            line-height: 24px; } }
       .lxmo_stage .LxStage .LxBox p {
         margin-top: 40px;
         margin-bottom: 50px;
         font-size: 20px;
         line-height: 28px;
-        width: 420px; }
+        max-width: 420px; }
         @media screen and (max-width: 980px) {
           .lxmo_stage .LxStage .LxBox p {
-            width: calc(100% - 40px); } }
+            width: calc(100% - 20px);
+            margin-top: 20px;
+            margin-bottom: 25px; } }
         @media screen and (max-width: 767px) {
           .lxmo_stage .LxStage .LxBox p {
             font-size: 16px;

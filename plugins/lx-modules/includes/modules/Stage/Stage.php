@@ -94,7 +94,7 @@ class LXMO_Stage extends ET_Builder_Module {
 
 		ob_start();
 		?>
-		<img src="<?php echo $img_src; ?>" alt="<?php echo $image_alt; ?>" class="tilt LxStageImage">
+		<img src="<?php echo $img_src; ?>" alt="<?php echo $image_alt; ?>" class="clip LxStageImage">
 		<div class="LxStage">
 			<div class="LxContainer">
 				<div class="LxBox">
