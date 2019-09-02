@@ -279,7 +279,7 @@ body.noScroll {
         height: 100%; } }
     #main-header .LxHeader .LxBurger {
       position: absolute;
-      right: 40px;
+      left: calc(100vw - 80px);
       top: 20px;
       cursor: pointer;
       padding: 10px;
