@@ -42,7 +42,6 @@
             opacity: 1;
             display: block;
             transition: opacity $longTransition ease-in-out;
-
         }
     }
 
@@ -56,13 +55,12 @@
         }
         .LxBurger{
             position: absolute;
-            right: 40px;
+            left: calc(100vw - 80px);
             top: 20px;
             cursor: pointer;
             padding: 10px;
             z-index: 11;
             
-
             span{
                 height: 1px;
                 background: black;

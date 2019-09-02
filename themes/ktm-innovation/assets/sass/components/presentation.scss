@@ -1,98 +1,100 @@
-.LxCompany {
-    height: 986px;
+.lxmo_presentation{
     background: $background;
 
-    .LxCompanyInner{
-        display: flex;
-
-    @media screen and (max-width: $break-mobile){
-        flex-direction: column;
-    }
-
-    .LxBox {
-        @media screen and (max-width: $break-tablet){
-            width: calc(50% - 40px);
-        }
-
+    .LxCompany {
+        height: 986px;
+    
+        .LxCompanyInner{
+            display: flex;
+    
         @media screen and (max-width: $break-mobile){
-            width: calc(100% - 40px);
-            margin: 0 auto;
+            flex-direction: column;
         }
-
-        &.LxBoxOne {
-            width: 458px; // ??
-            margin-top: 0;
-            padding-top: 290px;
-            margin-left: $leftMargin;
-            h3 {
-                text-transform: uppercase;
-            }
-
+    
+        .LxBox {
             @media screen and (max-width: $break-tablet){
-                margin-left: 10%;
+                width: calc(50% - 40px);
             }
-
+    
             @media screen and (max-width: $break-mobile){
-                width: calc(100% - 20px);
-                margin-top: 0;
-                margin-left: 10px;
-                padding-top: 20px  !important;
-            }
-        }
-
-        &.LxBoxTwo {
-            margin-top: 540px;
-
-            @media screen and (max-width:  $break-laptop){
-                margin-top: 70px;
-            }
-
-            @media screen and (max-width: $break-mobile){
-                margin-top: 10px;
-            }
-
-            img {
-                border-radius: 50%;
-                margin-right: 78px;
-                width: 219px;
-
-                &:last-child{
-                    margin-right: 0;
-                    @media screen and (max-width: $break-mobile){
-                        margin-right: auto;
-                    }
-
-                }
-                @media screen and (max-width: $break-mobile){
-                    width: 200px;
-                    margin: 5px auto;
-                    display: block;
-                }
-
-            }
-        }
-
-        p {
-            margin-top: 40px;
-            margin-bottom: 50px;
-            font-size: 18px;
-            line-height: 28px;
-            width: 420px;
-
-            @media screen and (max-width: $break-tablet){
                 width: calc(100% - 40px);
+                margin: 0 auto;
             }
+    
+            &.LxBoxOne {
+                width: 458px; // ??
+                margin-top: 0;
+                padding-top: 290px;
+                margin-left: $leftMargin;
+                h3 {
+                    text-transform: uppercase;
+                }
+    
+                @media screen and (max-width: $break-tablet){
+                    margin-left: 10%;
+                }
+    
+                @media screen and (max-width: $break-mobile){
+                    width: calc(100% - 20px);
+                    margin-top: 0;
+                    margin-left: 10px;
+                    padding-top: 20px  !important;
+                }
+            }
+    
+            &.LxBoxTwo {
+                margin-top: 540px;
+    
+                @media screen and (max-width:  $break-laptop){
+                    margin-top: 70px;
+                }
+    
+                @media screen and (max-width: $break-mobile){
+                    margin-top: 10px;
+                }
+    
+                img {
+                    border-radius: 50%;
+                    margin-right: 78px;
+                    width: 219px;
+    
+                    &:last-child{
+                        margin-right: 0;
+                        @media screen and (max-width: $break-mobile){
+                            margin-right: auto;
+                        }
+    
+                    }
+                    @media screen and (max-width: $break-mobile){
+                        width: 200px;
+                        margin: 5px auto;
+                        display: block;
+                    }
+    
+                }
+            }
+    
+            p {
+                margin-top: 40px;
+                margin-bottom: 50px;
+                font-size: 18px;
+                line-height: 28px;
+                width: 420px;
+    
+                @media screen and (max-width: $break-tablet){
+                    width: calc(100% - 40px);
+                }
+            }
+            
+            .LxBtn{
+                width: 100%;
+                
+            }
+        }
+    
         }
         
-        .LxBtn{
-            width: 100%;
-            
-        }
-    }
-
-    }
     
-
-
-
+    }
 }
+
