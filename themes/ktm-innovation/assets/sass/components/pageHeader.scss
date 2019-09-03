@@ -1,0 +1,37 @@
+.lxmo_pagehead {
+
+    .LxPageHeader {
+
+        background-image: url("/wp-content/plugins/lx-modules/includes/modules/PageHeader/img/bghead.jpg"); 
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: top left;
+        margin-top: -120px;
+        height: 100%;
+        padding-bottom: 80px;
+
+        h1 {
+            color: $white;
+            padding-top: 15%;
+        }
+
+        p {
+            margin-top: -40px; // fix to get it closer
+            font-size: 60px;
+            line-height: 73px;
+            color: $white;
+            @include font('bold');
+            padding-bottom: 70px;
+        }
+
+        .LxDivider{
+            height: 79px;
+            width: 100%;
+            background: $orange;
+            padding-bottom: 60px;
+        }
+    
+    }
+    
+}
+

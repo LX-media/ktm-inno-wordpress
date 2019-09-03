@@ -142,6 +142,11 @@ h6 {
   -moz-osx-font-smoothing: grayscale;
   font-style: normal; }
 
+h1 {
+  font-size: 200px;
+  line-height: 244px;
+  text-transform: uppercase; }
+
 h3 {
   font-size: 50px;
   line-height: 50px; }
@@ -168,6 +173,9 @@ h3 {
 /* LAYOUT */
 body.noScroll {
   overflow: hidden; }
+
+.container {
+  max-width: 1460px; }
 
 #page-container {
   padding-top: 0; }
@@ -233,7 +241,8 @@ body.noScroll {
   max-width: 100%;
   z-index: 1;
   -webkit-box-shadow: none;
-  box-shadow: none; }
+  box-shadow: none;
+  background-color: transparent; }
   #main-header .logo_container {
     height: 120px;
     z-index: 10; }
@@ -539,7 +548,6 @@ footer #LxFooterBottom {
   .et_pb_lxblog_0 .et_pb_ajax_pagination_container {
     z-index: 1;
     position: absolute;
-    margin-left: 160px;
     margin-top: 310px;
     height: 986px;
     display: -webkit-box;
@@ -786,7 +794,7 @@ footer #LxFooterBottom {
 .lxmo_streams {
   background-color: #FF6600; }
   .lxmo_streams .LxStreams {
-    background-image: url("/wp-content/plugins/lx-modules/includes/modules/Streams/img/c-1.png");
+    background-image: url("/wp-content/plugins/lx-modules/includes/modules/Streams/img/bg_orange.jpg");
     background-repeat: no-repeat;
     background-position: left;
     height: 1084px;
@@ -1029,3 +1037,31 @@ footer #LxFooterBottom {
         transition: all 0.5s; }
     .LxFrontPage .fullwidth-menu-nav #et_mobile_nav_menu {
       display: none; }
+
+.lxmo_pagehead .LxPageHeader {
+  background-image: url("/wp-content/plugins/lx-modules/includes/modules/PageHeader/img/bghead.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: top left;
+  margin-top: -120px;
+  height: 100%;
+  padding-bottom: 80px; }
+  .lxmo_pagehead .LxPageHeader h1 {
+    color: #FFFFFF;
+    padding-top: 15%; }
+  .lxmo_pagehead .LxPageHeader p {
+    margin-top: -40px;
+    font-size: 60px;
+    line-height: 73px;
+    color: #FFFFFF;
+    font-family: proxima-nova,sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    padding-bottom: 70px; }
+  .lxmo_pagehead .LxPageHeader .LxDivider {
+    height: 79px;
+    width: 100%;
+    background: #FF6600;
+    padding-bottom: 60px; }

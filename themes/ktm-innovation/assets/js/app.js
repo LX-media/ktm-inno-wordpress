@@ -5,7 +5,8 @@ define([
 	'three',
 	'vanta',
 	'streams',
-	'stage'
+	'stage',
+	'pagehead'
 ], function(
 	$,
 	Header,
@@ -13,7 +14,8 @@ define([
 	Three,
 	Vanta,
 	Streams,
-	Stage
+	Stage,
+	PageHead
 ) {
 
 	var App = function() {
@@ -24,6 +26,7 @@ define([
 		Header.init();
 		Streams.init();
 		Stage.init();
+		PageHead.init();
 
 		// * ———————————————————————————————————————————————————————— * //
 		// * 	components
