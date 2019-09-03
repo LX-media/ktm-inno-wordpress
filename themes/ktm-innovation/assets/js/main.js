@@ -14,6 +14,7 @@ require.config({
         "header"        : "components/header",
         "streams"       : "components/streams",
         "stage"         : "components/stage",
+        "pagehead"      : "components/pageHead",
     }
 });
 
