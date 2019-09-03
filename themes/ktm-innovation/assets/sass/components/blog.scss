@@ -11,13 +11,10 @@
 
     .et_pb_ajax_pagination_container {
         z-index: 1; 
-        position: absolute;
-        // margin-left: $leftMargin;
-        margin-top: 310px;
-        // transform: translateX(-50%);
-        height: 986px;
+        padding-top: 310px;   
+        max-height: 986px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-start;
 
         @media screen and (max-width: $break-tablet) {
             flex-direction: column;
@@ -30,9 +27,45 @@
             margin-left: 0;
         }
 
+        .frage{
+            margin: 0 0 0 40px;
+            width: calc(33.3% - 60px);
+            background: $orange;
+            color: $black;
+            padding: 75px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            align-items: baseline;
+
+            h3 {
+                color: $black;
+            }
+
+            p{
+                font-size: 25px;
+                line-height: 35px;
+                margin: 40px 0;
+            }
+
+            span{
+                color: $white;
+                text-transform: uppercase;
+                float: right;
+                font-size: 20px;
+                line-height: 25px;
+                @include font("bold");
+                position: absolute;
+                top: 40px;
+                right: 40px;
+            }
+        }
+
         article {
             display: table;
             max-width: 420px;
+            width: calc(33.3% - 60px);
             margin: 0 40px;
 
             &:first-child{
@@ -60,9 +93,7 @@
                 }
             }
 
-            h2{
-                font-size: 40px;
-                line-height: 34px;
+            h3{
                 width: 60%;
                 margin-bottom: 15px;
                 margin-top: 30px;

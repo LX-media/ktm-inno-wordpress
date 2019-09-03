@@ -2,8 +2,8 @@
 
 class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 	function init() {
-		$this->name       = esc_html__( 'Home Page News', 'et_builder' );
-		$this->plural     = esc_html__( 'Home Page News', 'et_builder' );
+		$this->name       = esc_html__( 'Blog News', 'et_builder' );
+		$this->plural     = esc_html__( 'Blog News', 'et_builder' );
 		$this->slug       = 'et_pb_lxblog';
 		$this->vb_support = 'on';
 		$this->main_css_element = '%%order_class%% .et_pb_post';
@@ -45,7 +45,7 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 						'important' => 'all',
 					),
 					'header_level' => array(
-						'default' => 'h2',
+						'default' => 'h3',
 						'computed_affects' => array(
 							'__posts',
 						),
@@ -395,6 +395,21 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				'toggle_slug'       => 'elements',
 				'default_on_front'  => 'off',
 			),
+			'show_net' => array(
+				'label'             => esc_html__( 'Show Animated Net', 'et_builder' ),
+				'type'              => 'yes_no_button',
+				'option_category'   => 'configuration',
+				'options'           => array(
+					'on'  => esc_html__( 'Yes', 'et_builder' ),
+					'off' => esc_html__( 'No', 'et_builder' ),
+				),
+				'description'       => esc_html__( 'Disable this option if you want to remove the animated net in the background.', 'et_builder' ),
+				'computed_affects'  => array(
+					'__posts',
+				),
+				'toggle_slug'       => 'elements',
+				'default_on_front'   => 'on',
+			),
 			'show_author' => array(
 				'label'             => esc_html__( 'Show Author', 'et_builder' ),
 				'type'              => 'yes_no_button',
@@ -496,6 +511,51 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 					'__posts',
 				),
 				'default'          => 0,
+			),
+			'title_one' => array(
+				'label'           => esc_html__( 'Title', 'et_builder' ),
+				'type'            => 'text',
+				'option_category' => 'basic_option',
+				'description'     => esc_html__( '', 'et_builder' ),
+				'dynamic_content' => 'text',
+			),
+			'content_one' => array(
+				'label'           => esc_html__( 'Content', 'et_builder' ),
+				'type'            => 'textarea',
+				'option_category' => 'basic_option',
+				'description'     => esc_html__( '', 'et_builder' ),
+				'dynamic_content' => 'text',
+			),
+			'button_one' => array(
+				'label'           => esc_html__( 'Button title', 'et_builder' ),
+				'type'            => 'text',
+				'option_category' => 'basic_option',
+				'description'     => esc_html__( '', 'et_builder' ),
+				'dynamic_content' => 'text',
+			),
+			'button_one_url' => array(
+				'label'           => esc_html__( 'Button url', 'et_builder' ),
+				'type'            => 'text',
+				'option_category' => 'basic_option',
+				'description'     => esc_html__( '', 'et_builder' ),
+				'dynamic_content' => 'text',
+			),
+			'link_target_one' => array(
+				'label'           => esc_html__( 'Button Link target', 'et_builder' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'basic_option',
+				'options'         => array(
+					'on'       => esc_html__( 'Same', 'et_builder' ),
+					'off'      => esc_html__( 'New', 'et_builder' ),
+				),
+				'affects'           => array(
+					'use_circle_border',
+					'circle_color',
+				),
+				'toggle_slug'      => 'main_content',
+				'description'      => esc_html__( 'Same or new window', 'et_builder' ),
+				'default_on_front'=> 'on',
+				'dynamic_content' => 'text',
 			),
 			'use_overlay' => array(
 				'label'             => esc_html__( 'Featured Image Overlay', 'et_builder' ),
@@ -663,7 +723,7 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 			'hover_icon_tablet'             => '',
 			'hover_icon_phone'              => '',
 			'use_overlay'                   => '',
-			'header_level'                  => 'h2',
+			'header_level'                  => 'h3',
 		);
 
 		// WordPress' native conditional tag is only available during page load. It'll fail during component update because
@@ -1017,6 +1077,12 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 		global $wp_filter;
 		$wp_filter_cache = $wp_filter;
 
+		$title                         	= $this->props['title_one'];
+		$paragraph                      = $this->props['content_one'];
+		$button                         = $this->props['button_one'];
+		$button_url                     = $this->props['button_one_url'];
+		$target                         = $this->props['link_target_one'];
+		$show_net		                = $this->props['show_net'];
 		$fullwidth                           = $this->props['fullwidth'];
 		$posts_number                        = $this->props['posts_number'];
 		$include_categories                  = $this->props['include_categories'];
@@ -1059,7 +1125,7 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 
 		$container_is_closed = false;
 
-		$processed_header_level = et_pb_process_header_level( $header_level, 'h2' );
+		$processed_header_level = et_pb_process_header_level( $header_level, 'h3' );
 
 		// some themes do not include these styles/scripts so we need to enqueue them in this module to support audio post format
 		wp_enqueue_style( 'wp-mediaelement' );
@@ -1473,15 +1539,34 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				$this->add_classname( "et_pb_bg_layout_{$background_layout_phone}_phone" );
 			}
 
+			if($show_net == "on"): $net = "vantajs"; else: $net = ""; endif;
+			if($target == "off"): $t = "_blank"; else: $t = ""; endif;
+
+			if($title != ""):
+				$frage = '<div class="frage">
+				<span>Frage</span>
+				<h3>'.$title.'</h3>
+				<p>'.$paragraph.'</p>
+				<a class="LxBtn LxBtnWhite" href="'. $button_url .'" target="'. $t .'">'. $button .'</a>
+
+				</div>
+				';
+
+			else:
+				$frage = "";
+
+			endif;
+
 			$output = sprintf(
 
 				'<div%4$s class="%1$s"%8$s%9$s >
 				%6$s
 				%5$s
-				<div id="vantajs">
+				<div id="'. $net .'">
 					<div class="LxContainer">
 						<div class="et_pb_ajax_pagination_container" >
 							%2$s
+							'.$frage.'
 						</div>
 					</div>
 				</div>

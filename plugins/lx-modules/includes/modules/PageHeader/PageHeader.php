@@ -89,7 +89,7 @@ class LXMO_PageHeader extends ET_Builder_Module {
 					<?php endif; ?>
                 </div>		
             </div>
-            <div class="LxDivider"> </div>	
+            <!-- <div class="LxDivider"> </div>	 -->
 		</div>
 		<?php
 		$output = ob_get_contents();

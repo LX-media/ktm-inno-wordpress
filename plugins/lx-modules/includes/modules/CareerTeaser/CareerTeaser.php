@@ -127,7 +127,7 @@ class LXMO_CareerTeaser extends ET_Builder_Module {
 		<div class="LxContainer">
 			<div class="LxCareerTeaser">
 				<div class="LxBox LxBoxOne">
-					<h3><?php echo $title_one; ?></h3>
+					<h2><?php echo $title_one; ?></h2>
 					<p><?php echo $content_one; ?></p>
 					<?php if($button_one): ?>
 						<a class="LxBtn LxBtnOrange" href="<?php echo $button_one_url; ?>" <?php if($link_target_one == "off"): ?> target="_blank" <?php endif; ?>>
@@ -137,7 +137,7 @@ class LXMO_CareerTeaser extends ET_Builder_Module {
 				</div>
 
 				<div class="LxBox LxBoxTwo">
-					<h3><?php echo $title_two ?></h3>
+					<h2><?php echo $title_two ?></h2>
 					<p><?php echo $content_two; ?></p>
 					<?php if($button_two): ?>
 						<a class="LxBtn LxBtnOrange" href="<?php echo $button_two_url; ?>" <?php if($link_target_two == "off"): ?> target="_blank" <?php endif; ?>>

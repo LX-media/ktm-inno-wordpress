@@ -130,7 +130,7 @@ class LXMO_Presentation extends ET_Builder_Module {
 		<div class="LxCompany">
 			<div class="LxContainer LxCompanyInner">
 				<div class="LxBox LxBoxOne">
-					<h3><?php echo $title_one; ?></h3>
+					<h2><?php echo $title_one; ?></h2>
 					<p><?php echo $content_one; ?></p>
 					<?php if($button_one): ?>
 						<a class="LxBtn LxBtnOrange" href="<?php echo $button_one_url; ?>" <?php if($link_target_one == "off"): ?> target="_blank" <?php endif; ?>>
