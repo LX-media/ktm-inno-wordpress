@@ -1,0 +1,157 @@
+.LxFeatured {
+    width: 100vw;
+    max-width: 100%;
+    height: 702px;
+    object-fit: cover;
+}
+
+.LxTopLine {
+    width: 100vw;
+    max-width: 100%;
+    height: 80px;
+    background: $lightGrey;
+    margin-top: 30px;
+    position: relative;
+    text-transform: uppercase;
+    @include font("bold");
+
+    span{
+        color: $white;
+        display: inline-flex;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        font-size: 30px;
+        line-height: 37px;
+        @include font("bold");
+
+        i{
+            &.arrow{
+                &.down{
+    
+                    &:before {
+                        border-right: 2px solid;
+                        content: "";
+                        display: block;
+                        height: 8px;
+                        margin-top: -5px;
+                        position: absolute;
+                        -moz-transform: rotate(45deg);
+                        -o-transform: rotate(45deg);
+                        -webkit-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                        right: -20px;
+                        top: 50%;
+                        width: 0;
+                    }
+
+                    &:after {
+                        border-right: 2px solid;
+                        right: -15px;
+                        display: block;
+                        height: 8px;
+                        position: absolute;
+                        content: '';
+                        margin-top: 14px;
+                        -moz-transform: rotate(-45deg);
+                        -o-transform: rotate(-45deg);
+                        -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lxpost {
+    margin: 0 auto;
+    max-width:1560px; // container width + padding
+    padding: 0 50px;
+
+        h3 {
+            font-size: 45px;
+            font-weight: 100;
+            margin: 0 auto;
+            width: 868px;
+            padding: 40px 0;
+        }
+
+    h1 {
+        font-size: 120px;
+        line-height: 144px;
+        text-transform: none; 
+    }
+
+    h2{
+        font-size: 60px;
+        line-height: 73px;
+        color: $orange;
+    }
+
+    p {
+        font-size: 30px;
+        line-height: 45px;
+        color: $black;
+        letter-spacing: 2.5px;
+        max-width:868px;
+        margin: 0 auto;
+    }
+
+    img, iframe {
+        max-width: 1160px;
+        margin: 0 auto;
+    }
+
+    .post-meta{
+        display: none;
+    }
+
+    .LxClient{
+        padding: 50px 0;
+
+        span{
+            color: $grey;
+        }
+        color: $orange;
+        font-size: 30px;
+        line-height: 37px;
+        @include font("bold");
+        text-transform: uppercase;
+    }
+
+    .LxLine {
+        width: 100%;
+        height: 10px;
+        background: $grey;
+        display: block;
+    }
+
+    .LxCategory {
+        padding: 50px 0;
+
+        a {
+            font-size: 18px;
+            line-height: 23px;
+            color: $orange;
+            text-transform: uppercase;
+            @include font("bold");
+            position: relative;
+            margin-left: 15px;
+        
+            &:before{
+                content: "";
+                left: -15px;
+                position: absolute;
+                top: 6px;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent; 
+                
+                border-right:7px solid $orange; 
+            }
+        }
+    }
+
+}

@@ -25,10 +25,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 
 		<?php endwhile;
 		else:
-	?>
-	<div class="container">
-		<div id="content-area" class="clearfix">
-			
+	?>		
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php
 				/**
@@ -37,23 +34,24 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 				 * @since 3.18.8
 				 */
 				do_action( 'et_before_post' );
+
+				$category = get_the_category();
+				
 				?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post' ); ?>>
 					<?php if ( ( 'off' !== $show_default_title && $is_page_builder_used ) || ! $is_page_builder_used ) { ?>
 						<div class="et_post_meta_wrapper">
-							<h1 class="entry-title"><?php the_title(); ?></h1>
-
+						<div class="LxTopLine"> <span>Explore  <?php echo $category[0]->cat_name; ?> <i class="arrow down"></i></span></div>
 						<?php
 							if ( ! post_password_required() ) :
 
-								et_divi_post_meta();
 
 								$thumb = '';
 
-								$width = (int) apply_filters( 'et_pb_index_blog_image_width', 1080 );
+								$width = (int) apply_filters( 'et_pb_index_blog_image_width', "" );
 
-								$height = (int) apply_filters( 'et_pb_index_blog_image_height', 675 );
-								$classtext = 'et_featured_image';
+								$height = (int) apply_filters( 'et_pb_index_blog_image_height', "" );
+								$classtext = 'LxFeatured';
 								$titletext = get_the_title();
 								$thumbnail = get_thumbnail( $width, $height, $classtext, $titletext, $titletext, false, 'Blogimage' );
 								$thumb = $thumbnail["thumb"];
@@ -68,7 +66,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 										et_core_esc_previously( $first_video )
 									);
 								} else if ( ! in_array( $post_format, array( 'gallery', 'link', 'quote' ) ) && 'on' === et_get_option( 'divi_thumbnails', 'on' ) && '' !== $thumb ) {
-									print_thumbnail( $thumb, $thumbnail["use_timthumb"], $titletext, $width, $height );
+									print_thumbnail( $thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext );
 								} else if ( 'gallery' === $post_format ) {
 									et_pb_gallery_images();
 								}
@@ -120,8 +118,23 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 										break;
 								}
 
+							?>
+							<div class="LxContainer lxpost">
+								<div id="content-area" class="clearfix">
+							<?php
+
+								et_divi_post_meta();
+
+
 							endif;
 						?>
+							<div class="LxCategory"><?php the_category(); ?></div>
+
+							<h1 class="entry-title"><?php the_title(); ?></h1>
+							<h2> <?php the_field("second_headline"); ?></h2>
+							<div class="LxClient"><span><?php the_field("client_field_name"); ?></span> <?php the_field("client_name"); ?> </div>
+							<span class="LxLine"></span>
+
 					</div> <!-- .et_post_meta_wrapper -->
 				<?php  } ?>
 
