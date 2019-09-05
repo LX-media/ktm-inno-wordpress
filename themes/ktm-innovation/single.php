@@ -119,6 +119,9 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 								}
 
 							?>
+							<div class="LxNext"> 
+
+							</div>
 							<div class="LxContainer lxpost">
 								<div id="content-area" class="clearfix">
 							<?php

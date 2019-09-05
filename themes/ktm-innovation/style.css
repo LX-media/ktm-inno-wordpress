@@ -495,6 +495,17 @@ footer #LxFooterBottom {
   -o-object-fit: cover;
   object-fit: cover; }
 
+.LxNext {
+  width: 100vw;
+  max-width: 100%;
+  height: 702px;
+  background: #878787;
+  position: absolute;
+  top: 80px;
+  display: none; }
+  .LxNext.active {
+    display: block; }
+
 .LxTopLine {
   width: 100vw;
   max-width: 100%;
@@ -527,6 +538,13 @@ footer #LxFooterBottom {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-style: normal; }
+    .LxTopLine span i.rotate {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
+      .LxTopLine span i.rotate:before {
+        right: 19px !important; }
+      .LxTopLine span i.rotate:after {
+        right: 14px !important; }
     .LxTopLine span i.arrow.down:before {
       border-right: 2px solid;
       content: "";
