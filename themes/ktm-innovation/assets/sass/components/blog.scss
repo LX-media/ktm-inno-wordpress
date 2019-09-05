@@ -2,11 +2,9 @@
     z-index: 1;
     position: relative;
     height: 986px;
-    #particles-js{
-        z-index: 1;
-        @media screen and (max-width: $break-mobile){
-            height: 100%;
-        }
+    
+    #vantajs{
+        height: 100%;
     }
 
     .et_pb_ajax_pagination_container {
@@ -94,9 +92,9 @@
             }
 
             h3{
-                width: 60%;
                 margin-bottom: 15px;
                 margin-top: 30px;
+                text-transform: uppercase;
 
                 @media screen and (max-width: $break-tablet) {
                     width: 90%;          
@@ -120,7 +118,7 @@
             
             img {
                 width: 100%;
-                max-height: 310px;
+                height: 310px;
                 object-fit: cover;
                 border-bottom: 12px solid $orange;
                 margin-bottom: 0;
