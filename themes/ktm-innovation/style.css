@@ -182,6 +182,11 @@ h3 {
 body.noScroll {
   overflow: hidden; }
 
+@media screen and (max-width: 767px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden; } }
+
 .container {
   max-width: 1460px; }
 
@@ -584,22 +589,43 @@ footer #LxFooterBottom {
   margin: 0 auto;
   max-width: 1560px;
   padding: 0 50px; }
+  @media screen and (max-width: 980px) {
+    .lxpost {
+      padding: 0 20px; } }
+  @media screen and (max-width: 767px) {
+    .lxpost {
+      padding: 0 10px; } }
   .lxpost .entry-content {
     margin-top: 70px; }
+    @media screen and (max-width: 767px) {
+      .lxpost .entry-content {
+        margin-top: 20px; } }
   .lxpost h1 {
     font-size: 120px;
     line-height: 144px;
     text-transform: none; }
+    @media screen and (max-width: 767px) {
+      .lxpost h1 {
+        font-size: 60px;
+        line-height: 62px; } }
   .lxpost h2 {
     font-size: 60px;
     line-height: 73px;
     color: #FF6600; }
+    @media screen and (max-width: 767px) {
+      .lxpost h2 {
+        font-size: 30px;
+        line-height: 31px; } }
   .lxpost h3 {
     font-size: 45px;
     font-weight: 100;
     margin: 0 auto;
     width: 868px;
     padding: 40px 0; }
+    @media screen and (max-width: 767px) {
+      .lxpost h3 {
+        font-size: 25px;
+        line-height: 26px; } }
   .lxpost p {
     font-size: 30px;
     line-height: 45px;
@@ -607,6 +633,10 @@ footer #LxFooterBottom {
     letter-spacing: 2.5px;
     max-width: 868px;
     margin: 0 auto; }
+    @media screen and (max-width: 767px) {
+      .lxpost p {
+        font-size: 20px;
+        line-height: 26px; } }
   .lxpost img, .lxpost iframe {
     max-width: 1160px;
     margin: 0 auto; }
@@ -623,14 +653,24 @@ footer #LxFooterBottom {
     -moz-osx-font-smoothing: grayscale;
     font-style: normal;
     text-transform: uppercase; }
+    @media screen and (max-width: 767px) {
+      .lxpost .LxClient {
+        padding: 20px 0; } }
     .lxpost .LxClient span {
       color: #878787; }
+    @media screen and (max-width: 767px) {
+      .lxpost .LxClient {
+        font-size: 15px;
+        line-height: 16px; } }
   .lxpost .et_pb_image {
     display: block;
     max-width: 1160px;
     height: 650px;
     margin: 0 auto;
     margin-top: 70px; }
+    @media screen and (max-width: 767px) {
+      .lxpost .et_pb_image {
+        margin-top: 20px; } }
     .lxpost .et_pb_image .et_pb_image_wrap {
       width: 100%; }
       .lxpost .et_pb_image .et_pb_image_wrap img {
@@ -646,8 +686,14 @@ footer #LxFooterBottom {
     height: 650px;
     max-width: 1160px;
     overflow: hidden; }
+    @media screen and (max-width: 767px) {
+      .lxpost .et_pb_video_box {
+        margin-top: 20px; } }
   .lxpost .et_pb_module:last-child {
     margin-bottom: 200px !important; }
+    @media screen and (max-width: 767px) {
+      .lxpost .et_pb_module:last-child {
+        margin-bottom: 40px !important; } }
   .lxpost .LxLine {
     width: 100%;
     height: 10px;

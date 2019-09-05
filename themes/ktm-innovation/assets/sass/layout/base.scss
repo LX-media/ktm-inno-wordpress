@@ -2,6 +2,11 @@ body{
     &.noScroll{
         overflow: hidden;    
     }
+
+    @media screen and (max-width: $break-mobile) {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
 }
 
 .container {
@@ -59,11 +64,9 @@ body{
 
                 @media screen and (max-width: $break-tablet){
                     border-right: calc(100vw - 60px) solid transparent;
-
                 }
             }
         }
-
     }
 }
 
@@ -87,4 +90,3 @@ body{
 .et_pb_module {
     margin-bottom: 0 !important;
 }
-
