@@ -581,12 +581,8 @@ footer #LxFooterBottom {
   margin: 0 auto;
   max-width: 1560px;
   padding: 0 50px; }
-  .lxpost h3 {
-    font-size: 45px;
-    font-weight: 100;
-    margin: 0 auto;
-    width: 868px;
-    padding: 40px 0; }
+  .lxpost .entry-content {
+    margin-top: 70px; }
   .lxpost h1 {
     font-size: 120px;
     line-height: 144px;
@@ -595,6 +591,12 @@ footer #LxFooterBottom {
     font-size: 60px;
     line-height: 73px;
     color: #FF6600; }
+  .lxpost h3 {
+    font-size: 45px;
+    font-weight: 100;
+    margin: 0 auto;
+    width: 868px;
+    padding: 40px 0; }
   .lxpost p {
     font-size: 30px;
     line-height: 45px;
@@ -620,6 +622,27 @@ footer #LxFooterBottom {
     text-transform: uppercase; }
     .lxpost .LxClient span {
       color: #878787; }
+  .lxpost .et_pb_image {
+    display: block;
+    max-width: 1160px;
+    height: 650px;
+    margin: 0 auto;
+    margin-top: 70px; }
+    .lxpost .et_pb_image .et_pb_image_wrap {
+      width: 100%; }
+      .lxpost .et_pb_image .et_pb_image_wrap img {
+        width: 100%;
+        height: 650px;
+        -o-object-fit: cover;
+        object-fit: cover; }
+  .lxpost .et_pb_video {
+    max-width: 1160px;
+    margin: 0 auto; }
+  .lxpost .et_pb_video_box {
+    margin-top: 70px;
+    height: 650px;
+    max-width: 1160px;
+    overflow: hidden; }
   .lxpost .LxLine {
     width: 100%;
     height: 10px;

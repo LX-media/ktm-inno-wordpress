@@ -98,13 +98,9 @@
     max-width:1560px; // container width + padding
     padding: 0 50px;
 
-        h3 {
-            font-size: 45px;
-            font-weight: 100;
-            margin: 0 auto;
-            width: 868px;
-            padding: 40px 0;
-        }
+    .entry-content{
+        margin-top: 70px;
+    }
 
     h1 {
         font-size: 120px;
@@ -116,6 +112,14 @@
         font-size: 60px;
         line-height: 73px;
         color: $orange;
+    }
+
+    h3 {
+        font-size: 45px;
+        font-weight: 100;
+        margin: 0 auto;
+        width: 868px;
+        padding: 40px 0;
     }
 
     p {
@@ -147,6 +151,35 @@
         line-height: 37px;
         @include font("bold");
         text-transform: uppercase;
+    }
+
+    .et_pb_image{
+        display: block;
+        max-width: 1160px;
+        height: 650px;
+        margin: 0 auto;
+        margin-top: 70px;
+
+        .et_pb_image_wrap{
+            width: 100%;
+            img{
+                width: 100%;
+                height: 650px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .et_pb_video{
+        max-width: 1160px;
+        margin: 0 auto;
+    }
+
+    .et_pb_video_box {
+        margin-top: 70px;
+        height: 650px;
+        max-width: 1160px;
+        overflow: hidden;
     }
 
     .LxLine {
