@@ -502,9 +502,12 @@ footer #LxFooterBottom {
   background: #878787;
   position: absolute;
   top: 80px;
-  display: none; }
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
   .LxNext.active {
-    display: block; }
+    opacity: 1; }
 
 .LxTopLine {
   width: 100vw;
