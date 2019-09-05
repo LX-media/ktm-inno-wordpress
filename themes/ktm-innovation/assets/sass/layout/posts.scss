@@ -182,6 +182,12 @@
         overflow: hidden;
     }
 
+    .et_pb_module {
+        &:last-child{
+            margin-bottom: 200px !important;
+        }
+    }
+
     .LxLine {
         width: 100%;
         height: 10px;
