@@ -177,6 +177,7 @@ h3 {
     padding: 10px 20px;
     color: #FF6600; }
 
+/* HELPERS */
 /* FORM ELEMENTS */
 /* LAYOUT */
 body.noScroll {
@@ -1345,3 +1346,53 @@ footer #LxFooterBottom {
     width: 100%;
     background: #FF6600;
     padding-bottom: 60px; }
+
+.et_pb_circle_counter {
+  max-width: 1460px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative; }
+  .et_pb_circle_counter .et_pb_circle_counter_inner {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0; }
+    @media screen and (max-width: 980px) {
+      .et_pb_circle_counter .et_pb_circle_counter_inner {
+        max-width: 33%; } }
+    .et_pb_circle_counter .et_pb_circle_counter_inner .percent {
+      width: 100%;
+      display: block; }
+      .et_pb_circle_counter .et_pb_circle_counter_inner .percent p {
+        max-width: 400px; }
+        .et_pb_circle_counter .et_pb_circle_counter_inner .percent p span {
+          font-family: proxima-nova,sans-serif;
+          font-weight: 700;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-style: normal;
+          font-size: 100px;
+          color: #000000; }
+          @media screen and (max-width: 980px) {
+            .et_pb_circle_counter .et_pb_circle_counter_inner .percent p span {
+              font-size: 70px; } }
+    .et_pb_circle_counter .et_pb_circle_counter_inner h3 {
+      position: absolute;
+      right: -105%;
+      width: calc(100% - 20px);
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      font-family: proxima-nova,sans-serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-style: normal;
+      font-size: 34px;
+      color: #FF6600;
+      line-height: 45px;
+      text-align: left; }
+  .et_pb_circle_counter:nth-child(even) h3 {
+    left: -105%;
+    right: unset;
+    text-align: right; }

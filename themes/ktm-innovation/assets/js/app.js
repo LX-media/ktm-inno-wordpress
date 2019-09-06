@@ -1,7 +1,7 @@
 define([
 	'jquery',
     'header',
-	// 'particles',
+	'loading',
 	'three',
 	'vanta',
 	'streams',
@@ -11,7 +11,7 @@ define([
 ], function(
 	$,
 	Header,
-	// Particles,
+	Loading,
 	Three,
 	Vanta,
 	Streams,
