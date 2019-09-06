@@ -31,6 +31,10 @@
                     @media screen and(max-width: $break-tablet){
                         font-size: 70px;
                     }
+
+                    @media screen and(max-width: $break-mobile){
+                        font-size: 40px;
+                    }
                 }
             }
         }
@@ -46,6 +50,16 @@
             color: $orange;
             line-height: 45px;
             text-align: left;
+
+            @media screen and(max-width: $break-tablet){
+                max-width: 27vw;
+                right: -100%;
+            }
+
+            @media screen and(max-width: $break-mobile){
+                font-size: 16px;
+                line-height: 20px;
+            }
         }
     }
 
@@ -54,6 +68,10 @@
             left: -105%;
             right: unset;
             text-align: right;
+
+            @media screen and(max-width: $break-tablet){
+                left: -100%;
+            }
         }
     }
 }

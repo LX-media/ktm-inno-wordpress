@@ -1378,6 +1378,9 @@ footer #LxFooterBottom {
           @media screen and (max-width: 980px) {
             .et_pb_circle_counter .et_pb_circle_counter_inner .percent p span {
               font-size: 70px; } }
+          @media screen and (max-width: 767px) {
+            .et_pb_circle_counter .et_pb_circle_counter_inner .percent p span {
+              font-size: 40px; } }
     .et_pb_circle_counter .et_pb_circle_counter_inner h3 {
       position: absolute;
       right: -105%;
@@ -1395,7 +1398,18 @@ footer #LxFooterBottom {
       color: #FF6600;
       line-height: 45px;
       text-align: left; }
+      @media screen and (max-width: 980px) {
+        .et_pb_circle_counter .et_pb_circle_counter_inner h3 {
+          max-width: 27vw;
+          right: -100%; } }
+      @media screen and (max-width: 767px) {
+        .et_pb_circle_counter .et_pb_circle_counter_inner h3 {
+          font-size: 16px;
+          line-height: 20px; } }
   .et_pb_circle_counter:nth-child(even) h3 {
     left: -105%;
     right: unset;
     text-align: right; }
+    @media screen and (max-width: 980px) {
+      .et_pb_circle_counter:nth-child(even) h3 {
+        left: -100%; } }
