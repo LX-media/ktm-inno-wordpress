@@ -5,6 +5,10 @@
     position: relative;
     .et_pb_circle_counter_inner{
         max-width: 400px;
+    
+        &:first-child {
+            margin-top: 50px;
+        }
 
         @media screen and(max-width: $break-tablet){
             max-width: 33%;
@@ -12,6 +16,7 @@
 
         margin: 0 auto;
         padding: 0;
+        margin-bottom: 100px;
 
         .percent{
             width: 100%;
@@ -42,7 +47,6 @@
             line-height: 45px;
             text-align: left;
         }
-
     }
 
     &:nth-child(even){
@@ -51,10 +55,6 @@
             right: unset;
             text-align: right;
         }
-
     }
-
-
-
 }
 
