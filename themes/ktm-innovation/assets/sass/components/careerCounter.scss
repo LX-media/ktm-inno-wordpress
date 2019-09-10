@@ -1,0 +1,78 @@
+.et_pb_circle_counter {
+    max-width: 1460px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    .et_pb_circle_counter_inner{
+        max-width: 400px;
+    
+        &:first-child {
+            margin-top: 50px;
+        }
+
+        @media screen and(max-width: $break-tablet){
+            max-width: 33%;
+        }
+
+        margin: 0 auto;
+        padding: 0;
+        margin-bottom: 100px;
+
+        .percent{
+            width: 100%;
+            display: block;
+            p {
+                max-width: 400px;
+                span{
+                    @include font("bold");
+                    font-size: 100px;
+                    color: $black;
+
+                    @media screen and(max-width: $break-tablet){
+                        font-size: 70px;
+                    }
+
+                    @media screen and(max-width: $break-mobile){
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+
+        h3 {
+            position: absolute;
+            right: -105%;
+            width: calc(100% - 20px);
+            top: 50%;
+            transform: translate(0, -50%);
+            @include font("regular");
+            font-size: 34px;
+            color: $orange;
+            line-height: 45px;
+            text-align: left;
+
+            @media screen and(max-width: $break-tablet){
+                max-width: 27vw;
+                right: -100%;
+            }
+
+            @media screen and(max-width: $break-mobile){
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    &:nth-child(even){
+        h3 {
+            left: -105%;
+            right: unset;
+            text-align: right;
+
+            @media screen and(max-width: $break-tablet){
+                left: -100%;
+            }
+        }
+    }
+}
+

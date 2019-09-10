@@ -4,10 +4,9 @@ require.config({
     paths: {
         // helpers
         "jquery"        : "helper/jquery.min",
-        // "particles"     : "helper/particles.min",
         "three"         : "helper/three.min",
         "vanta"         : "helper/vanta.net.min",
- 
+        "loading"       : "helper/loading-bar",
 
         // custom js
         "app"           : "app",
