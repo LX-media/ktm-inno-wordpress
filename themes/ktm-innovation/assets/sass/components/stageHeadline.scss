@@ -1,0 +1,76 @@
+.lxmo_stageheadline {
+    z-index: 2;
+    margin: 65px 0;
+    padding-bottom: 85px;
+
+    .LxStageHeadline {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .LxTilted {
+        width: 100vw;
+        max-width: 100%;
+    
+        img {
+            width: 100vw;
+            left: 50%;
+            overflow: hidden;
+            transform: rotate(-3deg) translate(-50%, 0) scale(0.972);
+            position: relative;
+            z-index: 1;
+            top: 0;
+        }
+
+        &:before{
+            content:"";
+            width: 3%;
+            height: 96.9%;
+            background: linear-gradient(-45deg, #707070, $black);
+            left: 0;
+            bottom: -7.8%;
+            position: absolute;
+            z-index: 0;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 97%);
+        }
+
+        &:after{
+            content:"";
+            width: 2.9%;
+            height: 96.6%;
+            background: linear-gradient(-45deg, #707070, $black);
+            right: 0;
+            top: 1.6%;
+            position: absolute;
+            z-index: 0;
+            clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 85%);
+        }
+    }
+
+    .LxContainer{
+        position: relative;
+
+        h1 {
+            padding: 0 20px;
+            color: white;
+            bottom: -105px;
+            position: absolute;
+            text-transform: none;
+            font-size: 200px;
+            line-height: 200px;
+            z-index: 2;
+
+            @media screen and (max-width: $break-tablet){
+                font-size: 80px;
+                line-height: 80px;
+                bottom: -40px;
+            }
+
+            @media screen and (max-width: $break-mobile){
+                font-size: 30px;
+                line-height: 30px;
+                bottom: -10px;
+            }
+        }
+    }    
+}
