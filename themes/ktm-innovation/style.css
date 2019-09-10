@@ -1418,29 +1418,33 @@ footer #LxFooterBottom {
 
 .lxmo_stageheadline {
   z-index: 2;
-  margin: 65px 0; }
+  margin: 65px 0;
+  padding-bottom: 85px; }
   .lxmo_stageheadline .LxStageHeadline {
     position: relative;
-    margin: 3% 0;
-    max-width: 97%; }
+    margin-bottom: 30px; }
   .lxmo_stageheadline .LxTilted {
-    width: calc(100vw - 2.2%); }
+    width: 100vw;
+    max-width: 100%; }
     .lxmo_stageheadline .LxTilted img {
       width: 100vw;
-      padding-left: 1%;
+      left: 50%;
       overflow: hidden;
-      -webkit-transform: rotate(-3deg);
-      -ms-transform: rotate(-3deg);
-      transform: rotate(-3deg);
+      -webkit-transform: rotate(-3deg) translate(-50%, 0) scale(0.972);
+      -ms-transform: rotate(-3deg) translate(-50%, 0) scale(0.972);
+      transform: rotate(-3deg) translate(-50%, 0) scale(0.972);
       position: relative;
-      z-index: 1; }
+      z-index: 1;
+      top: 0; }
     .lxmo_stageheadline .LxTilted:before {
       content: "";
-      width: 2.6%;
-      height: 99%;
-      background: #000000;
+      width: 3%;
+      height: 96.9%;
+      background: -webkit-linear-gradient(135deg, #707070, #000000);
+      background: -o-linear-gradient(135deg, #707070, #000000);
+      background: linear-gradient(-45deg, #707070, #000000);
       left: 0;
-      top: 5.5%;
+      bottom: -7.8%;
       position: absolute;
       z-index: 0;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 97%);
@@ -1448,21 +1452,34 @@ footer #LxFooterBottom {
     .lxmo_stageheadline .LxTilted:after {
       content: "";
       width: 2.9%;
-      height: 99.1%;
-      background: #000000;
-      right: -3%;
-      top: -4.8%;
+      height: 96.6%;
+      background: -webkit-linear-gradient(135deg, #707070, #000000);
+      background: -o-linear-gradient(135deg, #707070, #000000);
+      background: linear-gradient(-45deg, #707070, #000000);
+      right: 0;
+      top: 1.6%;
       position: absolute;
       z-index: 0;
-      -webkit-clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 100%);
-      clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 100%); }
+      -webkit-clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 85%);
+      clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 85%); }
   .lxmo_stageheadline .LxContainer {
     position: relative; }
     .lxmo_stageheadline .LxContainer h1 {
+      padding: 0 20px;
       color: white;
-      bottom: -65px;
+      bottom: -105px;
       position: absolute;
       text-transform: none;
       font-size: 200px;
       line-height: 200px;
       z-index: 2; }
+      @media screen and (max-width: 980px) {
+        .lxmo_stageheadline .LxContainer h1 {
+          font-size: 80px;
+          line-height: 80px;
+          bottom: -40px; } }
+      @media screen and (max-width: 767px) {
+        .lxmo_stageheadline .LxContainer h1 {
+          font-size: 30px;
+          line-height: 30px;
+          bottom: -10px; } }
