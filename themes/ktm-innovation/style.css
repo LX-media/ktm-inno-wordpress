@@ -342,7 +342,9 @@ body.noScroll {
   height: 100vh;
   max-width: 100%;
   max-height: 100%;
-  background: lightgrey;
+  background: -webkit-linear-gradient(135deg, #333333, #696969);
+  background: -o-linear-gradient(135deg, #333333, #696969);
+  background: linear-gradient(-45deg, #333333, #696969);
   position: fixed;
   z-index: 2;
   top: 0;
@@ -1413,3 +1415,54 @@ footer #LxFooterBottom {
     @media screen and (max-width: 980px) {
       .et_pb_circle_counter:nth-child(even) h3 {
         left: -100%; } }
+
+.lxmo_stageheadline {
+  z-index: 2;
+  margin: 65px 0; }
+  .lxmo_stageheadline .LxStageHeadline {
+    position: relative;
+    margin: 3% 0;
+    max-width: 97%; }
+  .lxmo_stageheadline .LxTilted {
+    width: calc(100vw - 2.2%); }
+    .lxmo_stageheadline .LxTilted img {
+      width: 100vw;
+      padding-left: 1%;
+      overflow: hidden;
+      -webkit-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+      transform: rotate(-3deg);
+      position: relative;
+      z-index: 1; }
+    .lxmo_stageheadline .LxTilted:before {
+      content: "";
+      width: 2.6%;
+      height: 99%;
+      background: #000000;
+      left: 0;
+      top: 5.5%;
+      position: absolute;
+      z-index: 0;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 97%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 97%); }
+    .lxmo_stageheadline .LxTilted:after {
+      content: "";
+      width: 2.9%;
+      height: 99.1%;
+      background: #000000;
+      right: -3%;
+      top: -4.8%;
+      position: absolute;
+      z-index: 0;
+      -webkit-clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 100%); }
+  .lxmo_stageheadline .LxContainer {
+    position: relative; }
+    .lxmo_stageheadline .LxContainer h1 {
+      color: white;
+      bottom: -65px;
+      position: absolute;
+      text-transform: none;
+      font-size: 200px;
+      line-height: 200px;
+      z-index: 2; }
