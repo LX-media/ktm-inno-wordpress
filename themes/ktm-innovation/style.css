@@ -163,6 +163,9 @@ h3 {
   font-size: 40px;
   line-height: 40px; }
 
+p {
+  color: #000000; }
+
 .LxBtn {
   font-size: 16px;
   line-height: 34px;
@@ -443,7 +446,8 @@ footer #LxFooter {
       footer #LxFooter .LxFooterContentContainer .LxFooterInner .LxFooterContent p {
         font-size: 20px;
         line-height: 28px;
-        margin-top: 20px; }
+        margin-top: 20px;
+        color: #878787; }
         @media screen and (max-width: 980px) {
           footer #LxFooter .LxFooterContentContainer .LxFooterInner .LxFooterContent p {
             font-size: 14px;
@@ -1483,3 +1487,196 @@ footer #LxFooterBottom {
           font-size: 30px;
           line-height: 30px;
           bottom: -10px; } }
+
+.LxJobs {
+  padding: 50px 0;
+  background: url("/wp-content/plugins/lx-modules/includes/modules/Jobs/img/nets.png"); }
+  .LxJobs h2 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 90px; }
+    @media screen and (max-width: 767px) {
+      .LxJobs h2 {
+        padding-bottom: 30px; } }
+    .LxJobs h2:after {
+      content: "...";
+      color: #FF6600; }
+  .LxJobs .LxJobSlider {
+    width: 66.6%;
+    margin: 0 auto;
+    position: relative; }
+  .LxJobs .owl-stage-outer {
+    overflow: hidden;
+    position: relative; }
+    .LxJobs .owl-stage-outer .owl-stage {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      font-family: proxima-nova,sans-serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-style: normal; }
+      .LxJobs .owl-stage-outer .owl-stage .owl-item {
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        color: #000000;
+        margin: 0 10px;
+        background: transparent;
+        position: relative;
+        min-height: 300px; }
+        .LxJobs .owl-stage-outer .owl-stage .owl-item a {
+          padding: 30px;
+          width: 100%;
+          height: 100%;
+          display: block;
+          color: #000000; }
+          .LxJobs .owl-stage-outer .owl-stage .owl-item a .inner {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column; }
+            .LxJobs .owl-stage-outer .owl-stage .owl-item a .inner .title {
+              font-family: proxima-nova,sans-serif;
+              font-weight: 400;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              font-style: normal;
+              font-size: 40px;
+              line-height: 40px;
+              margin-bottom: 20px; }
+              @media screen and (max-width: 767px) {
+                .LxJobs .owl-stage-outer .owl-stage .owl-item a .inner .title {
+                  font-size: 20px;
+                  line-height: 20px; } }
+            .LxJobs .owl-stage-outer .owl-stage .owl-item a .inner .subtitle {
+              font-size: 25px;
+              line-height: 35px; }
+              @media screen and (max-width: 767px) {
+                .LxJobs .owl-stage-outer .owl-stage .owl-item a .inner .subtitle {
+                  font-size: 15px;
+                  line-height: 20px; } }
+          .LxJobs .owl-stage-outer .owl-stage .owl-item a .LxArrow {
+            background: #000000;
+            width: 50px;
+            height: 1px;
+            position: absolute;
+            bottom: 30px;
+            right: 30px; }
+            .LxJobs .owl-stage-outer .owl-stage .owl-item a .LxArrow:after {
+              content: "";
+              position: absolute;
+              right: 0;
+              width: 9px;
+              height: 1px;
+              background: #000000;
+              right: 0;
+              top: -4px;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
+            .LxJobs .owl-stage-outer .owl-stage .owl-item a .LxArrow:before {
+              content: "";
+              position: absolute;
+              right: 0;
+              width: 9px;
+              height: 1px;
+              background: #000000;
+              right: 0;
+              bottom: -4px;
+              -webkit-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+          .LxJobs .owl-stage-outer .owl-stage .owl-item a:hover {
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            color: #FFFFFF; }
+            .LxJobs .owl-stage-outer .owl-stage .owl-item a:hover .LxArrow {
+              -webkit-transition: all 0.5s;
+              -o-transition: all 0.5s;
+              transition: all 0.5s;
+              background: #FFFFFF; }
+              .LxJobs .owl-stage-outer .owl-stage .owl-item a:hover .LxArrow:after {
+                -webkit-transition: all 0.5s;
+                -o-transition: all 0.5s;
+                transition: all 0.5s;
+                background: #FFFFFF; }
+              .LxJobs .owl-stage-outer .owl-stage .owl-item a:hover .LxArrow:before {
+                -webkit-transition: all 0.5s;
+                -o-transition: all 0.5s;
+                transition: all 0.5s;
+                background: #FFFFFF; }
+        .LxJobs .owl-stage-outer .owl-stage .owl-item:hover {
+          background: -webkit-linear-gradient(135deg, #DE5900, #FF6600);
+          background: -o-linear-gradient(135deg, #DE5900, #FF6600);
+          background: linear-gradient(-45deg, #DE5900, #FF6600); }
+  .LxJobs .owl-nav .owl-prev {
+    left: -100px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    background: transparent;
+    border: none; }
+    @media screen and (max-width: 767px) {
+      .LxJobs .owl-nav .owl-prev {
+        left: -50px; } }
+    .LxJobs .owl-nav .owl-prev:after {
+      content: "";
+      width: 0;
+      cursor: pointer;
+      height: 0;
+      position: absolute;
+      -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      border-right: 45px solid #000000; }
+      @media screen and (max-width: 767px) {
+        .LxJobs .owl-nav .owl-prev:after {
+          font-size: 15px;
+          line-height: 20px; } }
+  .LxJobs .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    background: transparent;
+    border: none; }
+    @media screen and (max-width: 767px) {
+      .LxJobs .owl-nav .owl-next {
+        right: -5px; } }
+    .LxJobs .owl-nav .owl-next:before {
+      content: "";
+      cursor: pointer;
+      width: 0;
+      height: 0;
+      position: absolute;
+      -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      border-left: 45px solid #000000; }
+
+.LxContact {
+  max-width: 770px;
+  color: #000000;
+  margin: 0 auto; }
+  .LxContact a {
+    color: #FF6600; }

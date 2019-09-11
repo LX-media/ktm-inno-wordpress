@@ -68,6 +68,19 @@
                 'rewrite' => array('slug' => 'projects'),
             )
         );
+
+        register_post_type( 'jobs',
+        // CPT Options
+            array(
+                'labels' => array(
+                    'name' => __( 'Jobs' ),
+                    'singular_name' => __( 'Job' )
+                ),
+                'public' => true,
+                'has_archive' => true,
+                'rewrite' => array('slug' => 'projects'),
+            )
+        );
     }
     // Hooking up our function to theme setup
     add_action( 'init', 'create_posttype' );

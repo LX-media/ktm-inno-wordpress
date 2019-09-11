@@ -7,6 +7,7 @@ require.config({
         "three"         : "helper/three.min",
         "vanta"         : "helper/vanta.net.min",
         "loading"       : "helper/loading-bar",
+        "owl"           : "helper/owl.carousel.min",
 
         // custom js
         "app"           : "app",
@@ -14,7 +15,8 @@ require.config({
         "streams"       : "components/streams",
         "stage"         : "components/stage",
         "pagehead"      : "components/pageHead",
-        "posts"         : "components/posts"
+        "posts"         : "components/posts",
+        "jobs"          : "components/jobs"
     }
 });
 
