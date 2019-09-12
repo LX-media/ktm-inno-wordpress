@@ -39,6 +39,3 @@ VANTA.NET({
     spacing: 16.00,
     showDots: false
 })
-
-
-

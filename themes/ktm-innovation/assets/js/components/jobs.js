@@ -9,7 +9,6 @@ define(
         $(window).scroll(function() {
             var counter = $(".LxPercent");
 
-
             var top_of_element = $(".LxPercent").offset().top;
             var bottom_of_element = $(".LxPercent").offset().top + $(".LxPercent").outerHeight();
             var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
