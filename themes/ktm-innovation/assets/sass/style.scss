@@ -43,7 +43,7 @@ body {
 
 
 /* COMPONENTS */
-@import "components/careerTeaser.scss";
+
 @import "components/blog.scss";
 @import "components/stage.scss";
 @import "components/presentation.scss";
@@ -51,5 +51,7 @@ body {
 @import "components/frontPage.scss";
 @import "components/pageHeader.scss";
 @import "components/careerCounter.scss";
+@import "components/careerHeader.scss";
+@import "components/careerTeaser.scss";
 @import "components/stageHeadline.scss";
 @import "components/jobs.scss";

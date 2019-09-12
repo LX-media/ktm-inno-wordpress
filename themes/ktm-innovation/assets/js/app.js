@@ -10,6 +10,7 @@ define([
 	'pagehead',
 	'posts',
 	'jobs',
+	'easypie',
 ], function(
 	$,
 	Header,
@@ -21,7 +22,8 @@ define([
 	Stage,
 	PageHead,
 	Posts,
-	Jobs
+	Jobs,
+	EasyPie,
 ) {
 
 	var App = function() {

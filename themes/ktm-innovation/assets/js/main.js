@@ -8,6 +8,7 @@ require.config({
         "vanta"         : "helper/vanta.net.min",
         "loading"       : "helper/loading-bar",
         "owl"           : "helper/owl.carousel.min",
+        "easypie"       : "helper/easypiechart",
 
         // custom js
         "app"           : "app",
@@ -28,4 +29,16 @@ require([ 'app'], function(App) {
     'use strict';
     var app = new App();
 });
+
+VANTA.NET({
+    el: "#vantajs",
+    color: 0xff6600,
+    backgroundColor: 0xffffff,
+    points: 8.00,
+    maxDistance: 22.00,
+    spacing: 16.00,
+    showDots: false
+})
+
+
 

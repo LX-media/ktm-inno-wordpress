@@ -19,6 +19,20 @@ body{
     .LxContainer {
         max-width: $container;
         margin: 0 auto;
+
+        @media screen and (max-width: $break-tablet){
+            padding: 0 20px;
+        }
+
+        @media screen and (max-width: $break-mobile){
+            max-width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $break-tablet){
+        .et_pb_text {
+            padding: 0 20px;
+        }
     }
 
     .triangle {
