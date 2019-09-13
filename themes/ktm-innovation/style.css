@@ -369,6 +369,9 @@ body.noScroll {
   -o-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
   opacity: 0; }
+  @media screen and (max-width: 767px) {
+    #LxMenu {
+      overflow-x: scroll; } }
   #LxMenu.active {
     display: block;
     -webkit-transition: opacity 0.5s ease-in-out;
@@ -389,16 +392,33 @@ body.noScroll {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
+    @media screen and (max-width: 767px) {
+      #LxMenu .LxMenuContainer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 10% 0 0 30px;
+        top: 110px;
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0); } }
     #LxMenu .LxMenuContainer .LxMenuTitle {
       text-transform: uppercase;
       color: #FF6600;
       font-size: 18px;
       line-height: 30px;
       padding-bottom: 10px; }
+      @media screen and (max-width: 980px) {
+        #LxMenu .LxMenuContainer .LxMenuTitle {
+          font-size: 14px; } }
       #LxMenu .LxMenuContainer .LxMenuTitle ul li a {
         text-transform: uppercase; }
     #LxMenu .LxMenuContainer .LxMenuInner ul li {
       padding-bottom: 30px; }
+      @media screen and (max-width: 767px) {
+        #LxMenu .LxMenuContainer .LxMenuInner ul li {
+          padding-bottom: 10px; } }
       #LxMenu .LxMenuContainer .LxMenuInner ul li a {
         font-family: proxima-nova,sans-serif;
         font-weight: 700;
@@ -410,6 +430,15 @@ body.noScroll {
         color: #FFFFFF;
         margin-bottom: 30px;
         text-transform: uppercase; }
+        @media screen and (max-width: 980px) {
+          #LxMenu .LxMenuContainer .LxMenuInner ul li a {
+            font-size: 40px;
+            line-height: 50px; } }
+        @media screen and (max-width: 767px) {
+          #LxMenu .LxMenuContainer .LxMenuInner ul li a {
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 10px; } }
 
 footer #LxFooter {
   display: -webkit-box;

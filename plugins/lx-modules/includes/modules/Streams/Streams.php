@@ -94,7 +94,6 @@ class LXMO_Streams extends ET_Builder_Module {
 		return $menu;
 	}
 
-
 	public function get_fields() {
 		return array(
 			'menu_id' => array(
