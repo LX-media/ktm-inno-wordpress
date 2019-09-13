@@ -1,5 +1,7 @@
 .lxmo_streams{
-    background-color: $orange;
+    // background-color: $orange;
+    background: linear-gradient(145deg, $white, #D1D1D1);
+
 
     .LxStreams {
         background-image: url("/wp-content/plugins/lx-modules/includes/modules/Streams/img/bg_orange.jpg"); 
