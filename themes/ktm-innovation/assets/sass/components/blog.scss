@@ -1,10 +1,16 @@
-.et_pb_lxblog_0{
+.et_pb_lxblog_0, .et_pb_lxblog_1{
     z-index: 1;
     position: relative;
     height: 986px;
     
     #vantajs{
         height: 100%;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        position: absolute;
+        top: 240px;
     }
 
     .et_pb_ajax_pagination_container {
@@ -93,7 +99,7 @@
 
             h3{
                 margin-bottom: 15px;
-                margin-top: 30px;
+                margin-top: 35px;
                 text-transform: uppercase;
 
                 @media screen and (max-width: $break-tablet) {
@@ -105,6 +111,8 @@
                 margin-top: 5px;
                 float: right;
                 text-transform: uppercase;
+                font-size: 20px;
+                @include font("bold");
                 .published{
                     color: $orange;
                 }
@@ -125,4 +133,14 @@
             }
         }
     }
+}
+
+.et_pb_lxblog_1 {
+    .et_pb_ajax_pagination_container {
+        z-index: 1; 
+        padding-top: 10px;
+        max-height: 986px;
+        display: flex;
+    }
+
 }

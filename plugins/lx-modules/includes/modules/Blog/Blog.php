@@ -512,6 +512,13 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				),
 				'default'          => 0,
 			),
+			'module_title' => array(
+				'label'           => esc_html__( 'Module Title', 'et_builder' ),
+				'type'            => 'text',
+				'option_category' => 'basic_option',
+				'description'     => esc_html__( 'The module title, displayed above the posts', 'et_builder' ),
+				'dynamic_content' => 'text',
+			),
 			'title_one' => array(
 				'label'           => esc_html__( 'Title', 'et_builder' ),
 				'type'            => 'text',
@@ -1078,6 +1085,7 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 		$wp_filter_cache = $wp_filter;
 
 		$title                         	= $this->props['title_one'];
+		$module_title                  	= $this->props['module_title'];
 		$paragraph                      = $this->props['content_one'];
 		$button                         = $this->props['button_one'];
 		$button_url                     = $this->props['button_one_url'];
@@ -1412,8 +1420,8 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 			} // endwhile
 
 			if ( 'off' === $fullwidth ) {
- 				echo '</div><!-- .et_pb_salvattore_content -->';
- 			}
+				echo '</div><!-- .et_pb_salvattore_content -->';
+			}
 
 			if ( 'on' === $show_pagination && ! is_search() ) {
 				if ( function_exists( 'wp_pagenavi' ) ) {
@@ -1501,7 +1509,7 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 			if ( '' !== $parallax_image_background ) {
 				$inner_wrap_classname[] = 'et_pb_section_parallax';
 			}
-			// not in use
+			// not in use ---------------------------------------------------------------------------------------------------------------------------
 			$output = sprintf(
 				'<div%4$s class="%5$s"%9$s%10$s>
 					<div class="%1$s" >
@@ -1548,13 +1556,16 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				<h3>'.$title.'</h3>
 				<p>'.$paragraph.'</p>
 				<a class="LxBtn LxBtnWhite" href="'. $button_url .'" target="'. $t .'">'. $button .'</a>
-
 				</div>
 				';
-
 			else:
 				$frage = "";
+			endif;
 
+			if($module_title != ""):
+				$mt = '<h2> '. $module_title .'</h2>';
+			else:
+				$mt = "";
 			endif;
 
 			$output = sprintf(
@@ -1562,14 +1573,15 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				'<div%4$s class="%1$s"%8$s%9$s >
 				%6$s
 				%5$s
-				<div id="'. $net .'">
-					<div class="LxContainer">
-						<div class="et_pb_ajax_pagination_container" >
-							%2$s
-							'.$frage.'
+					<div id="'. $net .'">
+						<div class="LxContainer">
+							'.$mt.'
+							<div class="et_pb_ajax_pagination_container" >
+								%2$s
+								'.$frage.'
+							</div>
 						</div>
 					</div>
-				</div>
 				</div>
 				%3$s %7$s',
 				$this->module_classname( $render_slug ),

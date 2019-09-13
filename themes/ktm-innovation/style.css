@@ -772,13 +772,17 @@ footer #LxFooterBottom {
         border-right: 7px solid #FF6600; }
 
 /* COMPONENTS */
-.et_pb_lxblog_0 {
+.et_pb_lxblog_0, .et_pb_lxblog_1 {
   z-index: 1;
   position: relative;
   height: 986px; }
-  .et_pb_lxblog_0 #vantajs {
+  .et_pb_lxblog_0 #vantajs, .et_pb_lxblog_1 #vantajs {
     height: 100%; }
-  .et_pb_lxblog_0 .et_pb_ajax_pagination_container {
+  .et_pb_lxblog_0 h2, .et_pb_lxblog_1 h2 {
+    text-transform: uppercase;
+    position: absolute;
+    top: 240px; }
+  .et_pb_lxblog_0 .et_pb_ajax_pagination_container, .et_pb_lxblog_1 .et_pb_ajax_pagination_container {
     z-index: 1;
     padding-top: 310px;
     max-height: 986px;
@@ -789,7 +793,7 @@ footer #LxFooterBottom {
     -ms-flex-pack: start;
     justify-content: flex-start; }
     @media screen and (max-width: 980px) {
-      .et_pb_lxblog_0 .et_pb_ajax_pagination_container {
+      .et_pb_lxblog_0 .et_pb_ajax_pagination_container, .et_pb_lxblog_1 .et_pb_ajax_pagination_container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -800,9 +804,9 @@ footer #LxFooterBottom {
         -ms-transform: none;
         transform: none; } }
     @media screen and (max-width: 767px) {
-      .et_pb_lxblog_0 .et_pb_ajax_pagination_container {
+      .et_pb_lxblog_0 .et_pb_ajax_pagination_container, .et_pb_lxblog_1 .et_pb_ajax_pagination_container {
         margin-left: 0; } }
-    .et_pb_lxblog_0 .et_pb_ajax_pagination_container .frage {
+    .et_pb_lxblog_0 .et_pb_ajax_pagination_container .frage, .et_pb_lxblog_1 .et_pb_ajax_pagination_container .frage {
       margin: 0 0 0 40px;
       width: calc(33.3% - 60px);
       background: #FF6600;
@@ -822,13 +826,13 @@ footer #LxFooterBottom {
       -webkit-box-align: baseline;
       -ms-flex-align: baseline;
       align-items: baseline; }
-      .et_pb_lxblog_0 .et_pb_ajax_pagination_container .frage h3 {
+      .et_pb_lxblog_0 .et_pb_ajax_pagination_container .frage h3, .et_pb_lxblog_1 .et_pb_ajax_pagination_container .frage h3 {
         color: #000000; }
-      .et_pb_lxblog_0 .et_pb_ajax_pagination_container .frage p {
+      .et_pb_lxblog_0 .et_pb_ajax_pagination_container .frage p, .et_pb_lxblog_1 .et_pb_ajax_pagination_container .frage p {
         font-size: 25px;
         line-height: 35px;
         margin: 40px 0; }
-      .et_pb_lxblog_0 .et_pb_ajax_pagination_container .frage span {
+      .et_pb_lxblog_0 .et_pb_ajax_pagination_container .frage span, .et_pb_lxblog_1 .et_pb_ajax_pagination_container .frage span {
         color: #FFFFFF;
         text-transform: uppercase;
         float: right;
@@ -842,54 +846,68 @@ footer #LxFooterBottom {
         position: absolute;
         top: 40px;
         right: 40px; }
-    .et_pb_lxblog_0 .et_pb_ajax_pagination_container article {
+    .et_pb_lxblog_0 .et_pb_ajax_pagination_container article, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article {
       display: table;
       max-width: 420px;
       width: calc(33.3% - 60px);
       margin: 0 40px; }
-      .et_pb_lxblog_0 .et_pb_ajax_pagination_container article:first-child {
+      .et_pb_lxblog_0 .et_pb_ajax_pagination_container article:first-child, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article:first-child {
         margin: 0 40px 0 0; }
       @media screen and (max-width: 980px) {
-        .et_pb_lxblog_0 .et_pb_ajax_pagination_container article {
+        .et_pb_lxblog_0 .et_pb_ajax_pagination_container article, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article {
           max-width: calc(50vw - 60px);
           margin: 0 10px; }
-          .et_pb_lxblog_0 .et_pb_ajax_pagination_container article:first-child {
+          .et_pb_lxblog_0 .et_pb_ajax_pagination_container article:first-child, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article:first-child {
             padding-left: 15px; }
-          .et_pb_lxblog_0 .et_pb_ajax_pagination_container article:last-child {
+          .et_pb_lxblog_0 .et_pb_ajax_pagination_container article:last-child, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article:last-child {
             padding-right: 15px; } }
       @media screen and (max-width: 767px) {
-        .et_pb_lxblog_0 .et_pb_ajax_pagination_container article {
+        .et_pb_lxblog_0 .et_pb_ajax_pagination_container article, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article {
           max-width: calc(100vw - 60px); }
-          .et_pb_lxblog_0 .et_pb_ajax_pagination_container article:first-child {
+          .et_pb_lxblog_0 .et_pb_ajax_pagination_container article:first-child, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article:first-child {
             padding-left: 15px; }
-          .et_pb_lxblog_0 .et_pb_ajax_pagination_container article:last-child {
+          .et_pb_lxblog_0 .et_pb_ajax_pagination_container article:last-child, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article:last-child {
             padding-right: 0;
             padding-left: 15px; } }
-      .et_pb_lxblog_0 .et_pb_ajax_pagination_container article h3 {
+      .et_pb_lxblog_0 .et_pb_ajax_pagination_container article h3, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article h3 {
         margin-bottom: 15px;
-        margin-top: 30px;
+        margin-top: 35px;
         text-transform: uppercase; }
         @media screen and (max-width: 980px) {
-          .et_pb_lxblog_0 .et_pb_ajax_pagination_container article h3 {
+          .et_pb_lxblog_0 .et_pb_ajax_pagination_container article h3, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article h3 {
             width: 90%; } }
-      .et_pb_lxblog_0 .et_pb_ajax_pagination_container article .post-meta {
+      .et_pb_lxblog_0 .et_pb_ajax_pagination_container article .post-meta, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article .post-meta {
         margin-top: 5px;
         float: right;
-        text-transform: uppercase; }
-        .et_pb_lxblog_0 .et_pb_ajax_pagination_container article .post-meta .published {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: proxima-nova,sans-serif;
+        font-weight: 700;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-style: normal; }
+        .et_pb_lxblog_0 .et_pb_ajax_pagination_container article .post-meta .published, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article .post-meta .published {
           color: #FF6600; }
         @media screen and (max-width: 980px) {
-          .et_pb_lxblog_0 .et_pb_ajax_pagination_container article .post-meta {
+          .et_pb_lxblog_0 .et_pb_ajax_pagination_container article .post-meta, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article .post-meta {
             top: 245px; } }
-      .et_pb_lxblog_0 .et_pb_ajax_pagination_container article .entry-featured-image-url {
+      .et_pb_lxblog_0 .et_pb_ajax_pagination_container article .entry-featured-image-url, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article .entry-featured-image-url {
         margin-bottom: 0; }
-      .et_pb_lxblog_0 .et_pb_ajax_pagination_container article img {
+      .et_pb_lxblog_0 .et_pb_ajax_pagination_container article img, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article img {
         width: 100%;
         height: 310px;
         -o-object-fit: cover;
         object-fit: cover;
         border-bottom: 12px solid #FF6600;
         margin-bottom: 0; }
+
+.et_pb_lxblog_1 .et_pb_ajax_pagination_container {
+  z-index: 1;
+  padding-top: 10px;
+  max-height: 986px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .lxmo_stage {
   position: relative;
