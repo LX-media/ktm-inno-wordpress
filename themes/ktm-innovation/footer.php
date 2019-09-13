@@ -63,16 +63,5 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 
 	<script data-main="/wp-content/themes/ktm-innovation/assets/js/main" src="/wp-content/themes/ktm-innovation/assets/js/helper/require.js"></script>
 
-	<script> // need to fix the colors
-		VANTA.NET({
-		el: "#vantajs",
-		color: 0xff6600,
-		backgroundColor: 0xffffff,
-		points: 8.00,
-		maxDistance: 22.00,
-		spacing: 16.00,
-		showDots: false
-	})
-	</script>
 </body>
 </html>

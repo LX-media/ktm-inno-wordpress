@@ -1,23 +1,29 @@
 define([
 	'jquery',
     'header',
+    'owl',
 	'loading',
 	'three',
 	'vanta',
 	'streams',
 	'stage',
 	'pagehead',
-	'posts'
+	'posts',
+	'jobs',
+	'easypie',
 ], function(
 	$,
 	Header,
 	Loading,
+	Owl,
 	Three,
 	Vanta,
 	Streams,
 	Stage,
 	PageHead,
-	Posts
+	Posts,
+	Jobs,
+	EasyPie,
 ) {
 
 	var App = function() {
@@ -30,6 +36,7 @@ define([
 		Stage.init();
 		PageHead.init();
 		Posts.init();
+		Jobs.init();
 
 		// * ———————————————————————————————————————————————————————— * //
 		// * 	components
@@ -37,9 +44,6 @@ define([
 
 	};
 	
-	// particlesJS.load('particles-js', '/wp-content/themes/ktm-innovation/assets/js/helper/particlesjs-config.json', function() {
-	// 	console.log('callback - particles.js config loaded');
-	// });
 
 
 	return App;

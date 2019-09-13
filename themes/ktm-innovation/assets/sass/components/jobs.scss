@@ -1,0 +1,211 @@
+.LxJobs{
+    padding: 100px 0;
+    background: url("/wp-content/plugins/lx-modules/includes/modules/Jobs/img/nets.png");
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 90px;
+
+        @media screen and (max-width: $break-mobile){
+            padding-bottom: 30px;
+        }
+
+        &:after{
+            content: "...";
+            color: $orange;
+        }
+    }
+
+    .LxJobSlider{
+        width: 66.6%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .owl-stage-outer{
+        overflow: hidden;
+        position: relative;
+
+        .owl-stage {
+            display: flex;
+            position: relative;
+            @include font("regular");
+
+            .owl-item{
+                transition: all $shortTransition;
+                color: $black;
+                margin: 0 10px;
+                background: transparent;
+                position: relative;
+                min-height: 300px;
+                a {
+                    padding: 30px;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    color: $black;
+                    .inner{
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                        display: flex;
+                        flex-direction: column;
+                    
+                        .title {
+                            @include font("regular");
+                            font-size: 40px;
+                            line-height: 40px;
+                            margin-bottom: 20px;
+
+                            @media screen and (max-width: $break-mobile){
+                                font-size: 20px;
+                                line-height: 20px;
+                            }
+                            
+                        }
+        
+                        .subtitle {
+                            font-size: 25px;
+                            line-height: 35px;
+
+                            @media screen and (max-width: $break-mobile){
+                                font-size: 15px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+
+                    .LxArrow {
+                        background: $black;
+                        width: 50px;
+                        height: 1px;
+                        position: absolute;
+                        bottom: 30px;
+                        right: 30px;
+
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            right: 0;
+                            width: 9px;
+                            height: 1px;
+                            background: $black;
+                            right: 0;
+                            top: -4px;
+                            transform: rotate(45deg);
+                        }
+
+                        
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            right: 0;
+                            width: 9px;
+                            height: 1px;
+                            background: $black;
+                            right: 0;
+                            bottom: -4px;
+                            transform: rotate(-45deg);
+                        }
+
+                    }
+                    
+
+                    &:hover{
+                        transition: all $shortTransition;
+                        color: $white;
+
+                        .LxArrow{
+                            transition: all $shortTransition;
+                            background: $white;
+                            &:after{
+                                transition: all $shortTransition;
+                                background: $white;
+                            }
+                            
+                            &:before{
+                                transition: all $shortTransition;
+                                background: $white;
+                            }
+                        }
+                    }
+                }
+            
+                &:hover{
+                    
+                    background: linear-gradient(-45deg, $darkOrange, $orange);
+                }
+            }
+        }
+    }
+
+    .owl-nav{   
+
+        .owl-prev{
+            left: -100px;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            background: transparent;
+            border: none;
+
+            @media screen and (max-width: $break-mobile){
+                left: -50px;
+            }
+
+            &:after{
+                content: "";
+                width: 0; 
+                cursor: pointer;
+                height: 0; 
+                position: absolute;
+                transform: translate(0, -50%);
+                border-top: 30px solid transparent;
+                border-bottom: 30px solid transparent;
+                border-right: 45px solid $black;
+
+                @media screen and (max-width: $break-mobile){
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .owl-next{
+            position: absolute;
+            top: 50%;
+            right: -60px;
+            transform: translate(0, -50%);
+            background: transparent;
+            border: none;
+
+            @media screen and (max-width: $break-mobile){
+                right: -5px;
+            }
+
+            &:before{
+                content: "";
+                cursor: pointer;
+                width: 0; 
+                height: 0; 
+                position: absolute;
+                transform: translate(0, -50%);
+                border-top: 30px solid transparent;
+                border-bottom: 30px solid transparent;
+                border-left: 45px solid $black;
+            }
+        }
+    }
+}
+
+
+.LxContact {
+    max-width: 770px;
+    color: $black;
+    margin: 0 auto;
+
+    a {
+        color: $orange;
+    }
+}

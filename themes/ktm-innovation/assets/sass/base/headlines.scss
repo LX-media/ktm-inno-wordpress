@@ -11,6 +11,11 @@ h1 {
     font-size: 200px;
     line-height: 244px;
     text-transform: uppercase;
+
+    @media screen and (max-width: $break-mobile){
+        font-size: 80px;
+        line-height: 88px;
+    }
 }
 
 h2 {
