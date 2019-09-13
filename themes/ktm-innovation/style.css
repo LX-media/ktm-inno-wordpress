@@ -1125,7 +1125,7 @@ footer #LxFooterBottom {
           position: relative; }
           .lxmo_streams .LxStreams nav.streams-menu ul li:before {
             content: "0" counter(lx-counter);
-            color: #FFFFFF;
+            color: #878787;
             font-family: proxima-nova,sans-serif;
             font-weight: 700;
             -webkit-font-smoothing: antialiased;
@@ -1135,19 +1135,21 @@ footer #LxFooterBottom {
             position: absolute;
             top: -10px;
             left: -45px; }
+          .lxmo_streams .LxStreams nav.streams-menu ul li:hover:before {
+            color: #FF6600; }
           .lxmo_streams .LxStreams nav.streams-menu ul li a {
             text-transform: uppercase;
-            color: #000000;
+            color: #878787;
             z-index: 10;
             max-width: 45%;
             display: block;
             padding-right: 20px; }
             .lxmo_streams .LxStreams nav.streams-menu ul li a:hover {
-              color: #FFFFFF; }
+              color: #FF6600; }
           .lxmo_streams .LxStreams nav.streams-menu ul li .line {
             position: absolute;
             height: 1px;
-            background: #000000;
+            background: #FF6600;
             width: 0;
             left: 200px;
             top: 28px;
