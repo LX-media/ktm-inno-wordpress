@@ -1487,7 +1487,9 @@ footer #LxFooterBottom {
             margin-left: 15px; } }
 
 .lxmo_career_teaser {
-  background: url("/wp-content/plugins/lx-modules/includes/modules/CareerTeaser/img/back.png");
+  background: -webkit-linear-gradient(305deg, #FFFFFF, #D1D1D1);
+  background: -o-linear-gradient(305deg, #FFFFFF, #D1D1D1);
+  background: linear-gradient(145deg, #FFFFFF, #D1D1D1);
   max-width: 100%;
   width: 100vw; }
   .lxmo_career_teaser .LxCareerTeaser {

@@ -1,11 +1,10 @@
 .lxmo_career_teaser {
-    background: url("/wp-content/plugins/lx-modules/includes/modules/CareerTeaser/img/back.png"); 
+    // background: url("/wp-content/plugins/lx-modules/includes/modules/CareerTeaser/img/back.png"); 
+    background: linear-gradient(145deg, $white, #D1D1D1);
     max-width: 100%;
     width: 100vw;
-    // height: 986px;
-
+ 
     .LxCareerTeaser {
-        
         height: 986px;
         margin: 0 auto;
         display: flex;
@@ -14,7 +13,6 @@
         @media screen and (max-width: $break-mobile){
             flex-direction: column;
             justify-content: space-around;
-
         }
 
         .LxBox {
