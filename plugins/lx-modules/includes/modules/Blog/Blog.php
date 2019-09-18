@@ -1,14 +1,22 @@
 <?php
 
 class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
-	function init() {
-		$this->name       = esc_html__( 'Blog News', 'et_builder' );
-		$this->plural     = esc_html__( 'Blog News', 'et_builder' );
-		$this->slug       = 'et_pb_lxblog';
-		$this->vb_support = 'on';
-		$this->main_css_element = '%%order_class%% .et_pb_post';
 
-		$this->settings_modal_toggles = array(
+	public $slug       = 'et_pb_lxblog';
+	public $vb_support = 'on';
+
+	protected $module_credits = array(
+		'module_uri' => 'www.lx-media.at',
+		'author'     => 'LX Media',
+		'author_uri' => 'www.lx-media.at',
+	);
+
+	public function init() {
+		$this->name = esc_html__( 'Blog News', 'lxmo-lx-modules' );
+	}
+
+	public function settings_modal_toggles() {
+		return array(
 			'general'  => array(
 				'toggles' => array(
 					'main_content' => esc_html__( 'Content', 'et_builder' ),
@@ -30,8 +38,10 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				),
 			),
 		);
+	}	
 
-		$this->advanced_fields = array(
+	public function advanced_fields() {
+		return array(
 			'fonts'                 => array(
 				'header' => array(
 					'label'    => esc_html__( 'Title', 'et_builder' ),
@@ -210,8 +220,11 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 			),
 			'button'                => false,
 		);
+	}
 
-		$this->custom_css_fields = array(
+	public function custom_css_fields() {
+		return array(
+
 			'title' => array(
 				'label'    => esc_html__( 'Title', 'et_builder' ),
 				'selector' => '.entry-title',
@@ -237,20 +250,21 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				'selector' => '.more-link',
 			),
 		);
-
-		$this->help_videos = array(
-			array(
-				'id'   => esc_html( 'PRaWaGI75wc' ),
-				'name' => esc_html__( 'An introduction to the Blog module', 'et_builder' ),
-			),
-			array(
-				'id'   => esc_html( 'jETCzKVv6P0' ),
-				'name' => esc_html__( 'How To Use Divi Blog Post Formats', 'et_builder' ),
-			),
-		);
 	}
 
-	function get_fields() {
+		// $this->help_videos = array(
+		// 	array(
+		// 		'id'   => esc_html( 'PRaWaGI75wc' ),
+		// 		'name' => esc_html__( 'An introduction to the Blog module', 'et_builder' ),
+		// 	),
+		// 	array(
+		// 		'id'   => esc_html( 'jETCzKVv6P0' ),
+		// 		'name' => esc_html__( 'How To Use Divi Blog Post Formats', 'et_builder' ),
+		// 	),
+		// );
+	
+
+	public function get_fields() {
 		$fields = array(
 			'fullwidth' => array(
 				'label'             => esc_html__( 'Layout', 'et_builder' ),
