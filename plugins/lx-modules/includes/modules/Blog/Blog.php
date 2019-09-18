@@ -1,22 +1,14 @@
 <?php
 
 class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
+	function init() {
+		$this->name       = esc_html__( 'Blog News', 'et_builder' );
+		$this->plural     = esc_html__( 'Blog News', 'et_builder' );
+		$this->slug       = 'et_pb_lxblog';
+		$this->vb_support = 'on';
+		$this->main_css_element = '%%order_class%% .et_pb_post';
 
-	public $slug       = 'et_pb_lxblog';
-	public $vb_support = 'on';
-
-	protected $module_credits = array(
-		'module_uri' => 'www.lx-media.at',
-		'author'     => 'LX Media',
-		'author_uri' => 'www.lx-media.at',
-	);
-
-	public function init() {
-		$this->name = esc_html__( 'Blog News', 'lxmo-lx-modules' );
-	}
-
-	public function settings_modal_toggles() {
-		return array(
+		$this->settings_modal_toggles = array(
 			'general'  => array(
 				'toggles' => array(
 					'main_content' => esc_html__( 'Content', 'et_builder' ),
@@ -38,10 +30,8 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				),
 			),
 		);
-	}	
 
-	public function advanced_fields() {
-		return array(
+		$this->advanced_fields = array(
 			'fonts'                 => array(
 				'header' => array(
 					'label'    => esc_html__( 'Title', 'et_builder' ),
@@ -220,11 +210,8 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 			),
 			'button'                => false,
 		);
-	}
 
-	public function custom_css_fields() {
-		return array(
-
+		$this->custom_css_fields = array(
 			'title' => array(
 				'label'    => esc_html__( 'Title', 'et_builder' ),
 				'selector' => '.entry-title',
@@ -250,21 +237,20 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				'selector' => '.more-link',
 			),
 		);
+
+		$this->help_videos = array(
+			array(
+				'id'   => esc_html( 'PRaWaGI75wc' ),
+				'name' => esc_html__( 'An introduction to the Blog module', 'et_builder' ),
+			),
+			array(
+				'id'   => esc_html( 'jETCzKVv6P0' ),
+				'name' => esc_html__( 'How To Use Divi Blog Post Formats', 'et_builder' ),
+			),
+		);
 	}
 
-		// $this->help_videos = array(
-		// 	array(
-		// 		'id'   => esc_html( 'PRaWaGI75wc' ),
-		// 		'name' => esc_html__( 'An introduction to the Blog module', 'et_builder' ),
-		// 	),
-		// 	array(
-		// 		'id'   => esc_html( 'jETCzKVv6P0' ),
-		// 		'name' => esc_html__( 'How To Use Divi Blog Post Formats', 'et_builder' ),
-		// 	),
-		// );
-	
-
-	public function get_fields() {
+	function get_fields() {
 		$fields = array(
 			'fullwidth' => array(
 				'label'             => esc_html__( 'Layout', 'et_builder' ),
@@ -525,13 +511,6 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 					'__posts',
 				),
 				'default'          => 0,
-			),
-			'module_title' => array(
-				'label'           => esc_html__( 'Module Title', 'et_builder' ),
-				'type'            => 'text',
-				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'The module title, displayed above the posts', 'et_builder' ),
-				'dynamic_content' => 'text',
 			),
 			'title_one' => array(
 				'label'           => esc_html__( 'Title', 'et_builder' ),
@@ -1099,7 +1078,6 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 		$wp_filter_cache = $wp_filter;
 
 		$title                         	= $this->props['title_one'];
-		$module_title                  	= $this->props['module_title'];
 		$paragraph                      = $this->props['content_one'];
 		$button                         = $this->props['button_one'];
 		$button_url                     = $this->props['button_one_url'];
@@ -1434,8 +1412,8 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 			} // endwhile
 
 			if ( 'off' === $fullwidth ) {
-				echo '</div><!-- .et_pb_salvattore_content -->';
-			}
+ 				echo '</div><!-- .et_pb_salvattore_content -->';
+ 			}
 
 			if ( 'on' === $show_pagination && ! is_search() ) {
 				if ( function_exists( 'wp_pagenavi' ) ) {
@@ -1523,7 +1501,7 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 			if ( '' !== $parallax_image_background ) {
 				$inner_wrap_classname[] = 'et_pb_section_parallax';
 			}
-			// not in use ---------------------------------------------------------------------------------------------------------------------------
+			// not in use
 			$output = sprintf(
 				'<div%4$s class="%5$s"%9$s%10$s>
 					<div class="%1$s" >
@@ -1570,16 +1548,13 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				<h3>'.$title.'</h3>
 				<p>'.$paragraph.'</p>
 				<a class="LxBtn LxBtnWhite" href="'. $button_url .'" target="'. $t .'">'. $button .'</a>
+
 				</div>
 				';
+
 			else:
 				$frage = "";
-			endif;
 
-			if($module_title != ""):
-				$mt = '<h2> '. $module_title .'</h2>';
-			else:
-				$mt = "";
 			endif;
 
 			$output = sprintf(
@@ -1587,15 +1562,14 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				'<div%4$s class="%1$s"%8$s%9$s >
 				%6$s
 				%5$s
-					<div id="'. $net .'">
-						<div class="LxContainer">
-							'.$mt.'
-							<div class="et_pb_ajax_pagination_container" >
-								%2$s
-								'.$frage.'
-							</div>
+				<div id="'. $net .'">
+					<div class="LxContainer">
+						<div class="et_pb_ajax_pagination_container" >
+							%2$s
+							'.$frage.'
 						</div>
 					</div>
+				</div>
 				</div>
 				%3$s %7$s',
 				$this->module_classname( $render_slug ),

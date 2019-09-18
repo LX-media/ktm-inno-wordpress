@@ -77,37 +77,31 @@
                 
                     &:before{
                         content: "0" counter(lx-counter);
-                        color: $grey;
+                        color: $white;
                         @include font('bold');
                         font-size: 20px;
                         position: absolute;
                         top: -10px;
                         left: -45px;
                     }
-
-                    &:hover{
-                        &:before{
-                            color: $orange;
-                        }
-                    }
     
                     a{
                         text-transform: uppercase;
-                        color:$grey;
+                        color:$black;
                         z-index: 10;
                         max-width: 45%;
                         display: block;
                         padding-right: 20px;
                 
                         &:hover{
-                            color: $orange;
+                            color: $white;
                         }
                     }
     
                     .line{
                         position: absolute;
                         height: 1px;
-                        background:$orange;
+                        background:$black;
                         width: 0;
                         left: 200px;
                         top: 28px;
