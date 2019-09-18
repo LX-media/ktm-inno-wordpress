@@ -94,8 +94,6 @@ class LXMO_Streams extends ET_Builder_Module {
 		return $menu;
 	}
 
-	
-
 	public function get_fields() {
 		return array(
 			'menu_id' => array(
@@ -121,20 +119,51 @@ class LXMO_Streams extends ET_Builder_Module {
 					'menu_id'
 				),
 			),
+			'line_bottom' => array(
+				'label'           => esc_html__( 'Line Bottom', 'et_builder' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'basic_option',
+				'options'         => array(
+					'on'       => esc_html__( 'Yes', 'et_builder' ),
+					'off'      => esc_html__( 'No', 'et_builder' ),
+				),
+				'affects'           => array(
+					'use_circle_border',
+					'circle_color',
+				),
+				'toggle_slug'      => 'main_content',
+				'description'      => esc_html__( 'Triangular line on the bottom of the module', 'et_builder' ),
+				'default_on_front'=> 'off',
+				'dynamic_content' => 'text',
+			),
+			'line_top' => array(
+				'label'           => esc_html__( 'Line Top', 'et_builder' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'basic_option',
+				'options'         => array(
+					'on'       => esc_html__( 'Yes', 'et_builder' ),
+					'off'      => esc_html__( 'No', 'et_builder' ),
+				),
+				'affects'           => array(
+					'use_circle_border',
+					'circle_color',
+				),
+				'toggle_slug'      => 'main_content',
+				'description'      => esc_html__( 'Triangular line on the top of the module', 'et_builder' ),
+				'default_on_front'=> 'off',
+				'dynamic_content' => 'text',
+			),
 		);
 	}
 
-
 	function render( $attrs, $content = null, $render_slug ) {
-		$menu_id  = $this->props['menu_id'];
+		$menu_id  	= $this->props['menu_id'];
+		$top  		= $this->shortcode_atts['line_top'];
+		$bottom  	= $this->shortcode_atts['line_bottom'];
 
 		$menu = self::get_fullwidth_menu( array(
 			'menu_id'  => $menu_id,
 		));
-
-		
-		
-		$titles = wp_get_nav_menu_items($menu_id); 
 
 		$menu = wp_get_nav_menu_object($menu_id);
 		$menu_items = wp_get_nav_menu_items($menu->term_id);
@@ -159,11 +188,10 @@ class LXMO_Streams extends ET_Builder_Module {
 		}
 		$menu_list .= "\t\t\t\t". '</ul>' ."\n";
 		$menu_list .= "\t\t\t". '</nav>' ."\n";
-			
 		
 		ob_start();
 		?>
-		<span class="triangle top grey"></span>
+		<?php if($top == "on"): ?> <span class="triangle top grey"></span> <?php endif; ?>
 		<div class="LxStreams">
 			<div class="LxContainer">
 				<div class="LxStreamsInner">
@@ -172,12 +200,11 @@ class LXMO_Streams extends ET_Builder_Module {
 				<div class="hiddenmenu"> </div>
 			</div>
 		</div>
-		<span class="triangle bottom grey"></span>
+		<?php if($bottom == "on"): ?><span class="triangle bottom grey"></span><?php endif; ?>
 		<?php
 		$output = ob_get_contents();
 		ob_end_clean();
 		return $output;	// retrieves the attachment ID from the file URL
-
 	}
 }
 

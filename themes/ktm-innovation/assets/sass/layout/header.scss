@@ -111,6 +111,10 @@
     transition: opacity $shortTransition ease-in-out ;
     opacity: 0;
 
+    @media screen and (max-width: $break-mobile){
+        overflow-x: scroll;
+    }
+
     &.active{
         display: block;
         transition: opacity $shortTransition ease-in-out;
@@ -125,6 +129,14 @@
         left: 50%;
         width: 100%;
         transform: translate(-50%, -50%);
+
+        @media screen and (max-width: $break-mobile){
+            flex-direction: column;
+            padding: 10% 0 0 30px;
+            // bottom: 0;
+            top: 110px;
+            transform: translate(-50%, 0);
+        }
         
         .LxMenuTitle{
             text-transform: uppercase;
@@ -132,6 +144,11 @@
             font-size: 18px;
             line-height: 30px;
             padding-bottom: 10px;
+
+            @media screen and (max-width: $break-tablet){
+                font-size: 14px;
+            }
+
             ul{
                 li {
 
@@ -140,13 +157,17 @@
                     }
                 }
             }
-           
+        
         }
 
         .LxMenuInner{
             ul {
                 li {
                     padding-bottom: 30px;
+
+                    @media screen and (max-width: $break-mobile){
+                        padding-bottom: 10px;
+                    }
                     
                     a {
                         @include font('bold');
@@ -155,6 +176,17 @@
                         color: $white;
                         margin-bottom: 30px;
                         text-transform: uppercase;
+
+                        @media screen and (max-width: $break-tablet){
+                            font-size: 40px;
+                            line-height: 50px;
+                        }
+
+                        @media screen and (max-width: $break-mobile){
+                            font-size: 25px;
+                            line-height: 30px;
+                            margin-bottom: 10px;
+                        }
                     }
                 
                 }

@@ -4,13 +4,15 @@
     // }
     // add_action( 'wp_enqueue_scripts', 'enqueueParentStyle' );
 
+
+           //         wp_deregister_style('wp-mediaelement');  - removed because of new Divi
+
     //dequeue all styles and add it in one style.css
     function dequeueStyles() {
+        wp_dequeue_style( 'contact-form-7' );
         wp_dequeue_style( 'parent-style', get_template_directory_uri().'/style.css' );
         wp_dequeue_style( 'magnific-popup', get_template_directory_uri().'/includes/builder/styles/magnific_popup.css' );
-        wp_dequeue_style( 'contact-form-7' );
         wp_dequeue_style( 'dashicons' );
-        wp_deregister_style('wp-mediaelement');
     }
     add_action( 'wp_print_styles', 'dequeueStyles' );
 
@@ -27,31 +29,6 @@
 
 
     // wp_deregister_script('wp-mediaelement');
-
-
-    function deregister_script() {
-        $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
-     
-            // if( !$is_page_builder_used ) {
-                wp_dequeue_script('et-builder-modules-global-functions-script');
-                wp_dequeue_script('google-maps-api');
-                wp_dequeue_script('divi-fitvids');
-                wp_dequeue_script('waypoints');
-                wp_dequeue_script('magnific-popup');
-                 
-                wp_dequeue_script('hashchange');
-                wp_dequeue_script('salvattore');
-                wp_dequeue_script('easypiechart');
-                 
-                wp_dequeue_script('et-jquery-visible-viewport');
-                 
-                wp_dequeue_script('magnific-popup');
-                wp_dequeue_script('et-jquery-touch-mobile');
-                wp_dequeue_script('et-builder-modules-script');
-            // }
-    }
-    add_action( 'wp_print_scripts', 'deregister_script', 100 );
-
 
     // custom post type function
     function create_posttype() {
@@ -142,31 +119,31 @@
     add_shortcode('childpages', 'list_child_pages');
 	
 	// Custom Divi Modules
-	function LX_Divi_Custom_Modules(){
-		if ( class_exists("ET_Builder_Module") ) {
-			// include(get_stylesheet_directory() . "/custom-modules/manager-person.php");
-			// include(get_stylesheet_directory() . "/custom-modules/text-header.php");
-			// include(get_stylesheet_directory() . "/custom-modules/contact-form.php");
-			// include(get_stylesheet_directory() . "/custom-modules/organigramm.php");
-		}
-	}
-	function LX_Custom_Modules(){
-		global $pagenow;
+	// function LX_Divi_Custom_Modules(){
+	// 	if ( class_exists("ET_Builder_Module") ) {
+	// 		// include(get_stylesheet_directory() . "/custom-modules/manager-person.php");
+	// 		// include(get_stylesheet_directory() . "/custom-modules/text-header.php");
+	// 		// include(get_stylesheet_directory() . "/custom-modules/contact-form.php");
+	// 		// include(get_stylesheet_directory() . "/custom-modules/organigramm.php");
+	// 	}
+	// }
+	// function LX_Custom_Modules(){
+	// 	global $pagenow;
 		
-		$is_admin = is_admin();
-		$action_hook = $is_admin ? 'wp_loaded' : 'wp';
-		$required_admin_pages = array( 'edit.php', 'post.php', 'post-new.php', 'admin.php', 'customize.php', 'edit-tags.php', 'admin-ajax.php', 'export.php' ); // list of admin pages where we need to load builder files
-		$specific_filter_pages = array( 'edit.php', 'admin.php', 'edit-tags.php' );
-		$is_edit_library_page = 'edit.php' === $pagenow && isset( $_GET['post_type'] ) && 'et_pb_layout' === $_GET['post_type'];
-		$is_role_editor_page = 'admin.php' === $pagenow && isset( $_GET['page'] ) && 'et_divi_role_editor' === $_GET['page'];
-		$is_import_page = 'admin.php' === $pagenow && isset( $_GET['import'] ) && 'wordpress' === $_GET['import'];
-		$is_edit_layout_category_page = 'edit-tags.php' === $pagenow && isset( $_GET['taxonomy'] ) && 'layout_category' === $_GET['taxonomy'];
+	// 	$is_admin = is_admin();
+	// 	$action_hook = $is_admin ? 'wp_loaded' : 'wp';
+	// 	$required_admin_pages = array( 'edit.php', 'post.php', 'post-new.php', 'admin.php', 'customize.php', 'edit-tags.php', 'admin-ajax.php', 'export.php' ); // list of admin pages where we need to load builder files
+	// 	$specific_filter_pages = array( 'edit.php', 'admin.php', 'edit-tags.php' );
+	// 	$is_edit_library_page = 'edit.php' === $pagenow && isset( $_GET['post_type'] ) && 'et_pb_layout' === $_GET['post_type'];
+	// 	$is_role_editor_page = 'admin.php' === $pagenow && isset( $_GET['page'] ) && 'et_divi_role_editor' === $_GET['page'];
+	// 	$is_import_page = 'admin.php' === $pagenow && isset( $_GET['import'] ) && 'wordpress' === $_GET['import'];
+	// 	$is_edit_layout_category_page = 'edit-tags.php' === $pagenow && isset( $_GET['taxonomy'] ) && 'layout_category' === $_GET['taxonomy'];
 		
-		if ( ! $is_admin || ( $is_admin && in_array( $pagenow, $required_admin_pages ) && ( ! in_array( $pagenow, $specific_filter_pages ) || $is_edit_library_page || $is_role_editor_page || $is_edit_layout_category_page || $is_import_page ) ) ) {
-			add_action($action_hook, 'LX_Divi_Custom_Modules', 9789);
-		}
-	}
-    LX_Custom_Modules();
+	// 	if ( ! $is_admin || ( $is_admin && in_array( $pagenow, $required_admin_pages ) && ( ! in_array( $pagenow, $specific_filter_pages ) || $is_edit_library_page || $is_role_editor_page || $is_edit_layout_category_page || $is_import_page ) ) ) {
+	// 		add_action($action_hook, 'LX_Divi_Custom_Modules', 9789);
+	// 	}
+	// }
+    // LX_Custom_Modules();
     
     function lx_widgets_init() {
  
