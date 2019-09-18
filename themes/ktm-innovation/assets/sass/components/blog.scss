@@ -2,6 +2,12 @@
     z-index: 1;
     position: relative;
     height: 986px;
+
+    h2 {
+        text-transform: uppercase;
+        position: absolute;
+        top: 240px;
+    }
     
     #vantajs{
         height: 100%;
@@ -133,11 +139,11 @@
 }
 
 
-.et_pb_lxblog_1{
-
+.et_pb_lxblog_1 {
     .et_pb_ajax_pagination_container {
         z-index: 1; 
-        padding-top: 20px;   
+        padding-top: 10px;
+        max-height: 986px;
+        display: flex;
     }
-
 }

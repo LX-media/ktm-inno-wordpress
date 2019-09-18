@@ -8,7 +8,20 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 		$this->vb_support = 'on';
 		$this->main_css_element = '%%order_class%% .et_pb_post';
 
-		$this->settings_modal_toggles = array(
+	}
+
+	public $slug       = 'et_pb_lxblog';
+	public $vb_support = 'on';
+
+	protected $module_credits = array(
+		'module_uri' => 'www.lx-media.at',
+		'author'     => 'LX Media',
+		'author_uri' => 'www.lx-media.at',
+	);
+
+
+	public function settings_modal_toggles() {
+		return array(
 			'general'  => array(
 				'toggles' => array(
 					'main_content' => esc_html__( 'Content', 'et_builder' ),
@@ -30,8 +43,10 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				),
 			),
 		);
+	}
 
-		$this->advanced_fields = array(
+	public function advanced_fields() {
+		return array(
 			'fonts'                 => array(
 				'header' => array(
 					'label'    => esc_html__( 'Title', 'et_builder' ),
@@ -210,8 +225,10 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 			),
 			'button'                => false,
 		);
+	}
 
-		$this->custom_css_fields = array(
+	public function custom_css_fields() {
+		return array(
 			'title' => array(
 				'label'    => esc_html__( 'Title', 'et_builder' ),
 				'selector' => '.entry-title',
@@ -237,18 +254,9 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				'selector' => '.more-link',
 			),
 		);
-
-		$this->help_videos = array(
-			array(
-				'id'   => esc_html( 'PRaWaGI75wc' ),
-				'name' => esc_html__( 'An introduction to the Blog module', 'et_builder' ),
-			),
-			array(
-				'id'   => esc_html( 'jETCzKVv6P0' ),
-				'name' => esc_html__( 'How To Use Divi Blog Post Formats', 'et_builder' ),
-			),
-		);
 	}
+
+	
 
 	function get_fields() {
 		$fields = array(
@@ -511,6 +519,13 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 					'__posts',
 				),
 				'default'          => 0,
+			),
+			'module_title' => array(
+				'label'           => esc_html__( 'Module Title', 'et_builder' ),
+				'type'            => 'text',
+				'option_category' => 'basic_option',
+				'description'     => esc_html__( 'The module title, displayed above the posts', 'et_builder' ),
+				'dynamic_content' => 'text',
 			),
 			'title_one' => array(
 				'label'           => esc_html__( 'Title', 'et_builder' ),
@@ -1083,6 +1098,7 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 		$button_url                     = $this->props['button_one_url'];
 		$target                         = $this->props['link_target_one'];
 		$show_net		                = $this->props['show_net'];
+		$module_title                  	= $this->props['module_title'];
 		$fullwidth                           = $this->props['fullwidth'];
 		$posts_number                        = $this->props['posts_number'];
 		$include_categories                  = $this->props['include_categories'];
@@ -1554,7 +1570,12 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 
 			else:
 				$frage = "";
+			endif;
 
+			if($module_title != ""):
+				$mt = '<h2> '. $module_title .'</h2>';
+			else:
+				$mt = "";
 			endif;
 
 			$output = sprintf(
@@ -1564,6 +1585,7 @@ class ET_Builder_Module_LxBlog extends ET_Builder_Module_Type_PostBased {
 				%5$s
 				<div id="'. $net .'">
 					<div class="LxContainer">
+						'.$mt.'
 						<div class="et_pb_ajax_pagination_container" >
 							%2$s
 							'.$frage.'
