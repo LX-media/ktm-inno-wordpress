@@ -5,9 +5,7 @@
     // add_action( 'wp_enqueue_scripts', 'enqueueParentStyle' );
 
 
-           //         wp_deregister_style('wp-mediaelement');
-
-
+           //         wp_deregister_style('wp-mediaelement');  - removed because of new Divi
 
     //dequeue all styles and add it in one style.css
     function dequeueStyles() {

@@ -881,11 +881,14 @@ footer #LxFooterBottom {
         float: right;
         text-transform: uppercase;
         font-size: 20px;
+        color: #878787;
         font-family: proxima-nova,sans-serif;
         font-weight: 700;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-style: normal; }
+        .et_pb_lxblog_0 .et_pb_ajax_pagination_container article .post-meta a, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article .post-meta a {
+          color: #878787; }
         .et_pb_lxblog_0 .et_pb_ajax_pagination_container article .post-meta .published, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article .post-meta .published {
           color: #FF6600; }
         @media screen and (max-width: 980px) {

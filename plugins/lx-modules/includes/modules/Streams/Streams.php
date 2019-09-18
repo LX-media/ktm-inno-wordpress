@@ -153,7 +153,6 @@ class LXMO_Streams extends ET_Builder_Module {
 				'default_on_front'=> 'off',
 				'dynamic_content' => 'text',
 			),
-
 		);
 	}
 
