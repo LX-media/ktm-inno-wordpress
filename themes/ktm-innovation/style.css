@@ -1243,7 +1243,7 @@ footer #LxFooterBottom {
           .lxmo_streams .LxStreams nav.streams-menu ul li .line {
             position: absolute;
             height: 1px;
-            background: #000000;
+            background: #FF6600;
             width: 0;
             left: 200px;
             top: 28px;
