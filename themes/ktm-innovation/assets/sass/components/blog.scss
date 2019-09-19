@@ -3,6 +3,10 @@
     position: relative;
     height: 986px;
 
+    @media screen and (max-width: $break-mobile) {
+        height: 100%;
+    }
+
     h2 {
         text-transform: uppercase;
         position: absolute;
@@ -21,7 +25,6 @@
         justify-content: flex-start;
 
         @media screen and (max-width: $break-tablet) {
-            flex-direction: column;
             margin-top: 0;
             left: 0;
             transform: none;
@@ -29,6 +32,9 @@
 
         @media screen and (max-width: $break-mobile) {
             margin-left: 0;
+            flex-direction: column;
+            max-height: 100% !important;
+            padding-top: 100px;   
         }
 
         .frage{
@@ -42,6 +48,17 @@
             justify-content: space-between;
             position: relative;
             align-items: baseline;
+
+            @media screen and (max-width: $break-tablet) {
+                width: calc(50vw - 20px);
+                padding: 75px 20px;
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                width: calc(100vw - 40px);
+                padding: 75px 20px;
+                margin: 20px 0;
+            }
 
             h3 {
                 color: $black;
@@ -76,17 +93,18 @@
                 margin: 0 40px 0 0;
             }
             @media screen and (max-width: $break-tablet) {
-                max-width: calc(50vw - 60px);
+                width: calc(50vw - 20px);
                 margin: 0 10px;
                 &:first-child{
-                    padding-left: 15px;
+                    margin: 0 10px 0 0;
+                    
                 }
                 &:last-child{
                     padding-right: 15px;
                 }
             }
             @media screen and (max-width: $break-mobile) {
-                max-width: calc(100vw - 60px);
+                width: calc(100vw - 60px);
 
                 &:first-child{
                     padding-left: 15px;
@@ -113,6 +131,7 @@
                 text-transform: uppercase;
                 @include font("bold");
                 font-size: 20px;
+                color: $grey;
                 a { 
                     color: $grey;
                 }
@@ -134,16 +153,96 @@
                 border-bottom: 12px solid $orange;
                 margin-bottom: 0;
             }
+
+            .post-content{
+                p {
+                    font-size: 25px;
+                    line-height: 35px;
+                }
+            }
         }
     }
 }
 
-
 .et_pb_lxblog_1 {
+
+    height: 100%;
+    padding: 0 0 50px 0;
+
     .et_pb_ajax_pagination_container {
         z-index: 1; 
         padding-top: 10px;
         max-height: 986px;
         display: flex;
+    }
+}
+
+// basic Divi blog. Used for 1 article show !!
+
+.et_pb_blog_0 {
+
+    .et_pb_ajax_pagination_container {
+
+        max-width: 1460px;
+        margin: 0 auto;
+
+        @media screen and (max-width: $break-tablet){
+            max-width: 100%;
+            padding: 0 20px;
+        }
+
+        img {
+            max-width: 50%;
+            float: left;
+            margin-right: 90px;
+
+            @media screen and (max-width: $break-tablet){
+                max-width: 100% !important;
+                margin-right: 30px !important;
+                float: unset !important;
+            }
+        }
+
+        h2{
+            padding-top: 60px;
+            font-size: 30px;
+            text-transform: uppercase;
+
+            @media screen and (max-width: $break-tablet){
+                padding-top: 10px !important;
+                line-height: 35px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .post-meta {
+            color: $orange;
+            font-size: 20px;
+            @include font("bold");
+            text-transform: uppercase;
+        }
+
+        .post-content {
+            font-size: 25px;
+            color: $black;
+            line-height: 35px;
+
+            p{
+                color: $black;
+                margin-bottom: 20px;
+            }
+
+            a {
+                margin-top: 20px;
+                display: inline-block;
+                background: $orange;
+                padding: 10px 20px;
+                color:$white;
+                font-size: 16px;
+                line-height: 34px;
+                text-transform: uppercase;
+                
+            }
+        }
     }
 }

@@ -25,7 +25,6 @@
 
     add_filter( 'tablepress_use_default_css', '__return_false' );
 
-
     // custom post type function
     function create_posttype() {
     
@@ -90,7 +89,6 @@
     }
     add_filter('upload_mimes', 'cc_mime_types');
 
-
     // List Child pages of a parent. 
     function list_child_pages() {							
         global $post;
@@ -142,7 +140,7 @@
     LX_Custom_Modules();
     
     function lx_widgets_init() {
- 
+
         register_sidebar( array(
             'name'          => 'Custom Header Widget Area',
             'id'            => 'custom-header-widget',
@@ -199,7 +197,7 @@
             'before_title'  => '<h2 class="">',
             'after_title'   => '</h2>',
         ));
-     
+    
     }
     add_action( 'widgets_init', 'lx_widgets_init' );
     
