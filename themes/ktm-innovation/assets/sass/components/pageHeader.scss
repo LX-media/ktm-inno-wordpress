@@ -13,10 +13,19 @@
         h1 {
             color: $white;
             padding-top: 15%;
+
+            @media screen and (max-width: $break-mobile){
+                padding-top: 140px;
+            }
         }
 
         p {
             margin-top: -40px; // fix to get it closer
+
+            @media screen and (max-width: $break-mobile){
+                margin-top: 0;
+            }
+            
             font-size: 60px;
             line-height: 73px;
             color: $white;

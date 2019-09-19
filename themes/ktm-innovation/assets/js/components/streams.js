@@ -46,7 +46,7 @@ define(
                     var lenghtCheck = text.split(" ");
                     var height = $(this).height();
 
-                    $(this).find("a").css("color", "#FFFFFF");
+                    $(this).find("a").css("color", "#FF6600");
     
                     if ((lenghtCheck.length >= 2) && (height > 60)) {                            
                         $(this).find(".line").css("left", lenght+20 + "px");
