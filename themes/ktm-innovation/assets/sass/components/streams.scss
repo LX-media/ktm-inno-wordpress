@@ -10,7 +10,8 @@
         // background-image: url("/wp-content/plugins/lx-modules/includes/modules/Streams/img/bg_orange.jpg"); 
         background-repeat: no-repeat;
         background-position: left;
-        height: 1084px;
+        background-size: contain;
+        min-height: 1084px;
         z-index: 2; 
     
         .LxContainer{

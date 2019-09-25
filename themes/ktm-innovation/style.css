@@ -1137,7 +1137,8 @@ footer #LxFooterBottom {
   .lxmo_streams .LxStreams {
     background-repeat: no-repeat;
     background-position: left;
-    height: 1084px;
+    background-size: contain;
+    min-height: 1084px;
     z-index: 2; }
     .lxmo_streams .LxStreams .LxContainer {
       position: relative;
