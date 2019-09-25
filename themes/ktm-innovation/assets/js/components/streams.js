@@ -15,7 +15,6 @@ define(
 
 
             var src = img.attr('src');
-            console.log(src);
             streams.css("background-image", "url(" + src + ")");
 
             stream.each(function(){

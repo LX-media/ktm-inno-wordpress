@@ -1138,17 +1138,13 @@ footer #LxFooterBottom {
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
-    min-height: 1084px;
     z-index: 2; }
     .lxmo_streams .LxStreams .LxContainer {
       position: relative;
       height: 100%; }
     .lxmo_streams .LxStreams .LxStreamsInner {
       position: relative;
-      top: 50%;
-      -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-      transform: translate(0, -50%);
+      padding: 180px 0;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
