@@ -745,8 +745,7 @@ footer #LxFooterBottom {
 /* COMPONENTS */
 .et_pb_lxblog_0, .et_pb_lxblog_1 {
   z-index: 1;
-  position: relative;
-  min-height: 986px; }
+  position: relative; }
   @media screen and (max-width: 767px) {
     .et_pb_lxblog_0, .et_pb_lxblog_1 {
       height: 100%; } }
@@ -759,6 +758,7 @@ footer #LxFooterBottom {
   .et_pb_lxblog_0 .et_pb_ajax_pagination_container, .et_pb_lxblog_1 .et_pb_ajax_pagination_container {
     z-index: 1;
     padding-top: 310px;
+    padding-bottom: 100px;
     max-height: 986px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -832,7 +832,7 @@ footer #LxFooterBottom {
         top: 40px;
         right: 40px; }
     .et_pb_lxblog_0 .et_pb_ajax_pagination_container article, .et_pb_lxblog_1 .et_pb_ajax_pagination_container article {
-      display: table;
+      display: block;
       max-width: 420px;
       width: calc(33.3% - 60px);
       margin: 0 40px; }
