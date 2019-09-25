@@ -746,7 +746,7 @@ footer #LxFooterBottom {
 .et_pb_lxblog_0, .et_pb_lxblog_1 {
   z-index: 1;
   position: relative;
-  height: 986px; }
+  min-height: 986px; }
   @media screen and (max-width: 767px) {
     .et_pb_lxblog_0, .et_pb_lxblog_1 {
       height: 100%; } }
@@ -1060,7 +1060,7 @@ footer #LxFooterBottom {
 .lxmo_presentation {
   background: #F0F4F6; }
   .lxmo_presentation .LxCompany {
-    height: 986px; }
+    min-height: 986px; }
     .lxmo_presentation .LxCompany .LxCompanyInner {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1132,8 +1132,9 @@ footer #LxFooterBottom {
   background: -webkit-linear-gradient(305deg, #FFFFFF, #D1D1D1);
   background: -o-linear-gradient(305deg, #FFFFFF, #D1D1D1);
   background: linear-gradient(145deg, #FFFFFF, #D1D1D1); }
+  .lxmo_streams #StreamsImage {
+    display: none; }
   .lxmo_streams .LxStreams {
-    background-image: url("/wp-content/plugins/lx-modules/includes/modules/Streams/img/bg_orange.jpg");
     background-repeat: no-repeat;
     background-position: left;
     height: 1084px;
@@ -1597,7 +1598,7 @@ footer #LxFooterBottom {
   max-width: 100%;
   width: 100vw; }
   .lxmo_career_teaser .LxCareerTeaser {
-    height: 986px;
+    min-height: 986px;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;

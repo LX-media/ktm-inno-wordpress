@@ -121,6 +121,54 @@ class LXMO_Streams extends ET_Builder_Module {
 					'menu_id'
 				),
 			),
+			'image' => array(
+				'label'              => esc_html__( 'Background image ', 'et_builder' ),
+				'type'               => 'upload',
+				'option_category'    => 'configuration',
+				'upload_button_text' => esc_attr__( 'Upload an image', 'et_builder' ),
+				'choose_text'        => esc_attr__( 'Choose Image', 'et_builder' ),
+				'update_text'        => esc_attr__( 'Set Image', 'et_builder' ),
+				'affects'            => array(
+					'image_alt',
+				),
+				'description'        => esc_html__( '', 'et_builder' ),
+				'toggle_slug'        => 'main_content',
+				'dynamic_content'    => 'image',
+			),
+			'top_line' => array(
+				'label'           => esc_html__( 'Triangular line on top', 'et_builder' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'basic_option',
+				'options'         => array(
+					'on'       => esc_html__( 'Yes', 'et_builder' ),
+					'off'      => esc_html__( 'No', 'et_builder' ),
+				),
+				'affects'           => array(
+					'use_circle_border',
+					'circle_color',
+				),
+				'toggle_slug'      => 'main_content',
+				'description'      => esc_html__( '', 'et_builder' ),
+				'default_on_front'=> 'on',
+				'dynamic_content' => 'text',
+			), 
+			'bottom_line' => array(
+				'label'           => esc_html__( 'Triangular line on bottom', 'et_builder' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'basic_option',
+				'options'         => array(
+					'on'       => esc_html__( 'Yes', 'et_builder' ),
+					'off'      => esc_html__( 'No', 'et_builder' ),
+				),
+				'affects'           => array(
+					'use_circle_border',
+					'circle_color',
+				),
+				'toggle_slug'      => 'main_content',
+				'description'      => esc_html__( '', 'et_builder' ),
+				'default_on_front'=> 'on',
+				'dynamic_content' => 'text',
+			), 
 		);
 	}
 
@@ -132,6 +180,12 @@ class LXMO_Streams extends ET_Builder_Module {
 			'menu_id'  => $menu_id,
 		));
 
+		$top_line 		= $this->shortcode_atts['top_line'];
+		$bottom_line 	= $this->shortcode_atts['bottom_line'];
+
+		$img_src        = $this->shortcode_atts['image'];
+		$image_id 		= LXMO_Streams::wp_get_image_id($img_src);
+		$image_alt      = get_post_meta( $image_id, '_wp_attachment_image_alt', true);
 		
 		
 		$titles = wp_get_nav_menu_items($menu_id); 
@@ -163,7 +217,9 @@ class LXMO_Streams extends ET_Builder_Module {
 		
 		ob_start();
 		?>
-		<span class="triangle top grey"></span>
+		<img src="<?php echo $img_src; ?>" alt="<?php echo $image_alt; ?>" id="StreamsImage">
+
+		<?php if($top_line == "on"): ?><span class="triangle top grey"></span><?php endif; ?>
 		<div class="LxStreams">
 			<div class="LxContainer">
 				<div class="LxStreamsInner">
@@ -172,7 +228,7 @@ class LXMO_Streams extends ET_Builder_Module {
 				<div class="hiddenmenu"> </div>
 			</div>
 		</div>
-		<span class="triangle bottom grey"></span>
+		<?php if($bottom_line == "on"): ?><span class="triangle bottom grey"></span><?php endif; ?>
 		<?php
 		$output = ob_get_contents();
 		ob_end_clean();

@@ -39,9 +39,7 @@ class LXMO_Jobs extends ET_Builder_Module {
 			<div class="LxContainer">
 				
 					<h2><?php echo $title_one; ?></h2>
-				
-				
-					
+			
 					<?php 
 
 					$args = array(

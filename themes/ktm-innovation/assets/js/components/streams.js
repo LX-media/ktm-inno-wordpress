@@ -5,10 +5,18 @@ define(
 
 		var Streams = function() {};
 		Streams.init = function() {
-            
+
+
+            var img     = $("#StreamsImage");
+            var streams = $(".LxStreams");        
             var stream  = $(".LxStreams li");
             var link    = $(".LxStreams li a");
             var lenght;
+
+
+            var src = img.attr('src');
+            console.log(src);
+            streams.css("background-image", "url(" + src + ")");
 
             stream.each(function(){
                 var text = $(this).find("a").html();

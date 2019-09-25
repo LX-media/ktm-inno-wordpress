@@ -1,7 +1,7 @@
 .et_pb_lxblog_0, .et_pb_lxblog_1{
     z-index: 1;
     position: relative;
-    height: 986px;
+    min-height: 986px;
 
     @media screen and (max-width: $break-mobile) {
         height: 100%;

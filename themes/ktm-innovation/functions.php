@@ -38,6 +38,7 @@
                 'public' => true,
                 'has_archive' => true,
                 'rewrite' => array('slug' => 'projects'),
+                'taxonomies' => array( 'category' ),
             )
         );
 
@@ -200,6 +201,18 @@
     
     }
     add_action( 'widgets_init', 'lx_widgets_init' );
+    
+    add_action( 'pre_get_posts', function ( $q )
+    {
+        if (  !is_admin() // Only target front end queries
+              && $q->is_main_query() // Only target the main query
+              && $q->is_category()   // Only target category archives [comment out if not needed]
+              && $q->is_tag()        // Only target tag archives [comment out if not needed]
+        ) {
+            $q->set( 'post_type', ['post', 'projects'] ); // Change 'custom_post_type' to YOUR Custom Post Type
+                                                                  // You can add multiple CPT's separated by comma's
+        }
+    });
     
 
 ?>

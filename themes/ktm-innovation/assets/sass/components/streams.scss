@@ -2,9 +2,12 @@
     // background-color: $orange;
     background: linear-gradient(145deg, $white, #D1D1D1);
 
+    #StreamsImage {
+        display: none;
+    }
 
     .LxStreams {
-        background-image: url("/wp-content/plugins/lx-modules/includes/modules/Streams/img/bg_orange.jpg"); 
+        // background-image: url("/wp-content/plugins/lx-modules/includes/modules/Streams/img/bg_orange.jpg"); 
         background-repeat: no-repeat;
         background-position: left;
         height: 1084px;
